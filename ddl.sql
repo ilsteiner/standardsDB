@@ -27,10 +27,10 @@ spool standardsDB_DDL.sql
 *******************************************************/
 
 create table tbElement (
-	symbol char(2) primary key,
-	atomicNumber char(3) not null,
+	symbol varchar2(2) primary key,
+	atomicNumber varchar2(3) not null,
 	name varchar2(13) not null,
-	density number(4,2) not null
+	density number(4,2)
 	);
 
 create table tbType (
