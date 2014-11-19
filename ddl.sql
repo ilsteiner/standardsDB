@@ -15,6 +15,16 @@ spool standardsDB_DDL.sql
 
 	TODO: Add all tables and drop them here.
 *******************************************************/
+DROP TABLE tbStandardComponent;
+DROP TABLE tbProductComponent;
+DROP TABLE tbStandard;
+DROP TABLE tbProduct;
+DROP TABLE tbProduct;
+DROP TABLE tbCertification;
+DROP TABLE tbStandardType;
+DROP TABLE tbTechnician;
+DROP TABLE tbCertStatus;
+DROP TABLE tbElement;
 
 /*******************************************************
 	Drop other things
@@ -177,5 +187,47 @@ BEGIN
 	SELECT 'S' || TO_CHAR(seq_tbStandard.NEXTVAL,'FM0000000000')
 	INTO :new.serialNumber
 	FROM dual;
+END;
+/
+
+--Trigger to ensure that product compositions always sum to 100%
+CREATE OR REPLACE TRIGGER trg_productComposition
+	BEFORE INSERT or UPDATE or DELETE
+	ON tbProductComponent
+DECLARE
+	compositionSum number;
+BEGIN
+	SELECT
+	sum(composition)
+	INTO compositionSum
+	FROM tbProductComponent
+	WHERE partNumber = :new.partNumber
+
+	IF(compositionSum > 100) THEN
+		RAISE_APPLICATION_ERROR(-200001,'Total composition for part '||:new.partNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be more than 100%.');
+	ELSIF(compositionSum < 100) THEN
+		RAISE_APPLICATION_ERROR(-200001,'Total composition for part '||:new.partNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be less than 100%.');
+	END IF;
+END;
+/
+
+--Trigger to ensure that standard compositions always sum to 100%
+CREATE OR REPLACE TRIGGER trg_standardComposition
+	BEFORE INSERT or UPDATE or DELETE
+	ON tbStandardComponent
+DECLARE
+	compositionSum number;
+BEGIN
+	SELECT
+	sum(composition)
+	INTO compositionSum
+	FROM tbStandardComponent
+	WHERE serialNumber = :new.serialNumber
+
+	IF(compositionSum > 100) THEN
+		RAISE_APPLICATION_ERROR(-200001,'Total composition for standard '||:new.serialNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be more than 100%.');
+	ELSIF(compositionSum < 100) THEN
+		RAISE_APPLICATION_ERROR(-200001,'Total composition for standard '||:new.serialNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be less than 100%.');
+	END IF;
 END;
 /
