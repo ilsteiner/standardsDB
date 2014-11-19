@@ -50,7 +50,7 @@ create table tbTechnician (
 	);
 
 create table tbStandardType (
-	typeID char(2) primary key,
+	typeID char(1) primary key,
 	standardType varchar2(64) not null
 	);
 
@@ -70,7 +70,7 @@ create table tbCertification (
 
 create table tbProduct (
 	partNumber char(11) primary key,
-	typeID char(2),
+	typeID char(1),
 	targetValue number(5,0) not null,
 	price number(8,2),
 	stock number(5,0) default 0 not null,
