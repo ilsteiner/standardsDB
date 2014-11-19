@@ -33,13 +33,8 @@ create table tbElement (
 	density number(4,2)
 	);
 
-create table tbType (
-	typeID char(2) primary key,
-	typeName varchar2(16) not null
-	);
-
 create table tbCertStatus (
-	statusID char(2) primary key,
+	statusID char(1) primary key,
 	statusDesc varchar2(16) not null
 	);
 
@@ -51,7 +46,7 @@ create table tbTechnician (
 
 create table tbStandardType (
 	typeID char(1) primary key,
-	standardType varchar2(64) not null
+	standardType varchar2(32) not null
 	);
 
 create table tbCertification (
@@ -131,3 +126,56 @@ create table tbStandardComponent (
 	constraint pk_tbStandardComponent
 	primary key (serialNumber,symbol)
 	);
+
+/*******************************************************
+	Create sequences
+*******************************************************/
+
+CREATE SEQUENCE seq_tbCertification
+	MINVALUE 1
+	MAXVALUE 9999999999;
+
+CREATE SEQUENCE seq_tbProduct
+	MINVALUE 1
+	MAXVALUE 9999999999;
+
+CREATE SEQUENCE seq_tbStandard
+	MINVALUE 1
+	MAXVALUE 9999999999;
+
+/*******************************************************
+	Create triggers
+*******************************************************/
+
+CREATE OR REPLACE TRIGGER trg_autoIncCertNumber
+	BEFORE INSERT ON tbCertification
+	FOR EACH ROW
+BEGIN
+	--Creates a new certification number using the correct format
+	SELECT 'C' || TO_CHAR(seq_tbCertification.NEXTVAL,'FM0000000000')
+	INTO :new.certNumber
+	FROM dual;
+END;
+/
+
+CREATE OR REPLACE TRIGGER trg_autoIncPartNumber
+	BEFORE INSERT ON tbProduct
+	FOR EACH ROW
+BEGIN
+	--Creates a new part number using the correct format
+	SELECT 'P' || TO_CHAR(seq_tbProduct.NEXTVAL,'FM0000000000')
+	INTO :new.partNumber
+	FROM dual;
+END;
+/
+
+CREATE OR REPLACE TRIGGER trg_autoIncSerialNumber
+	BEFORE INSERT ON tbStandard
+	FOR EACH ROW
+BEGIN
+	--Creates a new standard serial number using the correct format
+	SELECT 'S' || TO_CHAR(seq_tbStandard.NEXTVAL,'FM0000000000')
+	INTO :new.serialNumber
+	FROM dual;
+END;
+/
