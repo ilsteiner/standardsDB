@@ -14,7 +14,9 @@ spool standardsDB_DDL.sql
 	Insert the data
 *******************************************************/
 
---Insert the Element data
+/******************************************************
+	Insert the Element data
+*******************************************************/
 INSERT INTO tbElement (symbol,atomicNumber,name,density) VALUES ('H','1','Hydrogen',0.0899);
 INSERT INTO tbElement (symbol,atomicNumber,name,density) VALUES ('He','2','Helium',0.1785);
 INSERT INTO tbElement (symbol,atomicNumber,name,density) VALUES ('Li','3','Lithium',0.54);
@@ -133,3 +135,37 @@ INSERT INTO tbElement (symbol,atomicNumber,name,density) VALUES ('Uup','115','Un
 INSERT INTO tbElement (symbol,atomicNumber,name,density) VALUES ('Uuh','116','Ununhexium',null);
 INSERT INTO tbElement (symbol,atomicNumber,name,density) VALUES ('Uus','117','Ununseptium',null);
 INSERT INTO tbElement (symbol,atomicNumber,name,density) VALUES ('Uuo','118','Ununoctium',null);
+
+
+/******************************************************
+	Insert the certification statuses
+*******************************************************/
+
+INSERT INTO tbCertStatus (statusID,statusDesc) VALUES ('R','Requested');
+INSERT INTO tbCertStatus (statusID,statusDesc) VALUES ('P','In Progress');
+INSERT INTO tbCertStatus (statusID,statusDesc) VALUES ('C','Complete');
+INSERT INTO tbCertStatus (statusID,statusDesc) VALUES ('X','Canceled');
+
+/******************************************************
+	Insert the technicians
+*******************************************************/
+
+INSERT INTO tbTechnician (technicianID,name,title) VALUES ('T01','Dean Weaver','Senior laboratory technician');
+INSERT INTO tbTechnician (technicianID,name,title) VALUES ('T02','Christine Bowers','Senior laboratory technician');
+INSERT INTO tbTechnician (technicianID,name,title) VALUES ('T03','Clarence Washington','Laboratory technician');
+INSERT INTO tbTechnician (technicianID,name,title) VALUES ('T04','Amber Cruz','Laboratory technician');
+INSERT INTO tbTechnician (technicianID,name,title) VALUES ('T05','Lori Klein','Laboratory technician');
+INSERT INTO tbTechnician (technicianID,name,title) VALUES ('T06','Israel Vargas','Laboratory technician');
+INSERT INTO tbTechnician (technicianID,name,title) VALUES ('T07','Mitchell Fuller','Laboratory technician');
+INSERT INTO tbTechnician (technicianID,name,title) VALUES ('T08','Charlotte Bowman','Laboratory technician');
+INSERT INTO tbTechnician (technicianID,name,title) VALUES ('T09','Gary Phelps','Junior laboratory technician');
+INSERT INTO tbTechnician (technicianID,name,title) VALUES ('T10','Alma Tucker','Junior laboratory technician');
+
+
+/******************************************************
+	Insert the standard types
+*******************************************************/
+
+INSERT INTO tbStandardType (typeID,typeDesc) VALUES ('F','Foil');
+INSERT INTO tbStandardType (typeID,typeDesc) VALUES ('I','Infinite');
+INSERT INTO tbStandardType (typeID,typeDesc) VALUES ('P','Plated');
