@@ -1,7 +1,32 @@
 import json
+import random
 
-# Maybe send the data to JSON or a CSV? CSV is probably easier.
+def custround(x, base=5):
+    return int(base * round(float(x)/base))
+
+# Varaible for the CSV version of the processed data
+csvData = ""
+
+# Variable for the valid thicknesses
+validValues = [2,4,10,20,40]
 
 with open("elements.json") as theFile:
 	theData = json.load(theFile)
-	print(theData["elements"][0]["element1"])
+	for i in range (0,len(theData["elements"])):
+		theData["elements"][i]["thicknesses"] = [2,4,10,20,40,80,120,160,200,240,280,320,360,400,440,480,520,560,600,640,680,720,760,800]
+		price = random.randint(500,1000)
+		for j in range(0,len(theData["elements"][i]["thicknesses"])):
+			output = ",".join([theData["elements"][i]["element1"],theData["elements"][i]["element2"],str(theData["elements"][i]["thicknesses"][j]),str(random.randint(5,500))])
+			# print("Element 1: " + theData["elements"][i]["element1"])
+			# print("Element 2: " + theData["elements"][i]["element2"])
+			# print("Thickness: " + str(theData["elements"][i]["thicknesses"][j]))
+			if(theData["elements"][i]["element2"] == ""):
+				# print("Price: " + str(custround(price)))
+				output = ",".join([output,str(custround(price))])
+			else:
+				output = ",".join([output,str(custround(price*1.3))])
+				# print("Price: " + str(custround(price*1.3)))
+
+			print(output)
+
+			price = price - (price * .1)
