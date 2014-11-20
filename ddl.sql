@@ -79,11 +79,15 @@ create table tbProduct (
 	targetValue number(5,0) not null,
 	price number(8,2),
 	stock number(5,0) default 0 not null,
+	platedElement char(2),
 	custom char(1) not null,
 	constraint format_partNumber_tbProduct
 	check (REGEXP_LIKE(partNumber,'P[0-9]{10}')),
 	constraint bool_custom_tbProduct
 	check (custom in('Y','N')),
+	constraint fk_symbol_tbProduct
+	foreign key (platedElement)
+	references tbElement,
 	constraint fk_typeID_tbProduct
 	foreign key (typeID)
 	references tbStandardType(typeID)
@@ -156,6 +160,26 @@ CREATE SEQUENCE seq_tbStandard
 /*******************************************************
 	Create triggers
 *******************************************************/
+
+CREATE OR REPLACE TRIGGER trg_platedElement
+	BEFORE INSERT OR UPDATE ON tbProduct
+	FOR EACH ROW
+BEGIN
+	--If the plated element was not specified
+	IF(:new.platedElement is null) THEN
+		--If the standard is Plated, it must have a plated element
+		IF(:new.typeID = 'P') THEN
+			RAISE_APPLICATION_ERROR(-200001,'Plated standards must have a specified plated element.');
+		END IF
+	--If the plated element was specified
+	ELSE
+		--If the standard is not plated, it should not have a plated element
+		IF(:new.typeID <> 'P') THEN
+			:new.platedElement = null;
+		END IF
+	END IF
+END;
+/
 
 CREATE OR REPLACE TRIGGER trg_autoIncCertNumber
 	BEFORE INSERT ON tbCertification
