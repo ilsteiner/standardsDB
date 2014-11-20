@@ -8,7 +8,7 @@
 
 --Spool our session
 
-spool standardsDB_DDL.sql
+spool standardsDB_DDL.lst
 
 /*******************************************************
 	Drop Tables
