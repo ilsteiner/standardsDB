@@ -15,22 +15,28 @@ spool standardsDB_DDL.lst
 
 	TODO: Add all tables and drop them here.
 *******************************************************/
-DROP TABLE tbStandardComponent;
-DROP TABLE tbProductComponent;
-DROP TABLE tbStandard;
-DROP TABLE tbProduct;
-DROP TABLE tbProduct;
-DROP TABLE tbCertification;
-DROP TABLE tbStandardType;
-DROP TABLE tbTechnician;
-DROP TABLE tbCertStatus;
-DROP TABLE tbElement;
+
+DROP TABLE tbStandard PURGE;
+DROP TABLE tbStandardComponent PURGE;
+DROP TABLE tbPartComponent PURGE;
+DROP TABLE tbCertification PURGE;
+DROP TABLE tbPart PURGE;
+DROP TABLE tbStandardType PURGE;
+DROP TABLE tbTechnician PURGE;
+DROP TABLE tbCertStatus PURGE;
+DROP TABLE tbElement PURGE;
 
 /*******************************************************
 	Drop other things
 
 	TODO: Ensure everything is dropped correctly.
 *******************************************************/
+
+DROP SEQUENCE seq_tbCertification;
+
+DROP SEQUENCE seq_tbPart;
+
+DROP SEQUENCE seq_tbStandard;
 
 /*******************************************************
 	Create tables
@@ -73,22 +79,22 @@ create table tbCertification (
 	references tbCertStatus(statusID)
 	);
 
-create table tbProduct (
+create table tbPart (
 	partNumber char(11) primary key,
 	typeID char(1),
 	targetValue number(5,0) not null,
 	price number(8,2),
 	stock number(5,0) default 0 not null,
-	platedElement char(2),
+	platedElement varchar2(2),
 	custom char(1) not null,
-	constraint format_partNumber_tbProduct
+	constraint format_partNumber_tbPart
 	check (REGEXP_LIKE(partNumber,'P[0-9]{10}')),
-	constraint bool_custom_tbProduct
+	constraint bool_custom_tbPart
 	check (custom in('Y','N')),
-	constraint fk_symbol_tbProduct
+	constraint fk_symbol_tbPart
 	foreign key (platedElement)
-	references tbElement,
-	constraint fk_typeID_tbProduct
+	references tbElement(symbol),
+	constraint fk_typeID_tbPart
 	foreign key (typeID)
 	references tbStandardType(typeID)
 	);
@@ -102,31 +108,31 @@ create table tbStandard (
 	check (REGEXP_LIKE(serialNumber,'S[0-9]{10}')),
 	constraint fk_partNumber_tbStandard
 	foreign key (partNumber)
-	references tbProduct(partNumber),
+	references tbPart(partNumber),
 	constraint fk_certNumber_tbStandard
 	foreign key (certNumber)
 	references tbCertification(certNumber)
 	);
 
-create table tbProductComponent (
+create table tbPartComponent (
 	partNumber char(11),
-	symbol char(2),
+	symbol varchar2(2),
 	composition number(2,0),
-	constraint format_composition_tbProductCo
+	constraint format_composition_tbPartCo
 	check (composition between 1 and 100),
-	constraint fk_partNumber_tbProductCompone
+	constraint fk_partNumber_tbPartCompone
 	foreign key (partNumber)
-	references tbProduct(partNumber),
-	constraint fk_symbol_tbProductComponent
+	references tbPart(partNumber),
+	constraint fk_symbol_tbPartComponent
 	foreign key (symbol)
 	references tbElement(symbol),
-	constraint pk_tbProductComponent
+	constraint pk_tbPartComponent
 	primary key (partNumber,symbol)
 	);
 
 create table tbStandardComponent (
 	serialNumber char(11),
-	symbol char(2),
+	symbol varchar2(2),
 	partNumber char(11) not null,
 	composition number(2,0) not null,
 	constraint format_composition
@@ -136,7 +142,7 @@ create table tbStandardComponent (
 	references tbStandard(serialNumber),
 	constraint fk_pComponent_tbStandardCompon
 	foreign key (symbol,partNumber)
-	references tbProductComponent(symbol,partNumber),
+	references tbPartComponent(symbol,partNumber),
 	constraint pk_tbStandardComponent
 	primary key (serialNumber,symbol)
 	);
@@ -149,7 +155,7 @@ CREATE SEQUENCE seq_tbCertification
 	MINVALUE 1
 	MAXVALUE 9999999999;
 
-CREATE SEQUENCE seq_tbProduct
+CREATE SEQUENCE seq_tbPart
 	MINVALUE 1
 	MAXVALUE 9999999999;
 
@@ -162,7 +168,7 @@ CREATE SEQUENCE seq_tbStandard
 *******************************************************/
 
 CREATE OR REPLACE TRIGGER trg_platedElement
-	BEFORE INSERT OR UPDATE ON tbProduct
+	BEFORE INSERT OR UPDATE ON tbPart
 	FOR EACH ROW
 BEGIN
 	--If the plated element was not specified
@@ -193,11 +199,11 @@ END;
 /
 
 CREATE OR REPLACE TRIGGER trg_autoIncPartNumber
-	BEFORE INSERT ON tbProduct
+	BEFORE INSERT ON tbPart
 	FOR EACH ROW
 BEGIN
 	--Creates a new part number using the correct format
-	SELECT 'P' || TO_CHAR(seq_tbProduct.NEXTVAL,'FM0000000000')
+	SELECT 'P' || TO_CHAR(seq_tbPart.NEXTVAL,'FM0000000000')
 	INTO :new.partNumber
 	FROM dual;
 END;
@@ -217,20 +223,21 @@ END;
 --Trigger to ensure that product compositions always sum to 100%
 CREATE OR REPLACE TRIGGER trg_productComposition
 	BEFORE INSERT or UPDATE or DELETE
-	ON tbProductComponent
+	ON tbPartComponent
+	FOR EACH ROW
 DECLARE
 	compositionSum number;
 BEGIN
 	SELECT
 	sum(composition)
 	INTO compositionSum
-	FROM tbProductComponent
+	FROM tbPartComponent
 	WHERE partNumber = :new.partNumber
 
 	IF(compositionSum > 100) THEN
 		RAISE_APPLICATION_ERROR(-200001,'Total composition for part '||:new.partNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be more than 100%.');
 	ELSIF(compositionSum < 100) THEN
-		RAISE_APPLICATION_ERROR(-200001,'Total composition for part '||:new.partNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be less than 100%.');
+		DBMS_OUTPUT.put_line('Total composition for part '||:new.partNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be less than 100%.');
 	END IF;
 END;
 /
@@ -239,6 +246,7 @@ END;
 CREATE OR REPLACE TRIGGER trg_standardComposition
 	BEFORE INSERT or UPDATE or DELETE
 	ON tbStandardComponent
+	FOR EACH ROW
 DECLARE
 	compositionSum number;
 BEGIN
@@ -251,7 +259,9 @@ BEGIN
 	IF(compositionSum > 100) THEN
 		RAISE_APPLICATION_ERROR(-200001,'Total composition for standard '||:new.serialNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be more than 100%.');
 	ELSIF(compositionSum < 100) THEN
-		RAISE_APPLICATION_ERROR(-200001,'Total composition for standard '||:new.serialNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be less than 100%.');
+		DBMS_OUTPUT.put_line('Total composition for standard '||:new.serialNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be less than 100%.');
 	END IF;
 END;
 /
+
+SPOOL OFF
