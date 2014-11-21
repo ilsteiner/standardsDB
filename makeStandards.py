@@ -34,7 +34,4 @@ for p in range (0,len(parts["parts"])):
 		actualValue = round(random.normalvariate(parts["parts"][p]["Thickness"],.05),2)
 		standards.append(make_standard(parts["parts"][p]["partNumber"],"",actualValue))
 
-# print(standards)
-print(standards[0])
-
-
+print(standards)
