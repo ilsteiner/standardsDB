@@ -117,7 +117,7 @@ create table tbStandard (
 create table tbPartComponent (
 	partNumber char(11),
 	symbol varchar2(3),
-	composition number(2,0),
+	composition number(3,0),
 	constraint format_composition_tbPartCo
 	check (composition between 1 and 100),
 	constraint fk_partNumber_tbPartCompone
