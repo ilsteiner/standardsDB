@@ -4,9 +4,6 @@ import random
 def custround(x, base=5):
     return int(base * round(float(x)/base))
 
-# Varaible for the CSV version of the processed data
-csvData = ""
-
 # Variable for the valid thicknesses
 validValues = [2,4,10,20,40]
 

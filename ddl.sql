@@ -16,11 +16,11 @@ spool standardsDB_DDL.lst
 	TODO: Add all tables and drop them here.
 *******************************************************/
 
-DROP TABLE tbStandard PURGE;
 DROP TABLE tbStandardComponent PURGE;
 DROP TABLE tbPartComponent PURGE;
-DROP TABLE tbCertification PURGE;
+DROP TABLE tbStandard PURGE;
 DROP TABLE tbPart PURGE;
+DROP TABLE tbCertification PURGE;
 DROP TABLE tbStandardType PURGE;
 DROP TABLE tbTechnician PURGE;
 DROP TABLE tbCertStatus PURGE;
@@ -43,7 +43,7 @@ DROP SEQUENCE seq_tbStandard;
 *******************************************************/
 
 create table tbElement (
-	symbol varchar2(2) primary key,
+	symbol varchar2(3) primary key,
 	atomicNumber varchar2(3) not null,
 	name varchar2(13) not null,
 	density number(4,2)
@@ -55,14 +55,14 @@ create table tbCertStatus (
 	);
 
 create table tbTechnician (
-	technicianID char(2) primary key,
+	technicianID char(3) primary key,
 	name varchar2(512) not null,
 	title varchar2(256)
 	);
 
 create table tbStandardType (
 	typeID char(1) primary key,
-	standardType varchar2(32) not null
+	typeDesc varchar2(32) not null
 	);
 
 create table tbCertification (
@@ -116,7 +116,7 @@ create table tbStandard (
 
 create table tbPartComponent (
 	partNumber char(11),
-	symbol varchar2(2),
+	symbol varchar2(3),
 	composition number(2,0),
 	constraint format_composition_tbPartCo
 	check (composition between 1 and 100),
@@ -132,7 +132,7 @@ create table tbPartComponent (
 
 create table tbStandardComponent (
 	serialNumber char(11),
-	symbol varchar2(2),
+	symbol varchar2(3),
 	partNumber char(11) not null,
 	composition number(2,0) not null,
 	constraint format_composition
@@ -152,15 +152,15 @@ create table tbStandardComponent (
 *******************************************************/
 
 CREATE SEQUENCE seq_tbCertification
-	MINVALUE 1
+	MINVALUE 1111111111
 	MAXVALUE 9999999999;
 
 CREATE SEQUENCE seq_tbPart
-	MINVALUE 1
+	MINVALUE 1111111111
 	MAXVALUE 9999999999;
 
 CREATE SEQUENCE seq_tbStandard
-	MINVALUE 1
+	MINVALUE 1111111111
 	MAXVALUE 9999999999;
 
 /*******************************************************
@@ -172,18 +172,18 @@ CREATE OR REPLACE TRIGGER trg_platedElement
 	FOR EACH ROW
 BEGIN
 	--If the plated element was not specified
-	IF(:new.platedElement is null) THEN
+	IF :new.platedElement is null THEN
 		--If the standard is Plated, it must have a plated element
-		IF(:new.typeID = 'P') THEN
+		IF :new.typeID = 'P' THEN
 			RAISE_APPLICATION_ERROR(-200001,'Plated standards must have a specified plated element.');
-		END IF
+		END IF;
 	--If the plated element was specified
 	ELSE
 		--If the standard is not plated, it should not have a plated element
-		IF(:new.typeID <> 'P') THEN
-			:new.platedElement = null;
-		END IF
-	END IF
+		IF :new.typeID != 'P' THEN
+			:new.platedElement := null;
+		END IF;
+	END IF;
 END;
 /
 
@@ -232,7 +232,7 @@ BEGIN
 	sum(composition)
 	INTO compositionSum
 	FROM tbPartComponent
-	WHERE partNumber = :new.partNumber
+	WHERE partNumber = :new.partNumber;
 
 	IF(compositionSum > 100) THEN
 		RAISE_APPLICATION_ERROR(-200001,'Total composition for part '||:new.partNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be more than 100%.');
@@ -254,7 +254,7 @@ BEGIN
 	sum(composition)
 	INTO compositionSum
 	FROM tbStandardComponent
-	WHERE serialNumber = :new.serialNumber
+	WHERE serialNumber = :new.serialNumber;
 
 	IF(compositionSum > 100) THEN
 		RAISE_APPLICATION_ERROR(-200001,'Total composition for standard '||:new.serialNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be more than 100%.');

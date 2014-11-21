@@ -1,5 +1,6 @@
-{"elements":[
+{"parts":[
   {
+    "partNumber":"P1111111111",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -8,6 +9,7 @@
     "Price":655
   },
   {
+    "partNumber":"P1111111112",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -16,6 +18,7 @@
     "Price":590
   },
   {
+    "partNumber":"P1111111113",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -24,6 +27,7 @@
     "Price":530
   },
   {
+    "partNumber":"P1111111114",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -32,6 +36,7 @@
     "Price":475
   },
   {
+    "partNumber":"P1111111115",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -40,6 +45,7 @@
     "Price":430
   },
   {
+    "partNumber":"P1111111116",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -48,6 +54,7 @@
     "Price":385
   },
   {
+    "partNumber":"P1111111117",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -56,6 +63,7 @@
     "Price":350
   },
   {
+    "partNumber":"P1111111118",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -64,6 +72,7 @@
     "Price":315
   },
   {
+    "partNumber":"P1111111119",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -72,6 +81,7 @@
     "Price":280
   },
   {
+    "partNumber":"P1111111120",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -80,6 +90,7 @@
     "Price":255
   },
   {
+    "partNumber":"P1111111121",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -88,6 +99,7 @@
     "Price":230
   },
   {
+    "partNumber":"P1111111122",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -96,6 +108,7 @@
     "Price":205
   },
   {
+    "partNumber":"P1111111123",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -104,6 +117,7 @@
     "Price":185
   },
   {
+    "partNumber":"P1111111124",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -112,6 +126,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111125",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -120,6 +135,7 @@
     "Price":150
   },
   {
+    "partNumber":"P1111111126",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -128,6 +144,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111127",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -136,6 +153,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111128",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -144,6 +162,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111129",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -152,6 +171,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111130",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -160,6 +180,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111131",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -168,6 +189,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111132",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -176,6 +198,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111133",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -184,6 +207,7 @@
     "Price":65
   },
   {
+    "partNumber":"P1111111134",
     "Element1":"Al",
     "Element2":"",
     "PlatedElement":"",
@@ -192,6 +216,7 @@
     "Price":60
   },
   {
+    "partNumber":"P1111111135",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -200,6 +225,7 @@
     "Price":975
   },
   {
+    "partNumber":"P1111111136",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -208,6 +234,7 @@
     "Price":875
   },
   {
+    "partNumber":"P1111111137",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -216,6 +243,7 @@
     "Price":790
   },
   {
+    "partNumber":"P1111111138",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -224,6 +252,7 @@
     "Price":710
   },
   {
+    "partNumber":"P1111111139",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -232,6 +261,7 @@
     "Price":640
   },
   {
+    "partNumber":"P1111111140",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -240,6 +270,7 @@
     "Price":575
   },
   {
+    "partNumber":"P1111111141",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -248,6 +279,7 @@
     "Price":520
   },
   {
+    "partNumber":"P1111111142",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -256,6 +288,7 @@
     "Price":465
   },
   {
+    "partNumber":"P1111111143",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -264,6 +297,7 @@
     "Price":420
   },
   {
+    "partNumber":"P1111111144",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -272,6 +306,7 @@
     "Price":375
   },
   {
+    "partNumber":"P1111111145",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -280,6 +315,7 @@
     "Price":340
   },
   {
+    "partNumber":"P1111111146",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -288,6 +324,7 @@
     "Price":305
   },
   {
+    "partNumber":"P1111111147",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -296,6 +333,7 @@
     "Price":275
   },
   {
+    "partNumber":"P1111111148",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -304,6 +342,7 @@
     "Price":250
   },
   {
+    "partNumber":"P1111111149",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -312,6 +351,7 @@
     "Price":225
   },
   {
+    "partNumber":"P1111111150",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -320,6 +360,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111151",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -328,6 +369,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111152",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -336,6 +378,7 @@
     "Price":160
   },
   {
+    "partNumber":"P1111111153",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -344,6 +387,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111154",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -352,6 +396,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111155",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -360,6 +405,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111156",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -368,6 +414,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111157",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -376,6 +423,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111158",
     "Element1":"Ag",
     "Element2":"",
     "PlatedElement":"",
@@ -384,6 +432,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111159",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -392,6 +441,7 @@
     "Price":870
   },
   {
+    "partNumber":"P1111111160",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -400,6 +450,7 @@
     "Price":785
   },
   {
+    "partNumber":"P1111111161",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -408,6 +459,7 @@
     "Price":705
   },
   {
+    "partNumber":"P1111111162",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -416,6 +468,7 @@
     "Price":635
   },
   {
+    "partNumber":"P1111111163",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -424,6 +477,7 @@
     "Price":570
   },
   {
+    "partNumber":"P1111111164",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -432,6 +486,7 @@
     "Price":515
   },
   {
+    "partNumber":"P1111111165",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -440,6 +495,7 @@
     "Price":465
   },
   {
+    "partNumber":"P1111111166",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -448,6 +504,7 @@
     "Price":415
   },
   {
+    "partNumber":"P1111111167",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -456,6 +513,7 @@
     "Price":375
   },
   {
+    "partNumber":"P1111111168",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -464,6 +522,7 @@
     "Price":340
   },
   {
+    "partNumber":"P1111111169",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -472,6 +531,7 @@
     "Price":305
   },
   {
+    "partNumber":"P1111111170",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -480,6 +540,7 @@
     "Price":275
   },
   {
+    "partNumber":"P1111111171",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -488,6 +549,7 @@
     "Price":245
   },
   {
+    "partNumber":"P1111111172",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -496,6 +558,7 @@
     "Price":220
   },
   {
+    "partNumber":"P1111111173",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -504,6 +567,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111174",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -512,6 +576,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111175",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -520,6 +585,7 @@
     "Price":160
   },
   {
+    "partNumber":"P1111111176",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -528,6 +594,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111177",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -536,6 +603,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111178",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -544,6 +612,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111179",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -552,6 +621,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111180",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -560,6 +630,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111181",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -568,6 +639,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111182",
     "Element1":"Ag",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -576,6 +648,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111183",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -584,6 +657,7 @@
     "Price":865
   },
   {
+    "partNumber":"P1111111184",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -592,6 +666,7 @@
     "Price":775
   },
   {
+    "partNumber":"P1111111185",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -600,6 +675,7 @@
     "Price":700
   },
   {
+    "partNumber":"P1111111186",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -608,6 +684,7 @@
     "Price":630
   },
   {
+    "partNumber":"P1111111187",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -616,6 +693,7 @@
     "Price":565
   },
   {
+    "partNumber":"P1111111188",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -624,6 +702,7 @@
     "Price":510
   },
   {
+    "partNumber":"P1111111189",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -632,6 +711,7 @@
     "Price":460
   },
   {
+    "partNumber":"P1111111190",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -640,6 +720,7 @@
     "Price":415
   },
   {
+    "partNumber":"P1111111191",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -648,6 +729,7 @@
     "Price":370
   },
   {
+    "partNumber":"P1111111192",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -656,6 +738,7 @@
     "Price":335
   },
   {
+    "partNumber":"P1111111193",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -664,6 +747,7 @@
     "Price":300
   },
   {
+    "partNumber":"P1111111194",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -672,6 +756,7 @@
     "Price":270
   },
   {
+    "partNumber":"P1111111195",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -680,6 +765,7 @@
     "Price":245
   },
   {
+    "partNumber":"P1111111196",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -688,6 +774,7 @@
     "Price":220
   },
   {
+    "partNumber":"P1111111197",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -696,6 +783,7 @@
     "Price":195
   },
   {
+    "partNumber":"P1111111198",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -704,6 +792,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111199",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -712,6 +801,7 @@
     "Price":160
   },
   {
+    "partNumber":"P1111111200",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -720,6 +810,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111201",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -728,6 +819,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111202",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -736,6 +828,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111203",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -744,6 +837,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111204",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -752,6 +846,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111205",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -760,6 +855,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111206",
     "Element1":"Au",
     "Element2":"",
     "PlatedElement":"",
@@ -768,6 +864,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111207",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -776,6 +873,7 @@
     "Price":960
   },
   {
+    "partNumber":"P1111111208",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -784,6 +882,7 @@
     "Price":860
   },
   {
+    "partNumber":"P1111111209",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -792,6 +891,7 @@
     "Price":775
   },
   {
+    "partNumber":"P1111111210",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -800,6 +900,7 @@
     "Price":700
   },
   {
+    "partNumber":"P1111111211",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -808,6 +909,7 @@
     "Price":630
   },
   {
+    "partNumber":"P1111111212",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -816,6 +918,7 @@
     "Price":565
   },
   {
+    "partNumber":"P1111111213",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -824,6 +927,7 @@
     "Price":510
   },
   {
+    "partNumber":"P1111111214",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -832,6 +936,7 @@
     "Price":460
   },
   {
+    "partNumber":"P1111111215",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -840,6 +945,7 @@
     "Price":410
   },
   {
+    "partNumber":"P1111111216",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -848,6 +954,7 @@
     "Price":370
   },
   {
+    "partNumber":"P1111111217",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -856,6 +963,7 @@
     "Price":335
   },
   {
+    "partNumber":"P1111111218",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -864,6 +972,7 @@
     "Price":300
   },
   {
+    "partNumber":"P1111111219",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -872,6 +981,7 @@
     "Price":270
   },
   {
+    "partNumber":"P1111111220",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -880,6 +990,7 @@
     "Price":245
   },
   {
+    "partNumber":"P1111111221",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -888,6 +999,7 @@
     "Price":220
   },
   {
+    "partNumber":"P1111111222",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -896,6 +1008,7 @@
     "Price":195
   },
   {
+    "partNumber":"P1111111223",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -904,6 +1017,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111224",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -912,6 +1026,7 @@
     "Price":160
   },
   {
+    "partNumber":"P1111111225",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -920,6 +1035,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111226",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -928,6 +1044,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111227",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -936,6 +1053,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111228",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -944,6 +1062,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111229",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -952,6 +1071,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111230",
     "Element1":"Au",
     "Element2":"Ni",
     "PlatedElement":"",
@@ -960,6 +1080,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111231",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -968,6 +1089,7 @@
     "Price":1215
   },
   {
+    "partNumber":"P1111111232",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -976,6 +1098,7 @@
     "Price":1095
   },
   {
+    "partNumber":"P1111111233",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -984,6 +1107,7 @@
     "Price":985
   },
   {
+    "partNumber":"P1111111234",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -992,6 +1116,7 @@
     "Price":885
   },
   {
+    "partNumber":"P1111111235",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1000,6 +1125,7 @@
     "Price":795
   },
   {
+    "partNumber":"P1111111236",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1008,6 +1134,7 @@
     "Price":715
   },
   {
+    "partNumber":"P1111111237",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1016,6 +1143,7 @@
     "Price":645
   },
   {
+    "partNumber":"P1111111238",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1024,6 +1152,7 @@
     "Price":580
   },
   {
+    "partNumber":"P1111111239",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1032,6 +1161,7 @@
     "Price":525
   },
   {
+    "partNumber":"P1111111240",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1040,6 +1170,7 @@
     "Price":470
   },
   {
+    "partNumber":"P1111111241",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1048,6 +1179,7 @@
     "Price":425
   },
   {
+    "partNumber":"P1111111242",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1056,6 +1188,7 @@
     "Price":380
   },
   {
+    "partNumber":"P1111111243",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1064,6 +1197,7 @@
     "Price":345
   },
   {
+    "partNumber":"P1111111244",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1072,6 +1206,7 @@
     "Price":310
   },
   {
+    "partNumber":"P1111111245",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1080,6 +1215,7 @@
     "Price":280
   },
   {
+    "partNumber":"P1111111246",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1088,6 +1224,7 @@
     "Price":250
   },
   {
+    "partNumber":"P1111111247",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1096,6 +1233,7 @@
     "Price":225
   },
   {
+    "partNumber":"P1111111248",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1104,6 +1242,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111249",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1112,6 +1251,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111250",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1120,6 +1260,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111251",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1128,6 +1269,7 @@
     "Price":150
   },
   {
+    "partNumber":"P1111111252",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1136,6 +1278,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111253",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1144,6 +1287,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111254",
     "Element1":"Au",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1152,6 +1296,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111255",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1160,6 +1305,7 @@
     "Price":1080
   },
   {
+    "partNumber":"P1111111256",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1168,6 +1314,7 @@
     "Price":970
   },
   {
+    "partNumber":"P1111111257",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1176,6 +1323,7 @@
     "Price":875
   },
   {
+    "partNumber":"P1111111258",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1184,6 +1332,7 @@
     "Price":790
   },
   {
+    "partNumber":"P1111111259",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1192,6 +1341,7 @@
     "Price":710
   },
   {
+    "partNumber":"P1111111260",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1200,6 +1350,7 @@
     "Price":640
   },
   {
+    "partNumber":"P1111111261",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1208,6 +1359,7 @@
     "Price":575
   },
   {
+    "partNumber":"P1111111262",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1216,6 +1368,7 @@
     "Price":515
   },
   {
+    "partNumber":"P1111111263",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1224,6 +1377,7 @@
     "Price":465
   },
   {
+    "partNumber":"P1111111264",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1232,6 +1386,7 @@
     "Price":420
   },
   {
+    "partNumber":"P1111111265",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1240,6 +1395,7 @@
     "Price":375
   },
   {
+    "partNumber":"P1111111266",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1248,6 +1404,7 @@
     "Price":340
   },
   {
+    "partNumber":"P1111111267",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1256,6 +1413,7 @@
     "Price":305
   },
   {
+    "partNumber":"P1111111268",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1264,6 +1422,7 @@
     "Price":275
   },
   {
+    "partNumber":"P1111111269",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1272,6 +1431,7 @@
     "Price":245
   },
   {
+    "partNumber":"P1111111270",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1280,6 +1440,7 @@
     "Price":220
   },
   {
+    "partNumber":"P1111111271",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1288,6 +1449,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111272",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1296,6 +1458,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111273",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1304,6 +1467,7 @@
     "Price":160
   },
   {
+    "partNumber":"P1111111274",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1312,6 +1476,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111275",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1320,6 +1485,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111276",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1328,6 +1494,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111277",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1336,6 +1503,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111278",
     "Element1":"Au",
     "Element2":"Sn",
     "PlatedElement":"",
@@ -1344,6 +1512,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111279",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1352,6 +1521,7 @@
     "Price":765
   },
   {
+    "partNumber":"P1111111280",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1360,6 +1530,7 @@
     "Price":690
   },
   {
+    "partNumber":"P1111111281",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1368,6 +1539,7 @@
     "Price":620
   },
   {
+    "partNumber":"P1111111282",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1376,6 +1548,7 @@
     "Price":560
   },
   {
+    "partNumber":"P1111111283",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1384,6 +1557,7 @@
     "Price":505
   },
   {
+    "partNumber":"P1111111284",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1392,6 +1566,7 @@
     "Price":450
   },
   {
+    "partNumber":"P1111111285",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1400,6 +1575,7 @@
     "Price":405
   },
   {
+    "partNumber":"P1111111286",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1408,6 +1584,7 @@
     "Price":365
   },
   {
+    "partNumber":"P1111111287",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1416,6 +1593,7 @@
     "Price":330
   },
   {
+    "partNumber":"P1111111288",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1424,6 +1602,7 @@
     "Price":295
   },
   {
+    "partNumber":"P1111111289",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1432,6 +1611,7 @@
     "Price":265
   },
   {
+    "partNumber":"P1111111290",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1440,6 +1620,7 @@
     "Price":240
   },
   {
+    "partNumber":"P1111111291",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1448,6 +1629,7 @@
     "Price":215
   },
   {
+    "partNumber":"P1111111292",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1456,6 +1638,7 @@
     "Price":195
   },
   {
+    "partNumber":"P1111111293",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1464,6 +1647,7 @@
     "Price":175
   },
   {
+    "partNumber":"P1111111294",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1472,6 +1656,7 @@
     "Price":160
   },
   {
+    "partNumber":"P1111111295",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1480,6 +1665,7 @@
     "Price":140
   },
   {
+    "partNumber":"P1111111296",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1488,6 +1674,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111297",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1496,6 +1683,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111298",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1504,6 +1692,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111299",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1512,6 +1701,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111300",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1520,6 +1710,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111301",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1528,6 +1719,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111302",
     "Element1":"Bi",
     "Element2":"",
     "PlatedElement":"",
@@ -1536,6 +1728,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111303",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1544,6 +1737,7 @@
     "Price":770
   },
   {
+    "partNumber":"P1111111304",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1552,6 +1746,7 @@
     "Price":690
   },
   {
+    "partNumber":"P1111111305",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1560,6 +1755,7 @@
     "Price":625
   },
   {
+    "partNumber":"P1111111306",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1568,6 +1764,7 @@
     "Price":560
   },
   {
+    "partNumber":"P1111111307",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1576,6 +1773,7 @@
     "Price":505
   },
   {
+    "partNumber":"P1111111308",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1584,6 +1782,7 @@
     "Price":455
   },
   {
+    "partNumber":"P1111111309",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1592,6 +1791,7 @@
     "Price":410
   },
   {
+    "partNumber":"P1111111310",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1600,6 +1800,7 @@
     "Price":370
   },
   {
+    "partNumber":"P1111111311",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1608,6 +1809,7 @@
     "Price":330
   },
   {
+    "partNumber":"P1111111312",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1616,6 +1818,7 @@
     "Price":300
   },
   {
+    "partNumber":"P1111111313",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1624,6 +1827,7 @@
     "Price":270
   },
   {
+    "partNumber":"P1111111314",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1632,6 +1836,7 @@
     "Price":240
   },
   {
+    "partNumber":"P1111111315",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1640,6 +1845,7 @@
     "Price":215
   },
   {
+    "partNumber":"P1111111316",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1648,6 +1854,7 @@
     "Price":195
   },
   {
+    "partNumber":"P1111111317",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1656,6 +1863,7 @@
     "Price":175
   },
   {
+    "partNumber":"P1111111318",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1664,6 +1872,7 @@
     "Price":160
   },
   {
+    "partNumber":"P1111111319",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1672,6 +1881,7 @@
     "Price":140
   },
   {
+    "partNumber":"P1111111320",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1680,6 +1890,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111321",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1688,6 +1899,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111322",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1696,6 +1908,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111323",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1704,6 +1917,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111324",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1712,6 +1926,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111325",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1720,6 +1935,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111326",
     "Element1":"Co",
     "Element2":"",
     "PlatedElement":"",
@@ -1728,6 +1944,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111327",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1736,6 +1953,7 @@
     "Price":675
   },
   {
+    "partNumber":"P1111111328",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1744,6 +1962,7 @@
     "Price":610
   },
   {
+    "partNumber":"P1111111329",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1752,6 +1971,7 @@
     "Price":545
   },
   {
+    "partNumber":"P1111111330",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1760,6 +1980,7 @@
     "Price":490
   },
   {
+    "partNumber":"P1111111331",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1768,6 +1989,7 @@
     "Price":445
   },
   {
+    "partNumber":"P1111111332",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1776,6 +1998,7 @@
     "Price":400
   },
   {
+    "partNumber":"P1111111333",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1784,6 +2007,7 @@
     "Price":360
   },
   {
+    "partNumber":"P1111111334",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1792,6 +2016,7 @@
     "Price":325
   },
   {
+    "partNumber":"P1111111335",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1800,6 +2025,7 @@
     "Price":290
   },
   {
+    "partNumber":"P1111111336",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1808,6 +2034,7 @@
     "Price":260
   },
   {
+    "partNumber":"P1111111337",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1816,6 +2043,7 @@
     "Price":235
   },
   {
+    "partNumber":"P1111111338",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1824,6 +2052,7 @@
     "Price":210
   },
   {
+    "partNumber":"P1111111339",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1832,6 +2061,7 @@
     "Price":190
   },
   {
+    "partNumber":"P1111111340",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1840,6 +2070,7 @@
     "Price":170
   },
   {
+    "partNumber":"P1111111341",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1848,6 +2079,7 @@
     "Price":155
   },
   {
+    "partNumber":"P1111111342",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1856,6 +2088,7 @@
     "Price":140
   },
   {
+    "partNumber":"P1111111343",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1864,6 +2097,7 @@
     "Price":125
   },
   {
+    "partNumber":"P1111111344",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1872,6 +2106,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111345",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1880,6 +2115,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111346",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1888,6 +2124,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111347",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1896,6 +2133,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111348",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1904,6 +2142,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111349",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1912,6 +2151,7 @@
     "Price":65
   },
   {
+    "partNumber":"P1111111350",
     "Element1":"Cr",
     "Element2":"",
     "PlatedElement":"",
@@ -1920,6 +2160,7 @@
     "Price":60
   },
   {
+    "partNumber":"P1111111351",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1928,6 +2169,7 @@
     "Price":1045
   },
   {
+    "partNumber":"P1111111352",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1936,6 +2178,7 @@
     "Price":940
   },
   {
+    "partNumber":"P1111111353",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1944,6 +2187,7 @@
     "Price":845
   },
   {
+    "partNumber":"P1111111354",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1952,6 +2196,7 @@
     "Price":760
   },
   {
+    "partNumber":"P1111111355",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1960,6 +2205,7 @@
     "Price":685
   },
   {
+    "partNumber":"P1111111356",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1968,6 +2214,7 @@
     "Price":615
   },
   {
+    "partNumber":"P1111111357",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1976,6 +2223,7 @@
     "Price":555
   },
   {
+    "partNumber":"P1111111358",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1984,6 +2232,7 @@
     "Price":500
   },
   {
+    "partNumber":"P1111111359",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -1992,6 +2241,7 @@
     "Price":450
   },
   {
+    "partNumber":"P1111111360",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2000,6 +2250,7 @@
     "Price":405
   },
   {
+    "partNumber":"P1111111361",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2008,6 +2259,7 @@
     "Price":365
   },
   {
+    "partNumber":"P1111111362",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2016,6 +2268,7 @@
     "Price":325
   },
   {
+    "partNumber":"P1111111363",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2024,6 +2277,7 @@
     "Price":295
   },
   {
+    "partNumber":"P1111111364",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2032,6 +2286,7 @@
     "Price":265
   },
   {
+    "partNumber":"P1111111365",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2040,6 +2295,7 @@
     "Price":240
   },
   {
+    "partNumber":"P1111111366",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2048,6 +2304,7 @@
     "Price":215
   },
   {
+    "partNumber":"P1111111367",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2056,6 +2313,7 @@
     "Price":195
   },
   {
+    "partNumber":"P1111111368",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2064,6 +2322,7 @@
     "Price":175
   },
   {
+    "partNumber":"P1111111369",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2072,6 +2331,7 @@
     "Price":155
   },
   {
+    "partNumber":"P1111111370",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2080,6 +2340,7 @@
     "Price":140
   },
   {
+    "partNumber":"P1111111371",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2088,6 +2349,7 @@
     "Price":125
   },
   {
+    "partNumber":"P1111111372",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2096,6 +2358,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111373",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2104,6 +2367,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111374",
     "Element1":"Cr",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -2112,6 +2376,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111375",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2120,6 +2385,7 @@
     "Price":880
   },
   {
+    "partNumber":"P1111111376",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2128,6 +2394,7 @@
     "Price":790
   },
   {
+    "partNumber":"P1111111377",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2136,6 +2403,7 @@
     "Price":710
   },
   {
+    "partNumber":"P1111111378",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2144,6 +2412,7 @@
     "Price":640
   },
   {
+    "partNumber":"P1111111379",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2152,6 +2421,7 @@
     "Price":575
   },
   {
+    "partNumber":"P1111111380",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2160,6 +2430,7 @@
     "Price":520
   },
   {
+    "partNumber":"P1111111381",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2168,6 +2439,7 @@
     "Price":465
   },
   {
+    "partNumber":"P1111111382",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2176,6 +2448,7 @@
     "Price":420
   },
   {
+    "partNumber":"P1111111383",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2184,6 +2457,7 @@
     "Price":380
   },
   {
+    "partNumber":"P1111111384",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2192,6 +2466,7 @@
     "Price":340
   },
   {
+    "partNumber":"P1111111385",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2200,6 +2475,7 @@
     "Price":305
   },
   {
+    "partNumber":"P1111111386",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2208,6 +2484,7 @@
     "Price":275
   },
   {
+    "partNumber":"P1111111387",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2216,6 +2493,7 @@
     "Price":250
   },
   {
+    "partNumber":"P1111111388",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2224,6 +2502,7 @@
     "Price":225
   },
   {
+    "partNumber":"P1111111389",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2232,6 +2511,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111390",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2240,6 +2520,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111391",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2248,6 +2529,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111392",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2256,6 +2538,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111393",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2264,6 +2547,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111394",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2272,6 +2556,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111395",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2280,6 +2565,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111396",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2288,6 +2574,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111397",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2296,6 +2583,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111398",
     "Element1":"Cr",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2304,6 +2592,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111399",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2312,6 +2601,7 @@
     "Price":515
   },
   {
+    "partNumber":"P1111111400",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2320,6 +2610,7 @@
     "Price":460
   },
   {
+    "partNumber":"P1111111401",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2328,6 +2619,7 @@
     "Price":415
   },
   {
+    "partNumber":"P1111111402",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2336,6 +2628,7 @@
     "Price":375
   },
   {
+    "partNumber":"P1111111403",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2344,6 +2637,7 @@
     "Price":335
   },
   {
+    "partNumber":"P1111111404",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2352,6 +2646,7 @@
     "Price":305
   },
   {
+    "partNumber":"P1111111405",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2360,6 +2655,7 @@
     "Price":275
   },
   {
+    "partNumber":"P1111111406",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2368,6 +2664,7 @@
     "Price":245
   },
   {
+    "partNumber":"P1111111407",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2376,6 +2673,7 @@
     "Price":220
   },
   {
+    "partNumber":"P1111111408",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2384,6 +2682,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111409",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2392,6 +2691,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111410",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2400,6 +2700,7 @@
     "Price":160
   },
   {
+    "partNumber":"P1111111411",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2408,6 +2709,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111412",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2416,6 +2718,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111413",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2424,6 +2727,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111414",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2432,6 +2736,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111415",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2440,6 +2745,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111416",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2448,6 +2754,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111417",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2456,6 +2763,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111418",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2464,6 +2772,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111419",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2472,6 +2781,7 @@
     "Price":60
   },
   {
+    "partNumber":"P1111111420",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2480,6 +2790,7 @@
     "Price":55
   },
   {
+    "partNumber":"P1111111421",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2488,6 +2799,7 @@
     "Price":50
   },
   {
+    "partNumber":"P1111111422",
     "Element1":"Cu",
     "Element2":"",
     "PlatedElement":"",
@@ -2496,6 +2808,7 @@
     "Price":45
   },
   {
+    "partNumber":"P1111111423",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2504,6 +2817,7 @@
     "Price":1055
   },
   {
+    "partNumber":"P1111111424",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2512,6 +2826,7 @@
     "Price":950
   },
   {
+    "partNumber":"P1111111425",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2520,6 +2835,7 @@
     "Price":855
   },
   {
+    "partNumber":"P1111111426",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2528,6 +2844,7 @@
     "Price":770
   },
   {
+    "partNumber":"P1111111427",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2536,6 +2853,7 @@
     "Price":690
   },
   {
+    "partNumber":"P1111111428",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2544,6 +2862,7 @@
     "Price":625
   },
   {
+    "partNumber":"P1111111429",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2552,6 +2871,7 @@
     "Price":560
   },
   {
+    "partNumber":"P1111111430",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2560,6 +2880,7 @@
     "Price":505
   },
   {
+    "partNumber":"P1111111431",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2568,6 +2889,7 @@
     "Price":455
   },
   {
+    "partNumber":"P1111111432",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2576,6 +2898,7 @@
     "Price":410
   },
   {
+    "partNumber":"P1111111433",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2584,6 +2907,7 @@
     "Price":370
   },
   {
+    "partNumber":"P1111111434",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2592,6 +2916,7 @@
     "Price":330
   },
   {
+    "partNumber":"P1111111435",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2600,6 +2925,7 @@
     "Price":300
   },
   {
+    "partNumber":"P1111111436",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2608,6 +2934,7 @@
     "Price":270
   },
   {
+    "partNumber":"P1111111437",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2616,6 +2943,7 @@
     "Price":240
   },
   {
+    "partNumber":"P1111111438",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2624,6 +2952,7 @@
     "Price":215
   },
   {
+    "partNumber":"P1111111439",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2632,6 +2961,7 @@
     "Price":195
   },
   {
+    "partNumber":"P1111111440",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2640,6 +2970,7 @@
     "Price":175
   },
   {
+    "partNumber":"P1111111441",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2648,6 +2979,7 @@
     "Price":160
   },
   {
+    "partNumber":"P1111111442",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2656,6 +2988,7 @@
     "Price":140
   },
   {
+    "partNumber":"P1111111443",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2664,6 +2997,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111444",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2672,6 +3006,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111445",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2680,6 +3015,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111446",
     "Element1":"Cu",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -2688,6 +3024,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111447",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2696,6 +3033,7 @@
     "Price":1235
   },
   {
+    "partNumber":"P1111111448",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2704,6 +3042,7 @@
     "Price":1110
   },
   {
+    "partNumber":"P1111111449",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2712,6 +3051,7 @@
     "Price":1000
   },
   {
+    "partNumber":"P1111111450",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2720,6 +3060,7 @@
     "Price":900
   },
   {
+    "partNumber":"P1111111451",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2728,6 +3069,7 @@
     "Price":810
   },
   {
+    "partNumber":"P1111111452",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2736,6 +3078,7 @@
     "Price":730
   },
   {
+    "partNumber":"P1111111453",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2744,6 +3087,7 @@
     "Price":655
   },
   {
+    "partNumber":"P1111111454",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2752,6 +3096,7 @@
     "Price":590
   },
   {
+    "partNumber":"P1111111455",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2760,6 +3105,7 @@
     "Price":530
   },
   {
+    "partNumber":"P1111111456",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2768,6 +3114,7 @@
     "Price":480
   },
   {
+    "partNumber":"P1111111457",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2776,6 +3123,7 @@
     "Price":430
   },
   {
+    "partNumber":"P1111111458",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2784,6 +3132,7 @@
     "Price":390
   },
   {
+    "partNumber":"P1111111459",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2792,6 +3141,7 @@
     "Price":350
   },
   {
+    "partNumber":"P1111111460",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2800,6 +3150,7 @@
     "Price":315
   },
   {
+    "partNumber":"P1111111461",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2808,6 +3159,7 @@
     "Price":285
   },
   {
+    "partNumber":"P1111111462",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2816,6 +3168,7 @@
     "Price":255
   },
   {
+    "partNumber":"P1111111463",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2824,6 +3177,7 @@
     "Price":230
   },
   {
+    "partNumber":"P1111111464",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2832,6 +3186,7 @@
     "Price":205
   },
   {
+    "partNumber":"P1111111465",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2840,6 +3195,7 @@
     "Price":185
   },
   {
+    "partNumber":"P1111111466",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2848,6 +3204,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111467",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2856,6 +3213,7 @@
     "Price":150
   },
   {
+    "partNumber":"P1111111468",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2864,6 +3222,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111469",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2872,6 +3231,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111470",
     "Element1":"Cu",
     "Element2":"Zn",
     "PlatedElement":"",
@@ -2880,6 +3240,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111471",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2888,6 +3249,7 @@
     "Price":585
   },
   {
+    "partNumber":"P1111111472",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2896,6 +3258,7 @@
     "Price":525
   },
   {
+    "partNumber":"P1111111473",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2904,6 +3267,7 @@
     "Price":475
   },
   {
+    "partNumber":"P1111111474",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2912,6 +3276,7 @@
     "Price":425
   },
   {
+    "partNumber":"P1111111475",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2920,6 +3285,7 @@
     "Price":385
   },
   {
+    "partNumber":"P1111111476",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2928,6 +3294,7 @@
     "Price":345
   },
   {
+    "partNumber":"P1111111477",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2936,6 +3303,7 @@
     "Price":310
   },
   {
+    "partNumber":"P1111111478",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2944,6 +3312,7 @@
     "Price":280
   },
   {
+    "partNumber":"P1111111479",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2952,6 +3321,7 @@
     "Price":250
   },
   {
+    "partNumber":"P1111111480",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2960,6 +3330,7 @@
     "Price":225
   },
   {
+    "partNumber":"P1111111481",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2968,6 +3339,7 @@
     "Price":205
   },
   {
+    "partNumber":"P1111111482",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2976,6 +3348,7 @@
     "Price":185
   },
   {
+    "partNumber":"P1111111483",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2984,6 +3357,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111484",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -2992,6 +3366,7 @@
     "Price":150
   },
   {
+    "partNumber":"P1111111485",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -3000,6 +3375,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111486",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -3008,6 +3384,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111487",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -3016,6 +3393,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111488",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -3024,6 +3402,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111489",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -3032,6 +3411,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111490",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -3040,6 +3420,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111491",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -3048,6 +3429,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111492",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -3056,6 +3438,7 @@
     "Price":65
   },
   {
+    "partNumber":"P1111111493",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -3064,6 +3447,7 @@
     "Price":60
   },
   {
+    "partNumber":"P1111111494",
     "Element1":"Fe",
     "Element2":"",
     "PlatedElement":"",
@@ -3072,6 +3456,7 @@
     "Price":50
   },
   {
+    "partNumber":"P1111111495",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3080,6 +3465,7 @@
     "Price":805
   },
   {
+    "partNumber":"P1111111496",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3088,6 +3474,7 @@
     "Price":725
   },
   {
+    "partNumber":"P1111111497",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3096,6 +3483,7 @@
     "Price":655
   },
   {
+    "partNumber":"P1111111498",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3104,6 +3492,7 @@
     "Price":590
   },
   {
+    "partNumber":"P1111111499",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3112,6 +3501,7 @@
     "Price":530
   },
   {
+    "partNumber":"P1111111500",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3120,6 +3510,7 @@
     "Price":475
   },
   {
+    "partNumber":"P1111111501",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3128,6 +3519,7 @@
     "Price":430
   },
   {
+    "partNumber":"P1111111502",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3136,6 +3528,7 @@
     "Price":385
   },
   {
+    "partNumber":"P1111111503",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3144,6 +3537,7 @@
     "Price":345
   },
   {
+    "partNumber":"P1111111504",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3152,6 +3546,7 @@
     "Price":310
   },
   {
+    "partNumber":"P1111111505",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3160,6 +3555,7 @@
     "Price":280
   },
   {
+    "partNumber":"P1111111506",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3168,6 +3564,7 @@
     "Price":255
   },
   {
+    "partNumber":"P1111111507",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3176,6 +3573,7 @@
     "Price":230
   },
   {
+    "partNumber":"P1111111508",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3184,6 +3582,7 @@
     "Price":205
   },
   {
+    "partNumber":"P1111111509",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3192,6 +3591,7 @@
     "Price":185
   },
   {
+    "partNumber":"P1111111510",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3200,6 +3600,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111511",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3208,6 +3609,7 @@
     "Price":150
   },
   {
+    "partNumber":"P1111111512",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3216,6 +3618,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111513",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3224,6 +3627,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111514",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3232,6 +3636,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111515",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3240,6 +3645,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111516",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3248,6 +3654,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111517",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3256,6 +3663,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111518",
     "Element1":"In",
     "Element2":"",
     "PlatedElement":"",
@@ -3264,6 +3672,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111519",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3272,6 +3681,7 @@
     "Price":825
   },
   {
+    "partNumber":"P1111111520",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3280,6 +3690,7 @@
     "Price":740
   },
   {
+    "partNumber":"P1111111521",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3288,6 +3699,7 @@
     "Price":665
   },
   {
+    "partNumber":"P1111111522",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3296,6 +3708,7 @@
     "Price":600
   },
   {
+    "partNumber":"P1111111523",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3304,6 +3717,7 @@
     "Price":540
   },
   {
+    "partNumber":"P1111111524",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3312,6 +3726,7 @@
     "Price":485
   },
   {
+    "partNumber":"P1111111525",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3320,6 +3735,7 @@
     "Price":440
   },
   {
+    "partNumber":"P1111111526",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3328,6 +3744,7 @@
     "Price":395
   },
   {
+    "partNumber":"P1111111527",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3336,6 +3753,7 @@
     "Price":355
   },
   {
+    "partNumber":"P1111111528",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3344,6 +3762,7 @@
     "Price":320
   },
   {
+    "partNumber":"P1111111529",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3352,6 +3771,7 @@
     "Price":285
   },
   {
+    "partNumber":"P1111111530",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3360,6 +3780,7 @@
     "Price":260
   },
   {
+    "partNumber":"P1111111531",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3368,6 +3789,7 @@
     "Price":235
   },
   {
+    "partNumber":"P1111111532",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3376,6 +3798,7 @@
     "Price":210
   },
   {
+    "partNumber":"P1111111533",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3384,6 +3807,7 @@
     "Price":190
   },
   {
+    "partNumber":"P1111111534",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3392,6 +3816,7 @@
     "Price":170
   },
   {
+    "partNumber":"P1111111535",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3400,6 +3825,7 @@
     "Price":155
   },
   {
+    "partNumber":"P1111111536",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3408,6 +3834,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111537",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3416,6 +3843,7 @@
     "Price":125
   },
   {
+    "partNumber":"P1111111538",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3424,6 +3852,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111539",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3432,6 +3861,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111540",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3440,6 +3870,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111541",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3448,6 +3879,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111542",
     "Element1":"Ir",
     "Element2":"",
     "PlatedElement":"",
@@ -3456,6 +3888,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111543",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3464,6 +3897,7 @@
     "Price":520
   },
   {
+    "partNumber":"P1111111544",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3472,6 +3906,7 @@
     "Price":470
   },
   {
+    "partNumber":"P1111111545",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3480,6 +3915,7 @@
     "Price":420
   },
   {
+    "partNumber":"P1111111546",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3488,6 +3924,7 @@
     "Price":380
   },
   {
+    "partNumber":"P1111111547",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3496,6 +3933,7 @@
     "Price":340
   },
   {
+    "partNumber":"P1111111548",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3504,6 +3942,7 @@
     "Price":305
   },
   {
+    "partNumber":"P1111111549",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3512,6 +3951,7 @@
     "Price":275
   },
   {
+    "partNumber":"P1111111550",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3520,6 +3960,7 @@
     "Price":250
   },
   {
+    "partNumber":"P1111111551",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3528,6 +3969,7 @@
     "Price":225
   },
   {
+    "partNumber":"P1111111552",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3536,6 +3978,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111553",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3544,6 +3987,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111554",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3552,6 +3996,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111555",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3560,6 +4005,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111556",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3568,6 +4014,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111557",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3576,6 +4023,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111558",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3584,6 +4032,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111559",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3592,6 +4041,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111560",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3600,6 +4050,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111561",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3608,6 +4059,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111562",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3616,6 +4068,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111563",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3624,6 +4077,7 @@
     "Price":65
   },
   {
+    "partNumber":"P1111111564",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3632,6 +4086,7 @@
     "Price":55
   },
   {
+    "partNumber":"P1111111565",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3640,6 +4095,7 @@
     "Price":50
   },
   {
+    "partNumber":"P1111111566",
     "Element1":"Mg",
     "Element2":"",
     "PlatedElement":"",
@@ -3648,6 +4104,7 @@
     "Price":45
   },
   {
+    "partNumber":"P1111111567",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3656,6 +4113,7 @@
     "Price":520
   },
   {
+    "partNumber":"P1111111568",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3664,6 +4122,7 @@
     "Price":465
   },
   {
+    "partNumber":"P1111111569",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3672,6 +4131,7 @@
     "Price":420
   },
   {
+    "partNumber":"P1111111570",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3680,6 +4140,7 @@
     "Price":380
   },
   {
+    "partNumber":"P1111111571",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3688,6 +4149,7 @@
     "Price":340
   },
   {
+    "partNumber":"P1111111572",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3696,6 +4158,7 @@
     "Price":305
   },
   {
+    "partNumber":"P1111111573",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3704,6 +4167,7 @@
     "Price":275
   },
   {
+    "partNumber":"P1111111574",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3712,6 +4176,7 @@
     "Price":250
   },
   {
+    "partNumber":"P1111111575",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3720,6 +4185,7 @@
     "Price":225
   },
   {
+    "partNumber":"P1111111576",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3728,6 +4194,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111577",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3736,6 +4203,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111578",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3744,6 +4212,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111579",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3752,6 +4221,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111580",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3760,6 +4230,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111581",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3768,6 +4239,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111582",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3776,6 +4248,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111583",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3784,6 +4257,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111584",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3792,6 +4266,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111585",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3800,6 +4275,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111586",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3808,6 +4284,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111587",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3816,6 +4293,7 @@
     "Price":65
   },
   {
+    "partNumber":"P1111111588",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3824,6 +4302,7 @@
     "Price":55
   },
   {
+    "partNumber":"P1111111589",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3832,6 +4311,7 @@
     "Price":50
   },
   {
+    "partNumber":"P1111111590",
     "Element1":"Mo",
     "Element2":"",
     "PlatedElement":"",
@@ -3840,6 +4320,7 @@
     "Price":45
   },
   {
+    "partNumber":"P1111111591",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3848,6 +4329,7 @@
     "Price":870
   },
   {
+    "partNumber":"P1111111592",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3856,6 +4338,7 @@
     "Price":785
   },
   {
+    "partNumber":"P1111111593",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3864,6 +4347,7 @@
     "Price":705
   },
   {
+    "partNumber":"P1111111594",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3872,6 +4356,7 @@
     "Price":635
   },
   {
+    "partNumber":"P1111111595",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3880,6 +4365,7 @@
     "Price":570
   },
   {
+    "partNumber":"P1111111596",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3888,6 +4374,7 @@
     "Price":515
   },
   {
+    "partNumber":"P1111111597",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3896,6 +4383,7 @@
     "Price":460
   },
   {
+    "partNumber":"P1111111598",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3904,6 +4392,7 @@
     "Price":415
   },
   {
+    "partNumber":"P1111111599",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3912,6 +4401,7 @@
     "Price":375
   },
   {
+    "partNumber":"P1111111600",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3920,6 +4410,7 @@
     "Price":335
   },
   {
+    "partNumber":"P1111111601",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3928,6 +4419,7 @@
     "Price":305
   },
   {
+    "partNumber":"P1111111602",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3936,6 +4428,7 @@
     "Price":275
   },
   {
+    "partNumber":"P1111111603",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3944,6 +4437,7 @@
     "Price":245
   },
   {
+    "partNumber":"P1111111604",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3952,6 +4446,7 @@
     "Price":220
   },
   {
+    "partNumber":"P1111111605",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3960,6 +4455,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111606",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3968,6 +4464,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111607",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3976,6 +4473,7 @@
     "Price":160
   },
   {
+    "partNumber":"P1111111608",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3984,6 +4482,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111609",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -3992,6 +4491,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111610",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -4000,6 +4500,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111611",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -4008,6 +4509,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111612",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -4016,6 +4518,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111613",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -4024,6 +4527,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111614",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"",
@@ -4032,6 +4536,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111615",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4040,6 +4545,7 @@
     "Price":1085
   },
   {
+    "partNumber":"P1111111616",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4048,6 +4554,7 @@
     "Price":975
   },
   {
+    "partNumber":"P1111111617",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4056,6 +4563,7 @@
     "Price":880
   },
   {
+    "partNumber":"P1111111618",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4064,6 +4572,7 @@
     "Price":790
   },
   {
+    "partNumber":"P1111111619",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4072,6 +4581,7 @@
     "Price":710
   },
   {
+    "partNumber":"P1111111620",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4080,6 +4590,7 @@
     "Price":640
   },
   {
+    "partNumber":"P1111111621",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4088,6 +4599,7 @@
     "Price":575
   },
   {
+    "partNumber":"P1111111622",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4096,6 +4608,7 @@
     "Price":520
   },
   {
+    "partNumber":"P1111111623",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4104,6 +4617,7 @@
     "Price":465
   },
   {
+    "partNumber":"P1111111624",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4112,6 +4626,7 @@
     "Price":420
   },
   {
+    "partNumber":"P1111111625",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4120,6 +4635,7 @@
     "Price":380
   },
   {
+    "partNumber":"P1111111626",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4128,6 +4644,7 @@
     "Price":340
   },
   {
+    "partNumber":"P1111111627",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4136,6 +4653,7 @@
     "Price":305
   },
   {
+    "partNumber":"P1111111628",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4144,6 +4662,7 @@
     "Price":275
   },
   {
+    "partNumber":"P1111111629",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4152,6 +4671,7 @@
     "Price":250
   },
   {
+    "partNumber":"P1111111630",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4160,6 +4680,7 @@
     "Price":225
   },
   {
+    "partNumber":"P1111111631",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4168,6 +4689,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111632",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4176,6 +4698,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111633",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4184,6 +4707,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111634",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4192,6 +4716,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111635",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4200,6 +4725,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111636",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4208,6 +4734,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111637",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4216,6 +4743,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111638",
     "Element1":"Ni",
     "Element2":"Al",
     "PlatedElement":"",
@@ -4224,6 +4752,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111639",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4232,6 +4761,7 @@
     "Price":840
   },
   {
+    "partNumber":"P1111111640",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4240,6 +4770,7 @@
     "Price":760
   },
   {
+    "partNumber":"P1111111641",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4248,6 +4779,7 @@
     "Price":680
   },
   {
+    "partNumber":"P1111111642",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4256,6 +4788,7 @@
     "Price":615
   },
   {
+    "partNumber":"P1111111643",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4264,6 +4797,7 @@
     "Price":555
   },
   {
+    "partNumber":"P1111111644",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4272,6 +4806,7 @@
     "Price":495
   },
   {
+    "partNumber":"P1111111645",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4280,6 +4815,7 @@
     "Price":450
   },
   {
+    "partNumber":"P1111111646",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4288,6 +4824,7 @@
     "Price":405
   },
   {
+    "partNumber":"P1111111647",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4296,6 +4833,7 @@
     "Price":365
   },
   {
+    "partNumber":"P1111111648",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4304,6 +4842,7 @@
     "Price":325
   },
   {
+    "partNumber":"P1111111649",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4312,6 +4851,7 @@
     "Price":295
   },
   {
+    "partNumber":"P1111111650",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4320,6 +4860,7 @@
     "Price":265
   },
   {
+    "partNumber":"P1111111651",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4328,6 +4869,7 @@
     "Price":240
   },
   {
+    "partNumber":"P1111111652",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4336,6 +4878,7 @@
     "Price":215
   },
   {
+    "partNumber":"P1111111653",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4344,6 +4887,7 @@
     "Price":195
   },
   {
+    "partNumber":"P1111111654",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4352,6 +4896,7 @@
     "Price":175
   },
   {
+    "partNumber":"P1111111655",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4360,6 +4905,7 @@
     "Price":155
   },
   {
+    "partNumber":"P1111111656",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4368,6 +4914,7 @@
     "Price":140
   },
   {
+    "partNumber":"P1111111657",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4376,6 +4923,7 @@
     "Price":125
   },
   {
+    "partNumber":"P1111111658",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4384,6 +4932,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111659",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4392,6 +4941,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111660",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4400,6 +4950,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111661",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4408,6 +4959,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111662",
     "Element1":"Ni",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -4416,6 +4968,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111663",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4424,6 +4977,7 @@
     "Price":690
   },
   {
+    "partNumber":"P1111111664",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4432,6 +4986,7 @@
     "Price":620
   },
   {
+    "partNumber":"P1111111665",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4440,6 +4995,7 @@
     "Price":555
   },
   {
+    "partNumber":"P1111111666",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4448,6 +5004,7 @@
     "Price":500
   },
   {
+    "partNumber":"P1111111667",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4456,6 +5013,7 @@
     "Price":450
   },
   {
+    "partNumber":"P1111111668",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4464,6 +5022,7 @@
     "Price":405
   },
   {
+    "partNumber":"P1111111669",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4472,6 +5031,7 @@
     "Price":365
   },
   {
+    "partNumber":"P1111111670",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4480,6 +5040,7 @@
     "Price":330
   },
   {
+    "partNumber":"P1111111671",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4488,6 +5049,7 @@
     "Price":295
   },
   {
+    "partNumber":"P1111111672",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4496,6 +5058,7 @@
     "Price":265
   },
   {
+    "partNumber":"P1111111673",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4504,6 +5067,7 @@
     "Price":240
   },
   {
+    "partNumber":"P1111111674",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4512,6 +5076,7 @@
     "Price":215
   },
   {
+    "partNumber":"P1111111675",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4520,6 +5085,7 @@
     "Price":195
   },
   {
+    "partNumber":"P1111111676",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4528,6 +5094,7 @@
     "Price":175
   },
   {
+    "partNumber":"P1111111677",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4536,6 +5103,7 @@
     "Price":155
   },
   {
+    "partNumber":"P1111111678",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4544,6 +5112,7 @@
     "Price":140
   },
   {
+    "partNumber":"P1111111679",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4552,6 +5121,7 @@
     "Price":125
   },
   {
+    "partNumber":"P1111111680",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4560,6 +5130,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111681",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4568,6 +5139,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111682",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4576,6 +5148,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111683",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4584,6 +5157,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111684",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4592,6 +5166,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111685",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4600,6 +5175,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111686",
     "Element1":"Ni",
     "Element2":"Fe",
     "PlatedElement":"",
@@ -4608,6 +5184,7 @@
     "Price":60
   },
   {
+    "partNumber":"P1111111687",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4616,6 +5193,7 @@
     "Price":730
   },
   {
+    "partNumber":"P1111111688",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4624,6 +5202,7 @@
     "Price":655
   },
   {
+    "partNumber":"P1111111689",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4632,6 +5211,7 @@
     "Price":590
   },
   {
+    "partNumber":"P1111111690",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4640,6 +5220,7 @@
     "Price":530
   },
   {
+    "partNumber":"P1111111691",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4648,6 +5229,7 @@
     "Price":480
   },
   {
+    "partNumber":"P1111111692",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4656,6 +5238,7 @@
     "Price":430
   },
   {
+    "partNumber":"P1111111693",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4664,6 +5247,7 @@
     "Price":385
   },
   {
+    "partNumber":"P1111111694",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4672,6 +5256,7 @@
     "Price":350
   },
   {
+    "partNumber":"P1111111695",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4680,6 +5265,7 @@
     "Price":315
   },
   {
+    "partNumber":"P1111111696",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4688,6 +5274,7 @@
     "Price":280
   },
   {
+    "partNumber":"P1111111697",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4696,6 +5283,7 @@
     "Price":255
   },
   {
+    "partNumber":"P1111111698",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4704,6 +5292,7 @@
     "Price":230
   },
   {
+    "partNumber":"P1111111699",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4712,6 +5301,7 @@
     "Price":205
   },
   {
+    "partNumber":"P1111111700",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4720,6 +5310,7 @@
     "Price":185
   },
   {
+    "partNumber":"P1111111701",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4728,6 +5319,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111702",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4736,6 +5328,7 @@
     "Price":150
   },
   {
+    "partNumber":"P1111111703",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4744,6 +5337,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111704",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4752,6 +5346,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111705",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4760,6 +5355,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111706",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4768,6 +5364,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111707",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4776,6 +5373,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111708",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4784,6 +5382,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111709",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4792,6 +5391,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111710",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Al",
@@ -4800,6 +5400,7 @@
     "Price":65
   },
   {
+    "partNumber":"P1111111711",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4808,6 +5409,7 @@
     "Price":710
   },
   {
+    "partNumber":"P1111111712",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4816,6 +5418,7 @@
     "Price":640
   },
   {
+    "partNumber":"P1111111713",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4824,6 +5427,7 @@
     "Price":575
   },
   {
+    "partNumber":"P1111111714",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4832,6 +5436,7 @@
     "Price":520
   },
   {
+    "partNumber":"P1111111715",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4840,6 +5445,7 @@
     "Price":465
   },
   {
+    "partNumber":"P1111111716",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4848,6 +5454,7 @@
     "Price":420
   },
   {
+    "partNumber":"P1111111717",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4856,6 +5463,7 @@
     "Price":380
   },
   {
+    "partNumber":"P1111111718",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4864,6 +5472,7 @@
     "Price":340
   },
   {
+    "partNumber":"P1111111719",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4872,6 +5481,7 @@
     "Price":305
   },
   {
+    "partNumber":"P1111111720",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4880,6 +5490,7 @@
     "Price":275
   },
   {
+    "partNumber":"P1111111721",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4888,6 +5499,7 @@
     "Price":250
   },
   {
+    "partNumber":"P1111111722",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4896,6 +5508,7 @@
     "Price":225
   },
   {
+    "partNumber":"P1111111723",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4904,6 +5517,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111724",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4912,6 +5526,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111725",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4920,6 +5535,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111726",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4928,6 +5544,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111727",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4936,6 +5553,7 @@
     "Price":130
   },
   {
+    "partNumber":"P1111111728",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4944,6 +5562,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111729",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4952,6 +5571,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111730",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4960,6 +5580,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111731",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4968,6 +5589,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111732",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4976,6 +5598,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111733",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4984,6 +5607,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111734",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Cu",
@@ -4992,6 +5616,7 @@
     "Price":65
   },
   {
+    "partNumber":"P1111111735",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5000,6 +5625,7 @@
     "Price":885
   },
   {
+    "partNumber":"P1111111736",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5008,6 +5634,7 @@
     "Price":795
   },
   {
+    "partNumber":"P1111111737",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5016,6 +5643,7 @@
     "Price":715
   },
   {
+    "partNumber":"P1111111738",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5024,6 +5652,7 @@
     "Price":645
   },
   {
+    "partNumber":"P1111111739",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5032,6 +5661,7 @@
     "Price":580
   },
   {
+    "partNumber":"P1111111740",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5040,6 +5670,7 @@
     "Price":520
   },
   {
+    "partNumber":"P1111111741",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5048,6 +5679,7 @@
     "Price":470
   },
   {
+    "partNumber":"P1111111742",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5056,6 +5688,7 @@
     "Price":425
   },
   {
+    "partNumber":"P1111111743",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5064,6 +5697,7 @@
     "Price":380
   },
   {
+    "partNumber":"P1111111744",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5072,6 +5706,7 @@
     "Price":340
   },
   {
+    "partNumber":"P1111111745",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5080,6 +5715,7 @@
     "Price":310
   },
   {
+    "partNumber":"P1111111746",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5088,6 +5724,7 @@
     "Price":275
   },
   {
+    "partNumber":"P1111111747",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5096,6 +5733,7 @@
     "Price":250
   },
   {
+    "partNumber":"P1111111748",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5104,6 +5742,7 @@
     "Price":225
   },
   {
+    "partNumber":"P1111111749",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5112,6 +5751,7 @@
     "Price":200
   },
   {
+    "partNumber":"P1111111750",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5120,6 +5760,7 @@
     "Price":180
   },
   {
+    "partNumber":"P1111111751",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5128,6 +5769,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111752",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5136,6 +5778,7 @@
     "Price":145
   },
   {
+    "partNumber":"P1111111753",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5144,6 +5787,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111754",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5152,6 +5796,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111755",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5160,6 +5805,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111756",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5168,6 +5814,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111757",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5176,6 +5823,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111758",
     "Element1":"Ni",
     "Element2":"",
     "PlatedElement":"Fe",
@@ -5184,6 +5832,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111759",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5192,6 +5841,7 @@
     "Price":535
   },
   {
+    "partNumber":"P1111111760",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5200,6 +5850,7 @@
     "Price":480
   },
   {
+    "partNumber":"P1111111761",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5208,6 +5859,7 @@
     "Price":435
   },
   {
+    "partNumber":"P1111111762",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5216,6 +5868,7 @@
     "Price":390
   },
   {
+    "partNumber":"P1111111763",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5224,6 +5877,7 @@
     "Price":350
   },
   {
+    "partNumber":"P1111111764",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5232,6 +5886,7 @@
     "Price":315
   },
   {
+    "partNumber":"P1111111765",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5240,6 +5895,7 @@
     "Price":285
   },
   {
+    "partNumber":"P1111111766",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5248,6 +5904,7 @@
     "Price":255
   },
   {
+    "partNumber":"P1111111767",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5256,6 +5913,7 @@
     "Price":230
   },
   {
+    "partNumber":"P1111111768",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5264,6 +5922,7 @@
     "Price":210
   },
   {
+    "partNumber":"P1111111769",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5272,6 +5931,7 @@
     "Price":185
   },
   {
+    "partNumber":"P1111111770",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5280,6 +5940,7 @@
     "Price":170
   },
   {
+    "partNumber":"P1111111771",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5288,6 +5949,7 @@
     "Price":150
   },
   {
+    "partNumber":"P1111111772",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5296,6 +5958,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111773",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5304,6 +5967,7 @@
     "Price":125
   },
   {
+    "partNumber":"P1111111774",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5312,6 +5976,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111775",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5320,6 +5985,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111776",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5328,6 +5994,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111777",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5336,6 +6003,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111778",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5344,6 +6012,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111779",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5352,6 +6021,7 @@
     "Price":65
   },
   {
+    "partNumber":"P1111111780",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5360,6 +6030,7 @@
     "Price":60
   },
   {
+    "partNumber":"P1111111781",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5368,6 +6039,7 @@
     "Price":55
   },
   {
+    "partNumber":"P1111111782",
     "Element1":"Pb",
     "Element2":"",
     "PlatedElement":"",
@@ -5376,6 +6048,7 @@
     "Price":50
   },
   {
+    "partNumber":"P1111111783",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5384,6 +6057,7 @@
     "Price":915
   },
   {
+    "partNumber":"P1111111784",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5392,6 +6066,7 @@
     "Price":825
   },
   {
+    "partNumber":"P1111111785",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5400,6 +6075,7 @@
     "Price":740
   },
   {
+    "partNumber":"P1111111786",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5408,6 +6084,7 @@
     "Price":665
   },
   {
+    "partNumber":"P1111111787",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5416,6 +6093,7 @@
     "Price":600
   },
   {
+    "partNumber":"P1111111788",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5424,6 +6102,7 @@
     "Price":540
   },
   {
+    "partNumber":"P1111111789",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5432,6 +6111,7 @@
     "Price":485
   },
   {
+    "partNumber":"P1111111790",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5440,6 +6120,7 @@
     "Price":435
   },
   {
+    "partNumber":"P1111111791",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5448,6 +6129,7 @@
     "Price":395
   },
   {
+    "partNumber":"P1111111792",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5456,6 +6138,7 @@
     "Price":355
   },
   {
+    "partNumber":"P1111111793",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5464,6 +6147,7 @@
     "Price":320
   },
   {
+    "partNumber":"P1111111794",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5472,6 +6156,7 @@
     "Price":285
   },
   {
+    "partNumber":"P1111111795",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5480,6 +6165,7 @@
     "Price":260
   },
   {
+    "partNumber":"P1111111796",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5488,6 +6174,7 @@
     "Price":230
   },
   {
+    "partNumber":"P1111111797",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5496,6 +6183,7 @@
     "Price":210
   },
   {
+    "partNumber":"P1111111798",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5504,6 +6192,7 @@
     "Price":190
   },
   {
+    "partNumber":"P1111111799",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5512,6 +6201,7 @@
     "Price":170
   },
   {
+    "partNumber":"P1111111800",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5520,6 +6210,7 @@
     "Price":150
   },
   {
+    "partNumber":"P1111111801",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5528,6 +6219,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111802",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5536,6 +6228,7 @@
     "Price":125
   },
   {
+    "partNumber":"P1111111803",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5544,6 +6237,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111804",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5552,6 +6246,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111805",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5560,6 +6255,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111806",
     "Element1":"Pb",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -5568,6 +6264,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111807",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5576,6 +6273,7 @@
     "Price":985
   },
   {
+    "partNumber":"P1111111808",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5584,6 +6282,7 @@
     "Price":885
   },
   {
+    "partNumber":"P1111111809",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5592,6 +6291,7 @@
     "Price":800
   },
   {
+    "partNumber":"P1111111810",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5600,6 +6300,7 @@
     "Price":720
   },
   {
+    "partNumber":"P1111111811",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5608,6 +6309,7 @@
     "Price":645
   },
   {
+    "partNumber":"P1111111812",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5616,6 +6318,7 @@
     "Price":580
   },
   {
+    "partNumber":"P1111111813",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5624,6 +6327,7 @@
     "Price":525
   },
   {
+    "partNumber":"P1111111814",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5632,6 +6336,7 @@
     "Price":470
   },
   {
+    "partNumber":"P1111111815",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5640,6 +6345,7 @@
     "Price":425
   },
   {
+    "partNumber":"P1111111816",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5648,6 +6354,7 @@
     "Price":380
   },
   {
+    "partNumber":"P1111111817",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5656,6 +6363,7 @@
     "Price":345
   },
   {
+    "partNumber":"P1111111818",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5664,6 +6372,7 @@
     "Price":310
   },
   {
+    "partNumber":"P1111111819",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5672,6 +6381,7 @@
     "Price":280
   },
   {
+    "partNumber":"P1111111820",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5680,6 +6390,7 @@
     "Price":250
   },
   {
+    "partNumber":"P1111111821",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5688,6 +6399,7 @@
     "Price":225
   },
   {
+    "partNumber":"P1111111822",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5696,6 +6408,7 @@
     "Price":205
   },
   {
+    "partNumber":"P1111111823",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5704,6 +6417,7 @@
     "Price":185
   },
   {
+    "partNumber":"P1111111824",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5712,6 +6426,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111825",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5720,6 +6435,7 @@
     "Price":150
   },
   {
+    "partNumber":"P1111111826",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5728,6 +6444,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111827",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5736,6 +6453,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111828",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5744,6 +6462,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111829",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5752,6 +6471,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111830",
     "Element1":"Pd",
     "Element2":"",
     "PlatedElement":"",
@@ -5760,6 +6480,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111831",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5768,6 +6489,7 @@
     "Price":725
   },
   {
+    "partNumber":"P1111111832",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5776,6 +6498,7 @@
     "Price":650
   },
   {
+    "partNumber":"P1111111833",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5784,6 +6507,7 @@
     "Price":585
   },
   {
+    "partNumber":"P1111111834",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5792,6 +6516,7 @@
     "Price":525
   },
   {
+    "partNumber":"P1111111835",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5800,6 +6525,7 @@
     "Price":475
   },
   {
+    "partNumber":"P1111111836",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5808,6 +6534,7 @@
     "Price":425
   },
   {
+    "partNumber":"P1111111837",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5816,6 +6543,7 @@
     "Price":385
   },
   {
+    "partNumber":"P1111111838",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5824,6 +6552,7 @@
     "Price":345
   },
   {
+    "partNumber":"P1111111839",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5832,6 +6561,7 @@
     "Price":310
   },
   {
+    "partNumber":"P1111111840",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5840,6 +6570,7 @@
     "Price":280
   },
   {
+    "partNumber":"P1111111841",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5848,6 +6579,7 @@
     "Price":250
   },
   {
+    "partNumber":"P1111111842",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5856,6 +6588,7 @@
     "Price":225
   },
   {
+    "partNumber":"P1111111843",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5864,6 +6597,7 @@
     "Price":205
   },
   {
+    "partNumber":"P1111111844",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5872,6 +6606,7 @@
     "Price":185
   },
   {
+    "partNumber":"P1111111845",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5880,6 +6615,7 @@
     "Price":165
   },
   {
+    "partNumber":"P1111111846",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5888,6 +6624,7 @@
     "Price":150
   },
   {
+    "partNumber":"P1111111847",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5896,6 +6633,7 @@
     "Price":135
   },
   {
+    "partNumber":"P1111111848",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5904,6 +6642,7 @@
     "Price":120
   },
   {
+    "partNumber":"P1111111849",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5912,6 +6651,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111850",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5920,6 +6660,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111851",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5928,6 +6669,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111852",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5936,6 +6678,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111853",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5944,6 +6687,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111854",
     "Element1":"Rh",
     "Element2":"",
     "PlatedElement":"",
@@ -5952,6 +6696,7 @@
     "Price":65
   },
   {
+    "partNumber":"P1111111855",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -5960,6 +6705,7 @@
     "Price":685
   },
   {
+    "partNumber":"P1111111856",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -5968,6 +6714,7 @@
     "Price":620
   },
   {
+    "partNumber":"P1111111857",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -5976,6 +6723,7 @@
     "Price":555
   },
   {
+    "partNumber":"P1111111858",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -5984,6 +6732,7 @@
     "Price":500
   },
   {
+    "partNumber":"P1111111859",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -5992,6 +6741,7 @@
     "Price":450
   },
   {
+    "partNumber":"P1111111860",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6000,6 +6750,7 @@
     "Price":405
   },
   {
+    "partNumber":"P1111111861",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6008,6 +6759,7 @@
     "Price":365
   },
   {
+    "partNumber":"P1111111862",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6016,6 +6768,7 @@
     "Price":330
   },
   {
+    "partNumber":"P1111111863",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6024,6 +6777,7 @@
     "Price":295
   },
   {
+    "partNumber":"P1111111864",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6032,6 +6786,7 @@
     "Price":265
   },
   {
+    "partNumber":"P1111111865",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6040,6 +6795,7 @@
     "Price":240
   },
   {
+    "partNumber":"P1111111866",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6048,6 +6804,7 @@
     "Price":215
   },
   {
+    "partNumber":"P1111111867",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6056,6 +6813,7 @@
     "Price":195
   },
   {
+    "partNumber":"P1111111868",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6064,6 +6822,7 @@
     "Price":175
   },
   {
+    "partNumber":"P1111111869",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6072,6 +6831,7 @@
     "Price":155
   },
   {
+    "partNumber":"P1111111870",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6080,6 +6840,7 @@
     "Price":140
   },
   {
+    "partNumber":"P1111111871",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6088,6 +6849,7 @@
     "Price":125
   },
   {
+    "partNumber":"P1111111872",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6096,6 +6858,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111873",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6104,6 +6867,7 @@
     "Price":105
   },
   {
+    "partNumber":"P1111111874",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6112,6 +6876,7 @@
     "Price":95
   },
   {
+    "partNumber":"P1111111875",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6120,6 +6885,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111876",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6128,6 +6894,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111877",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6136,6 +6903,7 @@
     "Price":70
   },
   {
+    "partNumber":"P1111111878",
     "Element1":"Ru",
     "Element2":"",
     "PlatedElement":"",
@@ -6144,6 +6912,7 @@
     "Price":60
   },
   {
+    "partNumber":"P1111111879",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6152,6 +6921,7 @@
     "Price":605
   },
   {
+    "partNumber":"P1111111880",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6160,6 +6930,7 @@
     "Price":545
   },
   {
+    "partNumber":"P1111111881",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6168,6 +6939,7 @@
     "Price":490
   },
   {
+    "partNumber":"P1111111882",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6176,6 +6948,7 @@
     "Price":440
   },
   {
+    "partNumber":"P1111111883",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6184,6 +6957,7 @@
     "Price":395
   },
   {
+    "partNumber":"P1111111884",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6192,6 +6966,7 @@
     "Price":355
   },
   {
+    "partNumber":"P1111111885",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6200,6 +6975,7 @@
     "Price":320
   },
   {
+    "partNumber":"P1111111886",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6208,6 +6984,7 @@
     "Price":290
   },
   {
+    "partNumber":"P1111111887",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6216,6 +6993,7 @@
     "Price":260
   },
   {
+    "partNumber":"P1111111888",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6224,6 +7002,7 @@
     "Price":235
   },
   {
+    "partNumber":"P1111111889",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6232,6 +7011,7 @@
     "Price":210
   },
   {
+    "partNumber":"P1111111890",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6240,6 +7020,7 @@
     "Price":190
   },
   {
+    "partNumber":"P1111111891",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6248,6 +7029,7 @@
     "Price":170
   },
   {
+    "partNumber":"P1111111892",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6256,6 +7038,7 @@
     "Price":155
   },
   {
+    "partNumber":"P1111111893",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6264,6 +7047,7 @@
     "Price":140
   },
   {
+    "partNumber":"P1111111894",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6272,6 +7056,7 @@
     "Price":125
   },
   {
+    "partNumber":"P1111111895",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6280,6 +7065,7 @@
     "Price":110
   },
   {
+    "partNumber":"P1111111896",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6288,6 +7074,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111897",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6296,6 +7083,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111898",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6304,6 +7092,7 @@
     "Price":80
   },
   {
+    "partNumber":"P1111111899",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6312,6 +7101,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111900",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6320,6 +7110,7 @@
     "Price":65
   },
   {
+    "partNumber":"P1111111901",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6328,6 +7119,7 @@
     "Price":60
   },
   {
+    "partNumber":"P1111111902",
     "Element1":"Sn",
     "Element2":"",
     "PlatedElement":"",
@@ -6336,6 +7128,7 @@
     "Price":55
   },
   {
+    "partNumber":"P1111111903",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6344,6 +7137,7 @@
     "Price":680
   },
   {
+    "partNumber":"P1111111904",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6352,6 +7146,7 @@
     "Price":610
   },
   {
+    "partNumber":"P1111111905",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6360,6 +7155,7 @@
     "Price":550
   },
   {
+    "partNumber":"P1111111906",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6368,6 +7164,7 @@
     "Price":495
   },
   {
+    "partNumber":"P1111111907",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6376,6 +7173,7 @@
     "Price":445
   },
   {
+    "partNumber":"P1111111908",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6384,6 +7182,7 @@
     "Price":400
   },
   {
+    "partNumber":"P1111111909",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6392,6 +7191,7 @@
     "Price":360
   },
   {
+    "partNumber":"P1111111910",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6400,6 +7200,7 @@
     "Price":325
   },
   {
+    "partNumber":"P1111111911",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6408,6 +7209,7 @@
     "Price":290
   },
   {
+    "partNumber":"P1111111912",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6416,6 +7218,7 @@
     "Price":265
   },
   {
+    "partNumber":"P1111111913",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6424,6 +7227,7 @@
     "Price":235
   },
   {
+    "partNumber":"P1111111914",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6432,6 +7236,7 @@
     "Price":215
   },
   {
+    "partNumber":"P1111111915",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6440,6 +7245,7 @@
     "Price":190
   },
   {
+    "partNumber":"P1111111916",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6448,6 +7254,7 @@
     "Price":170
   },
   {
+    "partNumber":"P1111111917",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6456,6 +7263,7 @@
     "Price":155
   },
   {
+    "partNumber":"P1111111918",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6464,6 +7272,7 @@
     "Price":140
   },
   {
+    "partNumber":"P1111111919",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6472,6 +7281,7 @@
     "Price":125
   },
   {
+    "partNumber":"P1111111920",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6480,6 +7290,7 @@
     "Price":115
   },
   {
+    "partNumber":"P1111111921",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6488,6 +7299,7 @@
     "Price":100
   },
   {
+    "partNumber":"P1111111922",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6496,6 +7308,7 @@
     "Price":90
   },
   {
+    "partNumber":"P1111111923",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6504,6 +7317,7 @@
     "Price":85
   },
   {
+    "partNumber":"P1111111924",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6512,6 +7326,7 @@
     "Price":75
   },
   {
+    "partNumber":"P1111111925",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
@@ -6520,6 +7335,7 @@
     "Price":65
   },
   {
+    "partNumber":"P1111111926",
     "Element1":"Sn",
     "Element2":"Cu",
     "PlatedElement":"",
