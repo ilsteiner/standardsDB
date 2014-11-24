@@ -67,8 +67,9 @@ create table tbStandardType (
 
 create table tbCertification (
 	certNumber char(11) primary key,
-	technicianID char(2) not null,
-	statusID char(2) not null,
+	technicianID char(3) not null,
+	statusID char(1) not null,
+	certDate date,
 	constraint format_certNumber
 	check (REGEXP_LIKE(certNumber,'C[0-9]{10}')),
 	constraint fk_technician_tbCertification
