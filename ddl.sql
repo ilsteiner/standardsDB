@@ -135,7 +135,7 @@ create table tbStandardComponent (
 	serialNumber char(11),
 	symbol varchar2(3),
 	partNumber char(11) not null,
-	composition number(2,0) not null,
+	composition number(3,0) not null,
 	constraint format_composition
 	check (composition between 1 and 100),
 	constraint fk_serialNumber_tbStandardComp
