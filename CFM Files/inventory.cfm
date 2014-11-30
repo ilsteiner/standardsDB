@@ -1,4 +1,4 @@
-<cfparam name="symbolList" default="" type="string">
+<cfparam name="symbolList" default="" type="string" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)">
 <cfparam name="minThick" default="0" type="integer">
 <cfparam name="maxThick" default="" type="integer">
 

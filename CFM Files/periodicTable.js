@@ -1,5 +1,17 @@
 $(".sold").click(function() {
 	$(this).toggleClass('selected');
+
+	//Clear the hidden input for the selected elements
+	$("#elements").val("");
+
+	//Put the text of the symbol for each selected element into an array
+	var selElems = $(".selected > .symbol").map(function(){
+						return $(this).text();
+					}).get();
+	
+	//Convert that array to a comma delimited list and set it as the value of the hidden input
+	$("#elements").val(selElems.join());
+	
 });
 
 //Code for the jQueryUI slider

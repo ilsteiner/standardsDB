@@ -96,6 +96,7 @@
                                     </div>
                                 </div>
                                 <div id="rangeSlider"></div>
+                                <input type="hidden" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
                             </form>
                         </td>
                     <cfelseif (#getElements.atomicNumber[i]# eq 4) or (#getElements.atomicNumber[i]# eq 12)>
