@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="periodicTable.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
@@ -54,7 +55,7 @@
                     <!-- These are the blank spots for the lanthinides and actinides.
                         They get a blank div so that they still take up room.
                     -->
-                    <td class="element">
+                    <td class="element transition">
                         &nbsp;
                     </td>
                 <cfelse>
@@ -81,33 +82,9 @@
                     </td>
 
                     <cfif #getElements.atomicNumber[i]# eq 1>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer" colspan="16">&nbsp;</td>
                     <cfelseif (#getElements.atomicNumber[i]# eq 4) or (#getElements.atomicNumber[i]# eq 12)>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
-                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer" colspan="10">&nbsp;</td>
                     </cfif>
 
                     <!-- If this is the end of a row, end the row. -->
