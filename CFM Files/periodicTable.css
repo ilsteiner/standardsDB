@@ -1,37 +1,28 @@
 #pTable{
-	display: table;
 	width: 100%;
-	float: right;
 }
 
 .elemRow {
-	display: block;
 	width: 100%;
 }
 
 .element{
-	display: table-cell;
 	width: 5.5%;
-	margin: 2px;
+	margin: 2em;
 	background-color: green;
-}
-
-.spacer_16{
-	display: table-cell;
-	width: 88.89%;
-}
-
-.spacer_10{
-	display: table-cell;
-	width: 55.5%;
+	opacity: .65;
 }
 
 .atomicNumber,.name,.density{
-	font-size: 70%;
+	font-size: 85%;
 }
 
 .symbol{
-	font-size: 150%;
+	font-size: 175%;
 	font-weight: bold;
+}
+
+.sold{
+	opacity: 1;
 }
 

@@ -32,11 +32,21 @@
         order by atomicNumber
         </cfquery>
 
+        <cfquery
+                name="getElementsSold"
+                 datasource="#Request.DSN#"
+                 username="#Request.username#"
+                 password="#Request.password#">
+        select distinct
+        symbol
+        from tbPartComponent
+        </cfquery>
+
         <cfset firstEl="1,3,11,19,37,55,57,87,89">
         <cfset lastEl="2,10,18,36,54,71,86,103,118">
         <cfset hasSpace="1,4,12">
 
-        <div id="pTable">
+        <table id="pTable">
             <cfloop from="1" to=#getElements.recordcount# index="i" step="1">
                 <cfif (#getElements.atomicNumber[i]# gt 57 and #getElements.atomicNumber[i]# lte 71) or (#getElements.atomicNumber[i]# gt 89 and #getElements.atomicNumber[i]# lte 103)>
                     <!-- These are lanthinides and actinides...I'm just going to ignore them for the current implementation. -->
@@ -44,31 +54,65 @@
                     <!-- These are the blank spots for the lanthinides and actinides.
                         They get a blank div so that they still take up room.
                     -->
-                    <div class="element">
+                    <td class="element">
                         &nbsp;
-                    </div>
+                    </td>
                 <cfelse>
-                    <!-- If this is the start of a row, begin a row div. -->
+                    <!-- If this is the start of a row, begin a row. -->
                     <cfif ListFind(firstEl,#getElements.atomicNumber[i]#) neq 0>
-                        <div class="elemRow">
+                        <tr class="elemRow">
                     </cfif>
 
-                    <div class="element">
+                    <td class="element
+                    <cfif ListFind(ValueList(getElementsSold.symbol),#getElements.symbol[i]#) neq 0>
+                        <cfoutput> sold</cfoutput>
+                    </cfif>">
                         <span class="atomicNumber"><cfoutput>#getElements.atomicNumber[i]#</cfoutput></span>
+                        <br/>
                         <span class="symbol"><cfoutput>#getElements.symbol[i]#</cfoutput></span>
+                        <br/>
                         <span class="name"><cfoutput>#getElements.name[i]#</cfoutput></span>
-                        <span class="density"><cfoutput>#getElements.density[i]#</cfoutput></span>
-                    </div>
+                        <br/>
+                        <cfif getElements.density[i] eq "">
+                        <span class="density">&nbsp;</span>
+                        <cfelse>
+                            <span class="density"><cfoutput>#getElements.density[i]# g/cc</cfoutput></span>
+                        </cfif>
+                    </td>
 
                     <cfif #getElements.atomicNumber[i]# eq 1>
-                        <div class="spacer_16">&nbsp;</div>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
                     <cfelseif (#getElements.atomicNumber[i]# eq 4) or (#getElements.atomicNumber[i]# eq 12)>
-                        <div class="spacer_10">&nbsp;</div>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
+                        <td class="spacer">&nbsp;</td>
                     </cfif>
 
-                    <!-- If this is the end of a row, end the row div. -->
+                    <!-- If this is the end of a row, end the row. -->
                     <cfif ListFind(lastEl,#getElements.atomicNumber[i]#) neq 0>
-                        </div>
+                        </tr>
                     </cfif>
                 </cfif>
             </cfloop>
