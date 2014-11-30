@@ -13,6 +13,10 @@
 	opacity: .65;
 }
 
+.element.transition{
+	opacity: 0;
+}
+
 .atomicNumber,.name,.density{
 	font-size: 85%;
 }
@@ -29,9 +33,39 @@
 
 .sold:hover{
 	cursor: pointer;
+	background-color: #68B389;
 }
 
-.selected{
-	background-color: RoyalBlue;
+.selected,.selected:hover{
+	background-color: #3C7EB3;
 }
 
+#sliderForm{
+	margin: .5em;
+}
+
+#formInputs,#rangeSlider{
+	margin-left: 8%;
+	margin-right: 32%;
+}
+
+#minThick,#maxThick{
+	width: 4em;
+}
+
+#rangeSlider{
+	margin-top: 1em;
+}
+
+#formInputs{
+	width: 100%;
+}
+
+.rangeInput{
+	width: 50%;
+	display: inline;
+}
+
+.marginLeft{
+	margin-left: 32%;
+}

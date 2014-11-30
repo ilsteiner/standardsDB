@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="periodicTable.css">
         <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
@@ -82,7 +83,21 @@
                     </td>
 
                     <cfif #getElements.atomicNumber[i]# eq 1>
-                        <td class="spacer" colspan="16">&nbsp;</td>
+                        <td class="spacer" colspan="16">
+                            <form name="getRange" id="sliderForm">
+                                <div id="formInputs">
+                                    <div class="rangeInput">
+                                        <label for="minThick">Minimum thickness</label>
+                                        <input type="number" id="minThick" min="2" max="1000" step="2">μin
+                                    </div>
+                                    <div class="rangeInput marginLeft">
+                                        <label for="maxThick">Maximum thickness</label>
+                                        <input type="number" id="maxThick" min="2" max="1000" step="2">μin
+                                    </div>
+                                </div>
+                                <div id="rangeSlider"></div>
+                            </form>
+                        </td>
                     <cfelseif (#getElements.atomicNumber[i]# eq 4) or (#getElements.atomicNumber[i]# eq 12)>
                         <td class="spacer" colspan="10">&nbsp;</td>
                     </cfif>
@@ -97,6 +112,8 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jqueryui-1.11.2.min.js"><\/script>')</script>
         <script type="text/javascript" src="periodicTable.js"></script>
     </body>
 </html>
