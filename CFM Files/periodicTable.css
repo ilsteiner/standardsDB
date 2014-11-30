@@ -9,7 +9,7 @@
 .element{
 	width: 5.5%;
 	margin: 2em;
-	background-color: green;
+	background-color: LightGray;
 	opacity: .65;
 }
 
@@ -23,6 +23,15 @@
 }
 
 .sold{
+	background-color: MediumSeaGreen;
 	opacity: 1;
+}
+
+.sold:hover{
+	cursor: pointer;
+}
+
+.selected{
+	background-color: RoyalBlue;
 }
 
