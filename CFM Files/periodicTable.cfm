@@ -85,10 +85,10 @@
                             <form name="sliderForm" id="sliderForm" action="inventory.cfm" method="POST">
                                 <div id="formInputs">
                                     <div class="rangeInput">
-                                        <label for="minThick">Minimum thickness</label>
+                                        <label for="minThick left">Minimum thickness</label>
                                         <input type="number" name="minThick" id="minThick" min="2" max="1000" step="2"/>μin
                                     </div>
-                                    <div class="rangeInput marginLeft">
+                                    <div class="rangeInput right">
                                         <label for="maxThick">Maximum thickness</label>
                                         <input type="number" name="maxThick" id="maxThick" min="2" max="1000" step="2"/>μin
                                     </div>
@@ -98,16 +98,16 @@
                             </form>
 
                             <form name="searchPart" id="searchPart" action="allParts.cfm" method="POST">
-                                <div class="ui-widget">
+                                <div>
                                     <label for="partialPart">Search by part number</label>
                                     <input type="text" maxlength="11" name="partialPart" id="partialPart"/>
                                 </div>
                             </form>
                         </td>
                     <cfelseif #getElements.atomicNumber[i]# eq 4>
-                        <td class="spacer" id="formResults" colspan="10">&nbsp;</td>
-                    <cfelseif #getElements.atomicNumber[i]# eq 12>
-                        <td class="spacer" colspan="10">&nbsp;</td>
+                        <td class="spacer" colspan="10" rowspan="2"><div id="formResults">&nbsp;</div></td>
+                    <!--- <cfelseif #getElements.atomicNumber[i]# eq 12>
+                        <td class="spacer" colspan="10">&nbsp;</td> --->
                     </cfif>
 
                     <!--- If this is the end of a row, end the row. --->

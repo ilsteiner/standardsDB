@@ -1,13 +1,15 @@
 #pTable{
-	width: 100%;
+	width: 100vw;
 }
 
 .elemRow {
-	width: 100%;
+	width: 100vw;
 }
 
 .element{
-	width: 5.5%;
+	width: 5.5vw;
+	height: 5.5vw;
+	max-height: 5.5vw;
 	margin: 2em;
 	background-color: LightGray;
 	opacity: .65;
@@ -18,11 +20,12 @@
 }
 
 .atomicNumber,.name,.density{
-	font-size: 85%;
+	/*font-size: 85%;*/
+	font-size: .7vw;
 }
 
 .symbol{
-	font-size: 175%;
+	font-size: 1.8vw;
 	font-weight: bold;
 }
 
@@ -41,12 +44,26 @@
 }
 
 #sliderForm{
-	margin: .5em;
+	width: 52vw;
+	margin: 1vw 10vw .1vw 7vw;
 }
 
-#formInputs,#rangeSlider{
-	margin-left: 8%;
-	margin-right: 32%;
+#searchPart{
+	width: 52vw;
+	margin: 1vw 3vw 0vw 14vw;
+	font-size: 1.5vw;
+}
+
+#partialPart{
+	width: 12em;
+}
+
+#formResults{
+	width: calc(5.5vw * 4);
+	height: calc(5.5vw *2);
+	margin-left: 14vw;
+	margin-top: .5vw;
+	overflow-y: auto;
 }
 
 #minThick,#maxThick{
@@ -55,6 +72,8 @@
 
 #rangeSlider{
 	margin-top: 1em;
+	width: 100%;
+	clear: both;
 }
 
 #formInputs{
@@ -62,10 +81,23 @@
 }
 
 .rangeInput{
-	width: 50%;
 	display: inline;
 }
 
 .marginLeft{
-	margin-left: 32%;
+	margin-left: 4vw;
+}
+
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+}
+
+@media (max-width: 980px){
+	#sliderForm{
+		font-size: 1.5vw;
+	}
 }

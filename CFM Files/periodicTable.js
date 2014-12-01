@@ -62,10 +62,17 @@ $(document).ready(function() {
 //Query the DB for the parts associated with the parameters selected
 function updateList() {
 	$.post('inventory.cfm', $('input').serialize(),function(data,status){
-		$("#formResults").html(data);
+		//Remove the headers if no elements are selected
+		if($("#elements").val().length === 0){
+			$("#formResults").html("");
+		}
+		//Otherwise, return the data
+		else{
+			$("#formResults").html(data);
+		}
 	});
 	return false;
-}
+};
 
 /* I can't get this working and don't have time to fix it.
 //Autocomplete the part number lookup
