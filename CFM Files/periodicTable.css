@@ -26,12 +26,12 @@
 	font-weight: bold;
 }
 
-.sold{
+.active{
 	background-color: MediumSeaGreen;
 	opacity: 1;
 }
 
-.sold:hover{
+.active:hover{
 	cursor: pointer;
 	background-color: #68B389;
 }

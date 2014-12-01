@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="main.css">
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!--- Place favicon.ico and apple-touch-icon.png in the root directory --->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -51,24 +51,22 @@
         <table id="pTable">
             <cfloop from="1" to=#getElements.recordcount# index="i" step="1">
                 <cfif (#getElements.atomicNumber[i]# gt 57 and #getElements.atomicNumber[i]# lte 71) or (#getElements.atomicNumber[i]# gt 89 and #getElements.atomicNumber[i]# lte 103)>
-                    <!-- These are lanthinides and actinides...I'm just going to ignore them for the current implementation. -->
+                    <!--- These are lanthinides and actinides...I'm just going to ignore them for the current implementation. --->
                 <cfelseif #getElements.atomicNumber[i]# eq 57 or #getElements.atomicNumber[i]# eq 89>
-                    <!-- These are the blank spots for the lanthinides and actinides.
+                    <!--- These are the blank spots for the lanthinides and actinides.
                         They get a blank div so that they still take up room.
-                    -->
+                    --->
                     <td class="element transition">
                         &nbsp;
                     </td>
                 <cfelse>
-                    <!-- If this is the start of a row, begin a row. -->
+                    <!--- If this is the start of a row, begin a row. --->
                     <cfif ListFind(firstEl,#getElements.atomicNumber[i]#) neq 0>
                         <tr class="elemRow">
                     </cfif>
 
-                    <td class="element
-                    <cfif ListFind(ValueList(getElementsSold.symbol),#getElements.symbol[i]#) neq 0>
-                        <cfoutput> sold</cfoutput>
-                    </cfif>">
+                    <td class="element<cfif ListFind(ValueList(getElementsSold.symbol),#getElements.symbol[i]#) neq 0>
+                        <cfoutput> active</cfoutput></cfif>">
                         <span class="atomicNumber"><cfoutput>#getElements.atomicNumber[i]#</cfoutput></span>
                         <br/>
                         <span class="symbol"><cfoutput>#getElements.symbol[i]#</cfoutput></span>
@@ -84,26 +82,35 @@
 
                     <cfif #getElements.atomicNumber[i]# eq 1>
                         <td class="spacer" colspan="16">
-                            <form name="getRange" id="sliderForm">
+                            <form name="sliderForm" id="sliderForm" action="inventory.cfm" method="POST">
                                 <div id="formInputs">
                                     <div class="rangeInput">
                                         <label for="minThick">Minimum thickness</label>
-                                        <input type="number" id="minThick" min="2" max="1000" step="2">μin
+                                        <input type="number" name="minThick" id="minThick" min="2" max="1000" step="2"/>μin
                                     </div>
                                     <div class="rangeInput marginLeft">
                                         <label for="maxThick">Maximum thickness</label>
-                                        <input type="number" id="maxThick" min="2" max="1000" step="2">μin
+                                        <input type="number" name="maxThick" id="maxThick" min="2" max="1000" step="2"/>μin
                                     </div>
                                 </div>
                                 <div id="rangeSlider"></div>
-                                <input type="hidden" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
+                                <input type="hidden" name="elements" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
+                            </form>
+
+                            <form name="searchPart" id="searchPart" action="allParts.cfm" method="POST">
+                                <div class="ui-widget">
+                                    <label for="partialPart">Search by part number</label>
+                                    <input type="text" maxlength="11" name="partialPart" id="partialPart"/>
+                                </div>
                             </form>
                         </td>
-                    <cfelseif (#getElements.atomicNumber[i]# eq 4) or (#getElements.atomicNumber[i]# eq 12)>
+                    <cfelseif #getElements.atomicNumber[i]# eq 4>
+                        <td class="spacer" id="formResults" colspan="10">&nbsp;</td>
+                    <cfelseif #getElements.atomicNumber[i]# eq 12>
                         <td class="spacer" colspan="10">&nbsp;</td>
                     </cfif>
 
-                    <!-- If this is the end of a row, end the row. -->
+                    <!--- If this is the end of a row, end the row. --->
                     <cfif ListFind(lastEl,#getElements.atomicNumber[i]#) neq 0>
                         </tr>
                     </cfif>
