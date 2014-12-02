@@ -24,7 +24,8 @@
                 name="getElements"
                  datasource="#Request.DSN#"
                  username="#Request.username#"
-                 password="#Request.password#">
+                 password="#Request.password#"
+                 cachedwithin="#CreateTimeSpan(2,0,0,0)#">
         select
         symbol,
         to_number(atomicNumber) atomicNumber,
@@ -38,7 +39,8 @@
                 name="getElementsSold"
                  datasource="#Request.DSN#"
                  username="#Request.username#"
-                 password="#Request.password#">
+                 password="#Request.password#"
+                 cachedwithin="#CreateTimeSpan(0,12,0,0)#">
         select distinct
         symbol
         from tbPartComponent
