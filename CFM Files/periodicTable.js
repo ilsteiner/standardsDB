@@ -17,17 +17,27 @@ $(".active").click(function() {
 	$("#sliderForm").submit();
 });
 
+$("input").on('input change',function(){
+	console.log("Input changed!");
+	$("#sliderForm").submit();
+});
+
+$("#rangeSlider").on("slidestop", function(e){
+    $("#sliderForm").submit();
+});
+
 //Code for the jQueryUI slider
 $(function() {
     $( "#rangeSlider" ).slider({
       range: true,
       min: 2,
-      max: 1000,
+      max: 1002,
       step: 2,
       values: [ 2, 500 ],
       slide: function( event, ui ) {
       	$("#minThick").val(ui.values[ 0 ]);
       	$("#maxThick").val(ui.values[ 1 ]);
+      	checkInfinite();
       }
     });
     $( "#minThick" ).val($( "#rangeSlider" ).slider( "values", 0 ));
@@ -63,7 +73,7 @@ $(document).ready(function() {
 function updateList() {
 	$.post('inventory.cfm', $('input').serialize(),function(data,status){
 		//Remove the headers if no elements are selected
-		if($("#elements").val().length === 0){
+		if(($("#elements").val().length === 0) && $("#partialPart").val().length === 0){
 			$("#formResults").html("");
 		}
 		//Otherwise, return the data
@@ -73,6 +83,27 @@ function updateList() {
 	});
 	return false;
 };
+
+//If one of the values goes to or from 1002 or greater, make it look infinite
+$("#minThick,#maxThick").change(function(){
+	checkInfinite();
+});
+
+function checkInfinite(){
+	if($("#minThick").val() > 1000){
+		$("#minThick").addClass('infinity');
+	}
+	else{
+		$("#minThick").removeClass('infinity');
+	}
+
+	if($("#maxThick").val() > 1000){
+		$("#maxThick").addClass('infinity');
+	}
+	else{
+		$("#maxThick").removeClass('infinity');
+	}
+}
 
 /* I can't get this working and don't have time to fix it.
 //Autocomplete the part number lookup

@@ -53,8 +53,8 @@
                 <cfif (#getElements.atomicNumber[i]# gt 57 and #getElements.atomicNumber[i]# lte 71) or (#getElements.atomicNumber[i]# gt 89 and #getElements.atomicNumber[i]# lte 103)>
                     <!--- These are lanthinides and actinides...I'm just going to ignore them for the current implementation. --->
                 <cfelseif #getElements.atomicNumber[i]# eq 57 or #getElements.atomicNumber[i]# eq 89>
-                    <!--- These are the blank spots for the lanthinides and actinides.
-                        They get a blank div so that they still take up room.
+                    <!--- These are the blank spots for the lanthinide and actinide popouts.
+                        They get a blank cell so that they still take up room.
                     --->
                     <td class="element transition">
                         &nbsp;
@@ -86,28 +86,30 @@
                                 <div id="formInputs">
                                     <div class="rangeInput">
                                         <label for="minThick left">Minimum thickness</label>
-                                        <input type="number" name="minThick" id="minThick" min="2" max="1000" step="2"/>μin
+                                        <input type="number" name="minThick" id="minThick" min="2" max="1002" step="2"/>μin
                                     </div>
+
+                                    <div class="rangeInput mid">
+                                        <label class="checkLabel"><input type="checkbox" checked name="types" value="F">Foils</label>
+                                        <label class="checkLabel"><input type="checkbox" checked name="types" value="P">Plated standards</label>
+                                    </div>
+
                                     <div class="rangeInput right">
                                         <label for="maxThick">Maximum thickness</label>
-                                        <input type="number" name="maxThick" id="maxThick" min="2" max="1000" step="2"/>μin
+                                        <input type="number" name="maxThick" id="maxThick" min="2" max="1002" step="2"/>μin
                                     </div>
                                 </div>
                                 <div id="rangeSlider"></div>
                                 <input type="hidden" name="elements" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
                             </form>
-
-                            <form name="searchPart" id="searchPart" action="allParts.cfm" method="POST">
-                                <div>
+                                <div id="searchPart">
                                     <label for="partialPart">Search by part number</label>
-                                    <input type="text" maxlength="11" name="partialPart" id="partialPart"/>
+                                    <input type="text" maxlength="11" name="partialPart" id="partialPart">
                                 </div>
                             </form>
                         </td>
                     <cfelseif #getElements.atomicNumber[i]# eq 4>
                         <td class="spacer" colspan="10" rowspan="2"><div id="formResults">&nbsp;</div></td>
-                    <!--- <cfelseif #getElements.atomicNumber[i]# eq 12>
-                        <td class="spacer" colspan="10">&nbsp;</td> --->
                     </cfif>
 
                     <!--- If this is the end of a row, end the row. --->

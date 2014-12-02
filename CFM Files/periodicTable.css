@@ -20,7 +20,6 @@
 }
 
 .atomicNumber,.name,.density{
-	/*font-size: 85%;*/
 	font-size: .7vw;
 }
 
@@ -70,6 +69,14 @@
 	width: 4em;
 }
 
+.infinity{
+	color: rgba(0, 0, 0, 0.0);
+	background-image: url("./images/infinity.png");
+	background-size: 60% 70%;
+	background-position: center; 
+	background-repeat: no-repeat;
+}
+
 #rangeSlider{
 	margin-top: 1em;
 	width: 100%;
@@ -78,6 +85,11 @@
 
 #formInputs{
 	width: 100%;
+}
+
+.checkLabel{
+	padding: .5em;
+	cursor: pointer;
 }
 
 .rangeInput{
@@ -96,8 +108,12 @@
 	float: left;
 }
 
-@media (max-width: 980px){
+.mid{
+	margin-left: 7.5vw;
+}
+
+@media (max-width: 1643px){
 	#sliderForm{
-		font-size: 1.5vw;
+		font-size: 1vw;
 	}
 }
