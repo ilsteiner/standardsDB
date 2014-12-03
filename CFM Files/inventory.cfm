@@ -1,9 +1,10 @@
-<cfparam name="elements" default="Au" type="string" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])$)|(^([A-Z][a-z])$)">
+<cfparam name="elements" default="Au,Fe" type="string" <!--- pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])$)|(^([A-Z][a-z])$)" --->>
 <cfparam name="minThick" default="0" type="integer">
 <cfparam name="maxThick" default="1000" type="integer">
 <cfparam name="types" default="F" type="string" pattern="^([FP],)[FP]$|^[FP]$">
 <cfparam name="partialPart" default="" type="string" pattern="^[P]\d{0,10}$">
 
+<cfdump var="#elements#">
 <!---If we are including infinites, add them to the type list
 <cfif #minThick# gt 1000 or #maxThick# gt 1000>
 	#types# := #types# | ",I"
@@ -18,6 +19,7 @@
 		result="theParts">
 	SELECT distinct
 		   main.partNumber,
+		   main.symbol,
 	       p.stock,
 	       p.targetValue,
 	       p.price,
@@ -26,6 +28,7 @@
 	       p.custom
 	FROM tbPartComponent main inner join tbPart p on p.partNumber = main.partNumber inner join tbStandardType st on p.typeID = st.typeID
 	WHERE main.partNumber <cfif len(#partialPart#) eq 11> = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#"><cfelse> LIKE <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#%"></cfif> 
+	AND main.symbol = (SELECT MAX(sub.symbol) FROM tbPartComponent sub WHERE sub.partNumber = main.partNumber)
 	</cfquery>
 <cfelse>
 	<cfquery
@@ -34,23 +37,33 @@
 		username="#Request.username#"
 		password="#Request.password#"
 		result="theParts">
-		SELECT distinct
-			   main.partNumber,
-		       p.stock,
-		       p.targetValue,
-		       p.price,
-		       st.typeDesc,
-		       p.platedElement,
-		       p.custom
-		FROM tbPartComponent main inner join tbPart p on p.partNumber = main.partNumber inner join tbStandardType st on p.typeID = st.typeID
-		WHERE main.symbol IN (<cfqueryparam cfsqltype="CF_SQL_VARCHAR" list="yes" maxlength="32" value="#elements#">)
-		  AND NOT EXISTS
-		  	(SELECT sub.partNumber
-		     FROM tbPartComponent sub
-		     WHERE sub.symbol NOT IN (<cfqueryparam cfsqltype="CF_SQL_VARCHAR" list="yes" maxlength="32" value="#elements#">)
-		     AND sub.partNumber = main.partNumber)
-		  AND p.targetValue >= <cfqueryparam cfsqltype="CF_SQL_NUMERIC" maxlength="5" value="#minThick#"> AND p.targetValue <= <cfqueryparam cfsqltype="CF_SQL_NUMERIC" maxlength="5" value="#maxThick#">
+
+		SELECT DISTINCT main.partNumber,
+		                p.stock,
+		                p.targetValue,
+		                p.price,
+		                st.typeDesc,
+		                p.platedElement,
+		                p.custom
+		FROM tbPartComponent main
+		INNER JOIN tbPart p ON main.partNumber = p.partNumber
+		INNER JOIN tbStandardType st ON p.typeID = st.typeID
+		WHERE
+		<!---Check the minimum and maximum thickness--->
+		  p.targetValue >= <cfqueryparam cfsqltype="CF_SQL_NUMERIC" maxlength="4" value="#minThick#">
+		  AND p.targetValue <= <cfqueryparam cfsqltype="CF_SQL_NUMERIC" maxlength="4" value="#maxThick#">
+		<!---Check the standard type--->
 		  AND p.typeID IN (<cfqueryparam cfsqltype="CF_SQL_VARCHAR" list="yes" maxlength="8" value="#types#">)
+		  <!---Make sure the parts returned ONLY have the exact elements selected--->
+		  AND main.partNumber IN
+		    (SELECT partNumber
+		     FROM
+		       (SELECT DISTINCT subsub.partNumber,
+		                        subsub.symbol
+		        FROM tbPartComponent subsub) sub
+		     GROUP BY partNumber HAVING listagg(symbol, ',') within
+		     GROUP (ORDER BY symbol) = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="32" value="#elements#">)
+		    ORDER BY p.targetValue	  
 	</cfquery>
 </cfif>
 
