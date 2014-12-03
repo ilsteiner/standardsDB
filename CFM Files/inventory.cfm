@@ -4,12 +4,17 @@
 <cfparam name="types" default="F" type="string" pattern="^([FP],)[FP]$|^[FP]$">
 <cfparam name="partialPart" default="P111" type="string" pattern="^[P]\d{0,10}$">
 
-<cfdump var="#elements#">
-<!---If we are including infinites, add them to the type list
-<cfif #minThick# gt 1000 or #maxThick# gt 1000>
-	#types# := #types# | ",I"
+<!--- If we are including infinites, add them to the type list --->
+<cfif #minThick# gt 1000>
+	<cfset types &= ",I">
+	<cfset minThick = 1000>
 </cfif>
---->
+
+<cfif #maxThick# gt 1000>
+	<cfset types &= ",I">
+	<cfset maxThick = 1000>
+</cfif>
+
 <cfif #partialPart# neq "">
 	<cfquery
 		name="getAllParts"

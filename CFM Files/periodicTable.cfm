@@ -9,8 +9,9 @@
         <title>Product Table</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="periodicTable.css">
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="css/periodicTable.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/simplegrid.css">
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 
         <!--- Place favicon.ico and apple-touch-icon.png in the root directory --->
@@ -95,24 +96,29 @@
                     <cfif #getElements.atomicNumber[i]# eq 1>
                         <td class="spacer" colspan="16">
                             <form name="sliderForm" id="sliderForm" action="inventory.cfm" method="POST">
-                                <div id="formInputs">
-                                    <div class="rangeInput">
-                                        <label for="minThick left">Minimum thickness</label>
-                                        <input type="number" name="minThick" id="minThick" min="2" max="1002" step="2"/>μin
+                                <div id="formInputs grid">
+                                    <div class="col-4-12">
+                                        <div class="grid">
+                                            <label for="minThick left" class="col-6-12">Minimum thickness</label>
+                                           <span class="col-6-12"><input type="number" name="minThick" id="minThick" min="2" max="1002" step="2"/>μin</span>
+                                        </div>
                                     </div>
 
-                                    <div class="rangeInput mid">
-                                        <label class="checkLabel"><input type="checkbox" checked name="types" value="F">Foils</label>
-                                        <label class="checkLabel"><input type="checkbox" checked name="types" value="P">Plated standards</label>
+                                    <div class="col-4-12">
+                                        <div class="grid">
+                                            <label class="checkLabel col-6-12"><input type="checkbox" checked name="types" value="F">Foils</label>
+                                            <label class="checkLabel col-6-12"><input type="checkbox" checked name="types" value="P">Plated standards</label>
+                                        </div>
                                     </div>
 
-                                    <div class="rangeInput right">
-                                        <label for="maxThick">Maximum thickness</label>
-                                        <input type="number" name="maxThick" id="maxThick" min="2" max="1002" step="2"/>μin
+                                    <div class="col-4-12">
+                                        <div class="grid">
+                                            <label class="col-6-12" for="maxThick">Maximum thickness</label>
+                                            <input class="col-6-12" type="number" name="maxThick" id="maxThick" min="2" max="1002" step="2">μin</input>
                                     </div>
                                 </div>
-                                <div id="rangeSlider"></div>
-                                <input type="hidden" name="elements" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
+                                <div id="rangeSlider grid"></div>
+                                <input class="col-12-12" type="hidden" name="elements" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
                             </form>
                                 <div id="searchPart">
                                     <label for="partialPart">Search by part number</label>

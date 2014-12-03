@@ -58,7 +58,7 @@
 }
 
 #formResults{
-	width: calc(5.5vw * 4);
+	width: calc(5.5vw * 8);
 	height: calc(5.5vw *2);
 	margin-left: 14vw;
 	margin-top: .5vw;
@@ -93,27 +93,33 @@
 }
 
 .rangeInput{
-	display: inline;
+	display: inline-block;
 }
 
 .marginLeft{
 	margin-left: 4vw;
 }
 
-.right{
-	float: right;
-}
-
-.left{
-	float: left;
-}
-
-.mid{
-	margin-left: 7.5vw;
-}
-
 .partSelected{
 	background-color: lightseagreen;
+}
+
+/*@media (min-width: 1067){
+	.right{
+		float: right;
+		width: 33%;
+	}
+
+	.left{
+		float: left;
+		width: 33%;
+	}
+
+	.mid{
+		display: inline-block;
+		width: 33%;
+	}
+
 }
 
 @media (max-width: 1643px){
@@ -121,3 +127,15 @@
 		font-size: 1vw;
 	}
 }
+
+@media (max-width: 1066px){
+	.left,.right{
+		float: none;
+		clear: both;
+		display: block;
+	}
+	.mid{
+		clear: both;
+		display: block;
+	}
+}*/
