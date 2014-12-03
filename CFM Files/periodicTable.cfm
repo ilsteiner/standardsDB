@@ -50,6 +50,31 @@
         <cfset lastEl="2,10,18,36,54,71,86,103,118">
         <cfset hasSpace="1,4,12">
 
+        <form name="sliderForm" id="sliderForm" action="inventory.cfm" method="POST">
+            <div id="formInputs">
+                <div class="inputDiv">
+                    <label for="minThick left">Minimum thickness</label><br/>
+                    <input type="number" name="minThick" id="minThick" min="2" max="1002" step="2"/>μin
+                </div>
+
+                <div class="checks">
+                    <label class="checkLabel"><input type="checkbox" checked name="types" value="F">Foils</label>
+                    <label class="checkLabel"><input type="checkbox" checked name="types" value="P">Plated&nbsp;standards</label>
+                </div>
+
+                <div class="inputDiv">
+                    <label for="maxThick">Maximum&nbsp;thickness</label><br/>
+                    <input type="number" name="maxThick" id="maxThick" min="2" max="1002" step="2">μin</input>
+                </div>
+            </div>
+            <div id="rangeSlider"></div>
+            <input class="col-12-12" type="hidden" name="elements" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
+            <div id="searchPart">
+                <label for="partialPart">Search by part number</label>
+                <input type="text" maxlength="11" name="partialPart" id="partialPart">
+            </div>
+        </form>
+
         <table id="pTable">
             <cfloop from="1" to=#getElements.recordcount# index="i" step="1">
                 <cfif (#getElements.atomicNumber[i]# gt 57 and #getElements.atomicNumber[i]# lte 71) or (#getElements.atomicNumber[i]# gt 89 and #getElements.atomicNumber[i]# lte 103)>
@@ -93,35 +118,17 @@
                     </td>
 
                     <cfif #getElements.atomicNumber[i]# eq 1>
-                        <td class="spacer" colspan="16">
-                            <form name="sliderForm" id="sliderForm" action="inventory.cfm" method="POST">
-                                <div id="formInputs">
-                                    <div class="inputDiv">
-                                        <label for="minThick left">Minimum thickness</label><br/>
-                                        <input type="number" name="minThick" id="minThick" min="2" max="1002" step="2"/>μin
-                                    </div>
-
-                                    <div class="checks">
-                                        <label class="checkLabel"><input type="checkbox" checked name="types" value="F">Foils</label>
-                                        <label class="checkLabel"><input type="checkbox" checked name="types" value="P">Plated&nbsp;standards</label>
-                                    </div>
-
-                                    <div class="inputDiv">
-                                        <label for="maxThick">Maximum&nbsp;thickness</label><br/>
-                                        <input type="number" name="maxThick" id="maxThick" min="2" max="1002" step="2">μin</input>
-                                    </div>
-                                </div>
-                                <div id="rangeSlider"></div>
-                                <input class="col-12-12" type="hidden" name="elements" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
-                            </form>
-                                <div id="searchPart">
-                                    <label for="partialPart">Search by part number</label>
-                                    <input type="text" maxlength="11" name="partialPart" id="partialPart">
-                                </div>
-                            </form>
+                        <td class="spacer" colspan="1">
+                            &nbsp;
                         </td>
-                    <cfelseif #getElements.atomicNumber[i]# eq 4>
-                        <td class="spacer" colspan="10" rowspan="2"><div id="formResults">&nbsp;</div></td>
+                        <td class="spacer" colspan="10" rowspan="3">
+                            <div id="formResults">&nbsp;</div>
+                        </td>
+                        <td class="spacer" colspan="5">
+                            &nbsp;
+                        </td>
+                    <!--- <cfelseif #getElements.atomicNumber[i]# eq 4>
+                        <td class="spacer" colspan="10" rowspan="2"><div id="formResults">&nbsp;</div></td> --->
                     </cfif>
 
                     <!--- If this is the end of a row, end the row. --->

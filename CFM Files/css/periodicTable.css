@@ -1,5 +1,6 @@
 #pTable{
 	width: 100vw;
+	margin: 0 5px;
 }
 
 .elemRow {
@@ -7,9 +8,9 @@
 }
 
 .element{
-	width: 5.5vw;
-	height: 5.5vw;
-	max-height: 5.5vw;
+	width: calc(5.5vw - 1px);
+	height: calc(5.5vw - 1px);
+	max-height: calc(5.5vw - 1px);
 	margin: 2em;
 	background-color: LightGray;
 	opacity: .65;
@@ -44,7 +45,7 @@
 
 #sliderForm{
 	width: 52vw;
-	margin: 1vw 10vw .1vw 7vw;
+	margin: 1vw 15vw .1vw 13vw;
 }
 
 #searchPart{
@@ -59,10 +60,14 @@
 
 #formResults{
 	width: calc(5.5vw * 8);
-	height: calc(5.5vw *2);
+	height: calc(5.5vw *3);
 	margin-left: 14vw;
 	margin-top: .5vw;
 	overflow-y: auto;
+}
+
+#resultTable > td{
+	padding: 2px;
 }
 
 .infinity{

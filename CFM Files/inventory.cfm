@@ -85,9 +85,9 @@
 	</cfquery>
 </cfif>
 
-<table>
+<table id="resultTable">
 	<caption><cfoutput>#getParts.RecordCount#</cfoutput> Products Found</caption>
-	<thead>
+	<thead class="ui-widget-header">
 		<tr>
 			<td>Part Number</td>
 			<td>Type</td>
@@ -97,7 +97,7 @@
 		</tr>
 	</thead>
 
-	<tbody>
+	<tbody class="ui-widget-content">
 		<cfoutput query="getParts">
 			<tr>
 				<td>#partNumber#</td>
