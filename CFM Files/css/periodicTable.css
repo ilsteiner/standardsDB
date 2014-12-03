@@ -65,10 +65,6 @@
 	overflow-y: auto;
 }
 
-#minThick,#maxThick{
-	width: 4em;
-}
-
 .infinity{
 	color: rgba(0, 0, 0, 0.0);
 	background-image: url("./images/infinity.png");
@@ -85,16 +81,31 @@
 
 #formInputs{
 	width: 100%;
+	display: flex;
+}
+
+.inputDiv{
+	flex: 1;
+	font-size: 1vw;
+}
+
+.checks{
+	flex: 1.3;
 }
 
 .checkLabel{
-	padding: .5em;
-	cursor: pointer;
+	font-size: 1vw;
 }
 
-.rangeInput{
+
+/*.checkLabel{
+	padding: .5em;
+	cursor: pointer;
+}*/
+
+/*.rangeInput{
 	display: inline-block;
-}
+}*/
 
 .marginLeft{
 	margin-left: 4vw;
@@ -122,7 +133,7 @@
 
 }
 
-@media (max-width: 1643px){
+@media (max-width: 783){
 	#sliderForm{
 		font-size: 1vw;
 	}
