@@ -66,9 +66,19 @@
                     <cfif ListFind(firstEl,#getElements.atomicNumber[i]#) neq 0>
                         <tr class="elemRow">
                     </cfif>
-
-                    <td class="element<cfif ListFind(ValueList(getElementsSold.symbol),#getElements.symbol[i]#) neq 0>
-                        <cfoutput> active</cfoutput></cfif>">
+                    <!--- 
+                        This section does a few things:
+                        Adds the cell containing an element, this includes:
+                            Atomic Number
+                            Symbol
+                            Name
+                            Density
+                        Sets the element's class to element
+                        Add an ID equal to the element's symbol so we can easily access it via Javascript
+                        If this is an element with at least one row in the tbPartComponent table, mark it active as the company sells it
+                     --->
+                    <td id="<cfoutput>#getElements.symbol[i]#</cfoutput>" class="element <cfif ListFind(ValueList(getElementsSold.symbol),#getElements.symbol[i]#) neq 0>
+                        <cfoutput>active</cfoutput></cfif>">
                         <span class="atomicNumber"><cfoutput>#getElements.atomicNumber[i]#</cfoutput></span>
                         <br/>
                         <span class="symbol"><cfoutput>#getElements.symbol[i]#</cfoutput></span>

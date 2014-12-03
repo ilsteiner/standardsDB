@@ -18,7 +18,6 @@ $(".active").click(function() {
 });
 
 $("input").on('input change',function(){
-	console.log("Input changed!");
 	$("#sliderForm").submit();
 });
 
@@ -105,13 +104,26 @@ function checkInfinite(){
 	}
 }
 
-/* I can't get this working and don't have time to fix it.
-//Autocomplete the part number lookup
-$('#partialPart').autocomplete({
-	source: "allParts.cfm",
-	minLength: 4,
-	select: function(event,ui) {
-		//$('#partialPart').val(ui.item.partNumber);
-	}
+//If we are searching by part number, get all of the elements in the returned parts
+$("#partialPart").on('input change',function(e){
+	//For element we sell (or that was selected in some other way...that'd be an error)
+	$(".active .partSelected").each(function(){
+		/*
+			Check if an element exists in the selected
+			elements table that has an ID equal to the 
+			text of the element in the periodic table
+			currently being checked by the loop.
+			This is done by checking if the length
+			property of this hypothetical element 
+			returns something truthy (i.e. not 0 or null).
+		*/
+		if($(".chosenElem:contains(this.id)").length){
+			//This element was selected, so mark it as such
+			$("this").addClass('partSelected');
+		}
+		else{
+			//This element was not selected so remove the class if it was there
+			$("this").removeClass('partSelected');
+		}
+	});
 });
-*/

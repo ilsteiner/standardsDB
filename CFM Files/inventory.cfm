@@ -2,7 +2,7 @@
 <cfparam name="minThick" default="0" type="integer">
 <cfparam name="maxThick" default="1000" type="integer">
 <cfparam name="types" default="F" type="string" pattern="^([FP],)[FP]$|^[FP]$">
-<cfparam name="partialPart" default="" type="string" pattern="^[P]\d{0,10}$">
+<cfparam name="partialPart" default="P111" type="string" pattern="^[P]\d{0,10}$">
 
 <cfdump var="#elements#">
 <!---If we are including infinites, add them to the type list
@@ -12,7 +12,7 @@
 --->
 <cfif #partialPart# neq "">
 	<cfquery
-		name="getParts"
+		name="getAllParts"
 		datasource="#Request.DSN#"
 		username="#Request.username#"
 		password="#Request.password#"
@@ -27,8 +27,21 @@
 	       p.platedElement,
 	       p.custom
 	FROM tbPartComponent main inner join tbPart p on p.partNumber = main.partNumber inner join tbStandardType st on p.typeID = st.typeID
-	WHERE main.partNumber <cfif len(#partialPart#) eq 11> = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#"><cfelse> LIKE <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#%"></cfif> 
-	AND main.symbol = (SELECT MAX(sub.symbol) FROM tbPartComponent sub WHERE sub.partNumber = main.partNumber)
+	WHERE main.partNumber <cfif len(#partialPart#) eq 11> = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#"><cfelse> LIKE <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#%"></cfif>
+	</cfquery>
+
+	<cfquery
+		name="getParts"
+		dbtype="query">
+			SELECT distinct
+			   partNumber,
+		       stock,
+		       targetValue,
+		       price,
+		       typeDesc,
+		       platedElement,
+		       custom
+		FROM getAllParts
 	</cfquery>
 <cfelse>
 	<cfquery
@@ -92,4 +105,14 @@
 	</tbody>
 </table>
 
-
+<cfif IsDefined("getAllParts.symbol")>
+	<table class="hidden">
+		<tbody>
+			<cfoutput query="getAllParts">
+				<tr>
+					<td class="chosenElem">#symbol#</td>
+				</tr>
+			</cfoutput>
+		</tbody>
+	</table>
+</cfif>

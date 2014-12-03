@@ -112,6 +112,10 @@
 	margin-left: 7.5vw;
 }
 
+.partSelected{
+	background-color: lightseagreen;
+}
+
 @media (max-width: 1643px){
 	#sliderForm{
 		font-size: 1vw;
