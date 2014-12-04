@@ -74,69 +74,70 @@
                 <input type="text" maxlength="11" name="partialPart" id="partialPart">
             </div>
         </form>
-
-        <table id="pTable">
-            <cfloop from="1" to=#getElements.recordcount# index="i" step="1">
-                <cfif (#getElements.atomicNumber[i]# gt 57 and #getElements.atomicNumber[i]# lte 71) or (#getElements.atomicNumber[i]# gt 89 and #getElements.atomicNumber[i]# lte 103)>
-                    <!--- These are lanthinides and actinides...I'm just going to ignore them for the current implementation. --->
-                <cfelseif #getElements.atomicNumber[i]# eq 57 or #getElements.atomicNumber[i]# eq 89>
-                    <!--- These are the blank spots for the lanthinide and actinide popouts.
-                        They get a blank cell so that they still take up room.
-                    --->
-                    <td class="element transition">
-                        &nbsp;
-                    </td>
-                <cfelse>
-                    <!--- If this is the start of a row, begin a row. --->
-                    <cfif ListFind(firstEl,#getElements.atomicNumber[i]#) neq 0>
-                        <tr class="elemRow">
-                    </cfif>
-                    <!--- 
-                        This section does a few things:
-                        Adds the cell containing an element, this includes:
-                            Atomic Number
-                            Symbol
-                            Name
-                            Density
-                        Sets the element's class to element
-                        Add an ID equal to the element's symbol so we can easily access it via Javascript
-                        If this is an element with at least one row in the tbPartComponent table, mark it active as the company sells it
-                     --->
-                    <td id="<cfoutput>#getElements.symbol[i]#</cfoutput>" class="element <cfif ListFind(ValueList(getElementsSold.symbol),#getElements.symbol[i]#) neq 0>
-                        <cfoutput>active</cfoutput></cfif>">
-                        <span class="atomicNumber"><cfoutput>#getElements.atomicNumber[i]#</cfoutput></span>
-                        <br/>
-                        <span class="symbol"><cfoutput>#getElements.symbol[i]#</cfoutput></span>
-                        <br/>
-                        <span class="name"><cfoutput>#getElements.name[i]#</cfoutput></span>
-                        <br/>
-                        <cfif getElements.density[i] eq "">
-                        <span class="density">&nbsp;</span>
-                        <cfelse>
-                            <span class="density"><cfoutput>#getElements.density[i]# g/cc</cfoutput></span>
+        <div id="pDiv">
+            <table id="pTable">
+                <cfloop from="1" to=#getElements.recordcount# index="i" step="1">
+                    <cfif (#getElements.atomicNumber[i]# gt 57 and #getElements.atomicNumber[i]# lte 71) or (#getElements.atomicNumber[i]# gt 89 and #getElements.atomicNumber[i]# lte 103)>
+                        <!--- These are lanthinides and actinides...I'm just going to ignore them for the current implementation. --->
+                    <cfelseif #getElements.atomicNumber[i]# eq 57 or #getElements.atomicNumber[i]# eq 89>
+                        <!--- These are the blank spots for the lanthinide and actinide popouts.
+                            They get a blank cell so that they still take up room.
+                        --->
+                        <td class="element transition">
+                            &nbsp;
+                        </td>
+                    <cfelse>
+                        <!--- If this is the start of a row, begin a row. --->
+                        <cfif ListFind(firstEl,#getElements.atomicNumber[i]#) neq 0>
+                            <tr class="elemRow">
                         </cfif>
-                    </td>
+                        <!--- 
+                            This section does a few things:
+                            Adds the cell containing an element, this includes:
+                                Atomic Number
+                                Symbol
+                                Name
+                                Density
+                            Sets the element's class to element
+                            Add an ID equal to the element's symbol so we can easily access it via Javascript
+                            If this is an element with at least one row in the tbPartComponent table, mark it active as the company sells it
+                         --->
+                        <td id="<cfoutput>#getElements.symbol[i]#</cfoutput>" class="element <cfif ListFind(ValueList(getElementsSold.symbol),#getElements.symbol[i]#) neq 0>
+                            <cfoutput>active</cfoutput></cfif>">
+                            <span class="atomicNumber"><cfoutput>#getElements.atomicNumber[i]#</cfoutput></span>
+                            <br/>
+                            <span class="symbol"><cfoutput>#getElements.symbol[i]#</cfoutput></span>
+                            <br/>
+                            <span class="name"><cfoutput>#getElements.name[i]#</cfoutput></span>
+                            <br/>
+                            <cfif getElements.density[i] eq "">
+                            <span class="density">&nbsp;</span>
+                            <cfelse>
+                                <span class="density"><cfoutput>#getElements.density[i]# g/cc</cfoutput></span>
+                            </cfif>
+                        </td>
 
-                    <cfif #getElements.atomicNumber[i]# eq 1>
-                        <td class="spacer" colspan="1">
-                            &nbsp;
-                        </td>
-                        <td class="spacer" colspan="10" rowspan="3">
-                            <div id="formResults">&nbsp;</div>
-                        </td>
-                        <td class="spacer" colspan="5">
-                            &nbsp;
-                        </td>
-                    <!--- <cfelseif #getElements.atomicNumber[i]# eq 4>
-                        <td class="spacer" colspan="10" rowspan="2"><div id="formResults">&nbsp;</div></td> --->
-                    </cfif>
+                        <cfif #getElements.atomicNumber[i]# eq 1>
+                            <td class="spacer" colspan="1">
+                                &nbsp;
+                            </td>
+                            <td class="spacer" colspan="10" rowspan="3">
+                                <div id="formResults">&nbsp;</div>
+                            </td>
+                            <td class="spacer" colspan="5">
+                                &nbsp;
+                            </td>
+                        <!--- <cfelseif #getElements.atomicNumber[i]# eq 4>
+                            <td class="spacer" colspan="10" rowspan="2"><div id="formResults">&nbsp;</div></td> --->
+                        </cfif>
 
-                    <!--- If this is the end of a row, end the row. --->
-                    <cfif ListFind(lastEl,#getElements.atomicNumber[i]#) neq 0>
-                        </tr>
+                        <!--- If this is the end of a row, end the row. --->
+                        <cfif ListFind(lastEl,#getElements.atomicNumber[i]#) neq 0>
+                            </tr>
+                        </cfif>
                     </cfif>
-                </cfif>
-            </cfloop>
+                </cfloop>
+            </table>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

@@ -1,6 +1,9 @@
+#pTable,#pDiv{
+	width: 95%;
+}
+
 #pTable{
-	width: 100vw;
-	margin: 0 5px;
+	table-layout: fixed;
 }
 
 .elemRow {
@@ -8,9 +11,12 @@
 }
 
 .element{
-	width: calc(5.5vw - 1px);
+	/*width: calc(5.5vw - 1px);
 	height: calc(5.5vw - 1px);
 	max-height: calc(5.5vw - 1px);
+	max-width: calc(5.5vw - 1px);*/
+	width: 3em;
+	height: 3em;
 	margin: 2em;
 	background-color: LightGray;
 	opacity: .65;
