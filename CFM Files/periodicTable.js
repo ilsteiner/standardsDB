@@ -1,6 +1,22 @@
+function disableFilters(){
+	$("input").not("#partialPart").attr('disabled', 'disabled');
+	$("#rangeSlider").slider({disabled: "true"});	
+}
+
+function enableFilters(){
+	$("input").not("#partialPart").removeAttr('disabled');
+	$("#rangeSlider").slider({disabled: "false"});	
+}
+
 //Update the list of selected elements
 $(".active").click(function() {
 	$(this).toggleClass('selected');
+
+	//Clear the part number field
+	$("#partialPart").val("");
+
+	//If the filters were disabled, enable them
+	enableFilters();
 
 	//Clear the hidden input for the selected elements
 	$("#elements").val("");
@@ -88,6 +104,7 @@ $("#minThick,#maxThick").change(function(){
 	checkInfinite();
 });
 
+//Add the appropriate class to make infinites appear infinite
 function checkInfinite(){
 	if($("#minThick").val() > 1000){
 		$("#minThick").addClass('infinity');
@@ -106,7 +123,22 @@ function checkInfinite(){
 
 //If we are searching by part number, get all of the elements in the returned parts
 $("#partialPart").on('input change',function(e){
-	//For element we sell (or that was selected in some other way...that'd be an error)
+	//Remove the 'selected' class from all of the elements, if they have it
+	$(".selected").removeClass('selected');
+
+	//Remove all of the elements from the "currently selected" list
+	$("#elements").val("");
+
+	//If the part number field has a value, deactivate the filters
+	if($("#partialPart").val().length > 0){
+		disableFilters();
+	}
+	//Otherwise activate them
+	else{
+		enableFilters();
+	}
+
+	//For each element we sell (or that was selected in some other way...that'd be an error)
 	$(".active .partSelected").each(function(){
 		/*
 			Check if an element exists in the selected
