@@ -15,26 +15,28 @@
 	<cfset maxThick = 1000>
 </cfif>
 
+<cfquery
+	name="getAllParts"
+	datasource="#Request.DSN#"
+	username="#Request.username#"
+	password="#Request.password#"
+	result="theParts">
+SELECT distinct
+	   main.partNumber,
+	   main.symbol,
+	   main.composition,
+       p.stock,
+       p.targetValue,
+       p.price,
+       st.typeDesc,
+       p.platedElement,
+       p.custom
+FROM tbPartComponent main inner join tbPart p on p.partNumber = main.partNumber inner join tbStandardType st on p.typeID = st.typeID
+WHERE main.partNumber <cfif len(#partialPart#) eq 11> = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#"><cfelse> LIKE <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#%"></cfif>
+ORDER BY main.composition DESC, main.symbol
+</cfquery>
+	
 <cfif #partialPart# neq "">
-	<cfquery
-		name="getAllParts"
-		datasource="#Request.DSN#"
-		username="#Request.username#"
-		password="#Request.password#"
-		result="theParts">
-	SELECT distinct
-		   main.partNumber,
-		   main.symbol,
-	       p.stock,
-	       p.targetValue,
-	       p.price,
-	       st.typeDesc,
-	       p.platedElement,
-	       p.custom
-	FROM tbPartComponent main inner join tbPart p on p.partNumber = main.partNumber inner join tbStandardType st on p.typeID = st.typeID
-	WHERE main.partNumber <cfif len(#partialPart#) eq 11> = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#"><cfelse> LIKE <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#%"></cfif>
-	</cfquery>
-
 	<cfquery
 		name="getParts"
 		dbtype="query">
@@ -94,23 +96,26 @@
 			<td>Thickness</td>
 			<td>Price</td>
 			<td>In Stock</td>
+			<td>Composition</td>
 		</tr>
 	</thead>
 
 	<tbody class="ui-widget-content">
 		<cfoutput query="getParts">
 			<tr>
-				<td>#partNumber#</td>
+				<td class="partNumber">#partNumber#</td>
 				<td>#typeDesc#</td>
 				<td>#targetValue#μin</td>
 				<td>$#price#</td>
 				<td>#stock#</td>
+				<td class="composition">
+				</td>
 			</tr>
 		</cfoutput>
 	</tbody>
 </table>
 
-<cfif IsDefined("getAllParts.symbol")>
+<cfif #partialPart# neq "">
 	<table class="hidden">
 		<tbody>
 			<cfoutput query="getAllParts">
