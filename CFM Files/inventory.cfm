@@ -42,6 +42,8 @@ ORDER BY main.composition DESC, main.symbol
 		dbtype="query">
 			SELECT distinct
 			   partNumber,
+			   symbol,
+			   composition,
 		       stock,
 		       targetValue,
 		       price,
@@ -59,6 +61,8 @@ ORDER BY main.composition DESC, main.symbol
 		result="theParts">
 
 		SELECT DISTINCT main.partNumber,
+						main.symbol,
+						main.composition,
 		                p.stock,
 		                p.targetValue,
 		                p.price,
@@ -83,9 +87,17 @@ ORDER BY main.composition DESC, main.symbol
 		        FROM tbPartComponent subsub) sub
 		     GROUP BY partNumber HAVING listagg(symbol, ',') within
 		     GROUP (ORDER BY symbol) = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="32" value="#elements#">)
-		    ORDER BY p.targetValue	  
+		    ORDER BY p.targetValue,main.composition DESC,main.symbol	  
 	</cfquery>
 </cfif>
+
+<!--- 
+	For each part number we are returning, get all of the symbols
+	associated with it and put them into a comma-delimeted list.
+	Put all of this into an array. 
+--->
+
+<!--- <cfoutput query="getAllParts"> --->
 
 <table id="resultTable">
 	<caption><cfoutput>#getParts.RecordCount#</cfoutput> Products Found</caption>
@@ -101,7 +113,7 @@ ORDER BY main.composition DESC, main.symbol
 	</thead>
 
 	<tbody class="ui-widget-content">
-		<cfoutput query="getParts">
+		<cfoutput query="getParts" group="partNumber">
 			<tr>
 				<td class="partNumber">#partNumber#</td>
 				<td>#typeDesc#</td>
@@ -109,6 +121,12 @@ ORDER BY main.composition DESC, main.symbol
 				<td>$#price#</td>
 				<td>#stock#</td>
 				<td class="composition">
+					<cfset elemList="">
+					<cfoutput>
+						<cfset currElem = composition & "%" & " " & symbol>
+						<cfset elemList = listAppend(elemList,currElem)>
+					</cfoutput>
+					#elemList#
 				</td>
 			</tr>
 		</cfoutput>
