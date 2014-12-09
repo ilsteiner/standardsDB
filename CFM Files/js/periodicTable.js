@@ -8,6 +8,11 @@ function enableFilters(){
 	$("#rangeSlider").slider({disabled: "false"});	
 }
 
+//Make navigation buttons look like buttons
+$(function() {
+    $( "#navButtons" ).buttonset();
+});
+
 //Update the list of selected elements
 $(".active").click(function() {
 	$(this).toggleClass('selected');

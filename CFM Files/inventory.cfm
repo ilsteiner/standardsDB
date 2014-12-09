@@ -99,39 +99,41 @@ ORDER BY main.composition DESC, main.symbol
 
 <!--- <cfoutput query="getAllParts"> --->
 
-<table id="resultTable">
-	<caption><cfoutput>#getParts.RecordCount#</cfoutput> Products Found</caption>
-	<thead class="ui-widget-header">
-		<tr>
-			<td>Part Number</td>
-			<td>Type</td>
-			<td>Thickness</td>
-			<td>Price</td>
-			<td>In Stock</td>
-			<td>Composition</td>
-		</tr>
-	</thead>
-
-	<tbody class="ui-widget-content">
-		<cfoutput query="getParts" group="partNumber">
+<div id="resultTableWrapper">
+	<table id="resultTable">
+		<caption><cfoutput>#getParts.RecordCount#</cfoutput> Products Found</caption>
+		<thead class="ui-widget-header">
 			<tr>
-				<td class="partNumber">#partNumber#</td>
-				<td>#typeDesc#</td>
-				<td>#targetValue#μin</td>
-				<td>$#price#</td>
-				<td>#stock#</td>
-				<td class="composition">
-					<cfset elemList="">
-					<cfoutput>
-						<cfset currElem = composition & "%" & " " & symbol>
-						<cfset elemList = listAppend(elemList,currElem)>
-					</cfoutput>
-					#elemList#
-				</td>
+				<td>Part Number</td>
+				<td>Type</td>
+				<td>Thickness</td>
+				<td>Price</td>
+				<td>In Stock</td>
+				<td>Composition</td>
 			</tr>
-		</cfoutput>
-	</tbody>
-</table>
+		</thead>
+
+		<tbody class="ui-widget-content">
+			<cfoutput query="getParts" group="partNumber">
+				<tr>
+					<td class="partNumber">#partNumber#</td>
+					<td>#typeDesc#<cfif #typeDesc# eq 'Plated'> (#platedElement#)</cfif></td>
+					<td>#targetValue#μin</td>
+					<td>$#price#</td>
+					<td>#stock#</td>
+					<td class="composition">
+						<cfset elemList="">
+						<cfoutput>
+							<cfset currElem = composition & "%" & " " & symbol>
+							<cfset elemList = listAppend(elemList,currElem)>
+						</cfoutput>
+						#elemList#
+					</td>
+				</tr>
+			</cfoutput>
+		</tbody>
+	</table>
+</div>
 
 <cfif #partialPart# neq "">
 	<table class="hidden">

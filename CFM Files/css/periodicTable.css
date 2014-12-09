@@ -1,5 +1,7 @@
 #pTable,#pDiv{
 	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #pTable{
@@ -10,13 +12,21 @@
 	width: 100vw;
 }
 
+/* 
+	I can't get the elements to be square.
+	This is probably because I have a div
+	in one of the cells (the one with a
+	colspan and rowspan > 1), which is 
+	messing up the widths. For a real
+	website, I'd want to fix this.
+	One way would to make a static site,
+	but I really don't want to do that.
+*/
 .element{
-	/*width: calc(5.5vw - 1px);
+	width: calc(5.5vw - 1px);
 	height: calc(5.5vw - 1px);
 	max-height: calc(5.5vw - 1px);
-	max-width: calc(5.5vw - 1px);*/
-	width: 3em;
-	height: 3em;
+	max-width: calc(5.5vw - 1px);
 	margin: 2em;
 	background-color: LightGray;
 	opacity: .65;
@@ -49,14 +59,28 @@
 	background-color: #3C7EB3;
 }
 
+#sliderFormWrapper{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
 #sliderForm{
-	width: 52vw;
-	margin: 1vw 15vw .1vw 13vw;
+	margin-left: auto;
+	margin-right: 35%;
+	margin-top: 2%;
+	width: 50%;
+}
+
+#searchPartWrapper{
+	width: 100%;
 }
 
 #searchPart{
-	width: 52vw;
-	margin: 1vw 3vw 0vw 14vw;
+	width: 70%;
+	margin-right: 5%;
+	margin-left: auto;
+	margin-top: 2%;
 	font-size: 1.5vw;
 }
 
@@ -64,21 +88,29 @@
 	width: 12em;
 }
 
+#formResultsWrapper{
+	width: 100%;
+}
+
 #formResults{
-	width: calc(5.5vw * 8);
+	width: 100%;
 	height: calc(5.5vw *3);
-	margin-left: 14vw;
-	margin-top: .5vw;
 	overflow-y: auto;
 }
 
-#resultTable > td{
+#resultTable{
+	width: 80%;
+	margin: auto;
+}
+
+#resultTable td{
 	padding: 2px;
+	text-align: center;
 }
 
 .infinity{
 	color: rgba(0, 0, 0, 0.0);
-	background-image: url("./images/infinity.png");
+	background-image: url("./img/infinity.png");
 	background-size: 60% 70%;
 	background-position: center; 
 	background-repeat: no-repeat;
@@ -108,16 +140,6 @@
 	font-size: 1vw;
 }
 
-
-/*.checkLabel{
-	padding: .5em;
-	cursor: pointer;
-}*/
-
-/*.rangeInput{
-	display: inline-block;
-}*/
-
 .marginLeft{
 	margin-left: 4vw;
 }
@@ -125,39 +147,3 @@
 .partSelected{
 	background-color: lightseagreen;
 }
-
-/*@media (min-width: 1067){
-	.right{
-		float: right;
-		width: 33%;
-	}
-
-	.left{
-		float: left;
-		width: 33%;
-	}
-
-	.mid{
-		display: inline-block;
-		width: 33%;
-	}
-
-}
-
-@media (max-width: 783){
-	#sliderForm{
-		font-size: 1vw;
-	}
-}
-
-@media (max-width: 1066px){
-	.left,.right{
-		float: none;
-		clear: both;
-		display: block;
-	}
-	.mid{
-		clear: both;
-		display: block;
-	}
-}*/

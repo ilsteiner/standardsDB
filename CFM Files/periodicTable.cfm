@@ -12,14 +12,13 @@
         <link rel="stylesheet" type="text/css" href="css/periodicTable.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
-
-        <!--- Place favicon.ico and apple-touch-icon.png in the root directory --->
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!--- Get the information from the Element table for each element --->
         <cfquery
                 name="getElements"
                  datasource="#Request.DSN#"
@@ -35,6 +34,7 @@
         order by atomicNumber
         </cfquery>
 
+        <!--- Find out which elements are sold by the company so we can make them clickable --->
         <cfquery
                 name="getElementsSold"
                  datasource="#Request.DSN#"
@@ -46,34 +46,47 @@
         from tbPartComponent
         </cfquery>
 
+        <!--- Make lists of atomic numbers where we need to do something different when generating the table --->
         <cfset firstEl="1,3,11,19,37,55,57,87,89">
         <cfset lastEl="2,10,18,36,54,71,86,103,118">
         <cfset hasSpace="1,4,12">
 
-        <form name="sliderForm" id="sliderForm" action="inventory.cfm" method="POST">
-            <div id="formInputs">
-                <div class="inputDiv">
-                    <label for="minThick left">Minimum thickness</label><br/>
-                    <input type="number" name="minThick" id="minThick" min="2" max="1002" step="2"/>μin
-                </div>
-
-                <div class="checks">
-                    <label class="checkLabel"><input type="checkbox" checked name="types" value="F">Foils</label>
-                    <label class="checkLabel"><input type="checkbox" checked name="types" value="P">Plated&nbsp;standards</label>
-                </div>
-
-                <div class="inputDiv">
-                    <label for="maxThick">Maximum&nbsp;thickness</label><br/>
-                    <input type="number" name="maxThick" id="maxThick" min="2" max="1002" step="2">μin</input>
-                </div>
+        <nav>
+            <div id="navButtons">
+                <input type="radio" id="findProd" name="navButtons"><label for="findProd">Find Product</label>
+                <input type="radio" id="findStand" name="navButtons"><label for="findStand">Choice 2</label>
+                <input type="radio" id="findCert" name="findCert"><label for="findCert">Find Certification</label>
             </div>
-            <div id="rangeSlider"></div>
-            <input class="col-12-12" type="hidden" name="elements" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
-            <div id="searchPart">
-                <label for="partialPart">Search by part number</label>
-                <input type="text" maxlength="11" name="partialPart" id="partialPart">
-            </div>
-        </form>
+        </nav>
+
+        <div id="sliderFormWrapper">
+            <form name="sliderForm" id="sliderForm" action="inventory.cfm" method="POST">
+                <div id="formInputs">
+                    <div class="inputDiv">
+                        <label for="minThick left">Minimum thickness</label><br/>
+                        <input type="number" name="minThick" id="minThick" min="2" max="1002" step="2"/>μin
+                    </div>
+
+                    <div class="checks">
+                        <label class="checkLabel"><input type="checkbox" checked name="types" value="F">Foils</label>
+                        <label class="checkLabel"><input type="checkbox" checked name="types" value="P">Plated&nbsp;standards</label>
+                    </div>
+
+                    <div class="inputDiv">
+                        <label for="maxThick">Maximum&nbsp;thickness</label><br/>
+                        <input type="number" name="maxThick" id="maxThick" min="2" max="1002" step="2">μin</input>
+                    </div>
+                </div>
+                <div id="rangeSlider"></div>
+                <input class="col-12-12" type="hidden" name="elements" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
+                <div id="searchPartWrapper">
+                    <div id="searchPart">
+                        <label for="partialPart">Search by part number</label>
+                        <input type="text" maxlength="11" name="partialPart" id="partialPart">
+                    </div>
+                </div>
+            </form>
+        </div>
         <div id="pDiv">
             <table id="pTable">
                 <cfloop from="1" to=#getElements.recordcount# index="i" step="1">
@@ -127,8 +140,6 @@
                             <td class="spacer" colspan="5">
                                 &nbsp;
                             </td>
-                        <!--- <cfelseif #getElements.atomicNumber[i]# eq 4>
-                            <td class="spacer" colspan="10" rowspan="2"><div id="formResults">&nbsp;</div></td> --->
                         </cfif>
 
                         <!--- If this is the end of a row, end the row. --->
@@ -144,6 +155,6 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jqueryui-1.11.2.min.js"><\/script>')</script>
-        <script type="text/javascript" src="periodicTable.js"></script>
+        <script type="text/javascript" src="js/periodicTable.js"></script>
     </body>
 </html>
