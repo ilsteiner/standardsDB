@@ -1,8 +1,15 @@
-<cfparam name="elements" default="Au,Fe" type="string" <!--- pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])$)|(^([A-Z][a-z])$)" --->>
+<cftry>
+	<cfparam name="elements" default="Au,Fe" type="string" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])$)|(^([A-Z][a-z])$)">
+	<cfparam name="types" default="F" type="string" pattern="^([FP],)[FP]$|^[FP]$">
+	<cfparam name="partialPart" default="" type="string" pattern="^[P]\d{0,10}$">
+
+	<cfcatch>
+	<cfoutput>Invalid Parameter!</cfoutput>
+	</cfcatch>
+</cftry>
+
 <cfparam name="minThick" default="0" type="integer">
 <cfparam name="maxThick" default="1000" type="integer">
-<cfparam name="types" default="F" type="string" pattern="^([FP],)[FP]$|^[FP]$">
-<cfparam name="partialPart" default="" type="string" pattern="^[P]\d{0,10}$">
 
 <!--- If we are including infinites, add them to the type list --->
 <cfif #minThick# gt 1000>
