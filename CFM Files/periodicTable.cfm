@@ -13,6 +13,9 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
     </head>
+
+    <cfset currPage = "findProd">
+
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -51,7 +54,11 @@
         <cfset lastEl="2,10,18,36,54,71,86,103,118">
         <cfset hasSpace="1,4,12">
 
-        <cfinclude template = "navBar.cfm">
+        <div id="#navButtonsWrapper">
+            <div id="navButtons">
+                <cfinclude template = "navBar.cfm">
+            </div>
+        </div>
 
         <div id="sliderFormWrapper">
             <form name="sliderForm" id="sliderForm" action="inventory.cfm" method="POST">
