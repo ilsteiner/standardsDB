@@ -263,6 +263,25 @@ BEGIN
 		DBMS_OUTPUT.put_line('Total composition for standard '||:new.serialNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be less than 100%.');
 	END IF;
 END;
+
+-- Trigger to update stock number when a standard is added, deleted, or changed to a new product number
+CREATE OR REPLACE TRIGGER trg_updateStock
+	BEFORE INSERT or UPDATE or DELETE
+	ON tbStandard
+	FOR EACH ROW
+BEGIN
+IF DELETING OR UPDATING('partNumber') THEN
+	UPDATE tbPart
+	SET stock = stock - 1
+	WHERE partNumber = :old.partNumber;
+END IF;
+
+IF INSERTING OR UPDATING('partNumber') THEN
+	UPDATE tbPart
+	SET stock = stock + 1
+	WHERE partNumber = :new.partNumber;
+END IF;
+END;
 /
 
 SPOOL OFF
