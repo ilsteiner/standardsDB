@@ -8,11 +8,6 @@ function enableFilters(){
 	$("#rangeSlider").slider({disabled: "false"});	
 }
 
-//Make navigation buttons look like buttons
-$(function() {
-    $("#navButtons").buttonset();
-});
-
 //Highlight the correct button for the current "page"
 $(".navButton").click(function() {
 	$(".navButton").removeClass('navSelected');
