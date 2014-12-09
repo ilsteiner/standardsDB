@@ -14,7 +14,29 @@
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
     </head>
 
-    <cfset currPage = "findProd">
+    <cfset currPage = "findStan">
+
+    <cfparam name="partNum" default="" type="string" pattern="^[P]\d{10}$">
+
+    <cfquery
+        name="getPart"
+        datasource="#Request.DSN#"
+        username="#Request.username#"
+        password="#Request.password#"
+        result="theParts">
+    SELECT distinct
+           main.partNumber,
+           main.symbol,
+           main.composition,
+           p.stock,
+           p.targetValue,
+           p.price,
+           st.typeDesc,
+           p.platedElement,
+           p.custom
+    FROM tbPartComponent main inner join tbPart p on p.partNumber = main.partNumber inner join tbStandardType st on p.typeID = st.typeID
+    WHERE main.partNumber = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partNum#">
+    </cfquery>
 
     <body>
         <!--[if lt IE 7]>
@@ -23,10 +45,16 @@
 
         <!--- Get the information from the Element table for each element --->
 
-        <cfparam name="elements" default="" type="string" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])$)|(^([A-Z][a-z])$)">
-        <cfparam name="partNum" default="" type="string" pattern="^[P]\d{10}$">
+        <form id="newStandard">
+            <label for="partNumber">Part Number</label>
+            <input type="text" required readonly id="partNumber" name="partNumber" value="<cfoutput>#partNum#</cfoutput>"/>
+            <label for="stanType">Standard Type</label>
+            <input type="text" required disabled id="stanType" name="stanType" value="<cfoutput>#partNum#</cfoutput>"/>
+            <label for="actualValue">Measured thickness</label>
+            <input type="number" name="actualValue" id="actualValue" required min="2" max="1002" step="2"/>
+        </form>
 
-        
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
