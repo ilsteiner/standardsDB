@@ -17,26 +17,59 @@
     <cfset currPage = "findStan">
 
     <cfparam name="partNum" default="" type="string" pattern="^[P]\d{10}$">
-
-    <cfquery
-        name="getPart"
-        datasource="#Request.DSN#"
-        username="#Request.username#"
-        password="#Request.password#"
-        result="theParts">
-    SELECT distinct
-           main.partNumber,
-           main.symbol,
-           main.composition,
-           p.stock,
-           p.targetValue,
-           p.price,
-           st.typeDesc,
-           p.platedElement,
-           p.custom
-    FROM tbPartComponent main inner join tbPart p on p.partNumber = main.partNumber inner join tbStandardType st on p.typeID = st.typeID
-    WHERE main.partNumber = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partNum#">
-    </cfquery>
+    <cfparam name="serialNum" default="" type="string" pattern="^[S]\d{10}$">
+	
+	<!--- Editing an existing Standard --->
+    <cfif #serialNum# neq "">
+    	<cfquery
+	        name="getStandard"
+	        datasource="#Request.DSN#"
+	        username="#Request.username#"
+	        password="#Request.password#"
+	        result="theStandard">
+	    SELECT 
+	    	s.partNumber,
+	    	s.certNumber,
+	    	s.actualValue,
+	    	pc.symbol,
+			pc.composition,
+			p.stock,
+			p.targetValue,
+			p.price,
+			st.typeDesc,
+			p.platedElement,
+			p.custom
+	    FROM tbStandard s 
+	    left join tbCertification c on s.certNumber = c.certNumber
+	    inner join tbPartComponent pc on s.partNumber = pc.partNumber
+	    inner join tbPart p on pc.partNumber = p.partNumber
+	    inner join tbStandardType st on p.typeID = st.typeID
+	    WHERE s.serialNumber = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#serialNum#">
+	    </cfquery>
+    </cfif>
+	
+	<!--- Creating a new Standard --->
+	<cfif #partNum# neq "">
+	    <cfquery
+	        name="getPart"
+	        datasource="#Request.DSN#"
+	        username="#Request.username#"
+	        password="#Request.password#"
+	        result="theParts">
+	    SELECT distinct
+	           pc.partNumber,
+	           pc.symbol,
+	           pc.composition,
+	           p.stock,
+	           p.targetValue,
+	           p.price,
+	           st.typeDesc,
+	           p.platedElement,
+	           p.custom
+	    FROM tbPartComponent pc inner join tbPart p on p.partNumber = pc.partNumber inner join tbStandardType st on p.typeID = st.typeID
+	    WHERE pc.partNumber = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partNum#">
+	    </cfquery>
+	</cfif>
 
     <body>
         <!--[if lt IE 7]>
@@ -50,12 +83,14 @@
             <input type="text" required readonly id="partNumber" name="partNumber" value="<cfoutput>#partNumber#</cfoutput>"/>
             <label for="stanType">Standard Type</label>
             <input type="text" required disabled id="stanType" name="stanType" value="<cfoutput>#typeDesc#</cfoutput>"/>
-            <cfif #typeDesc# eq "P">
+            <!--- IF this is a plated standard, show what it is plated on --->
+            <cfif #typeDesc# eq "Plated">
                 <label for="plated">Plated On</label>
                 <input type="text" required disabled id="plated" name="plated" value="<cfoutput>#typeDesc#</cfoutput>"/>
             </cfif>
             <label for="actualValue">Measured thickness</label>
-            <input type="number" name="actualValue" id="actualValue" required min="2" max="1002" step="2"/>
+            <input type="number" name="actualValue" id="actualValue" required min="2" max="1002" step="2" <cfif #actualValue# neq ""><cfoutput>value="#actualValue#"</cfoutput>/>
+            <input type="text" required id="certNum">
         </form>
 
 
