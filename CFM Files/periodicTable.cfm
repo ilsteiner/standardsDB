@@ -51,15 +51,7 @@
         <cfset lastEl="2,10,18,36,54,71,86,103,118">
         <cfset hasSpace="1,4,12">
 
-        <nav>
-            <div id="navButtonsWrapper">
-                <div id="navButtons">
-                    <input type="radio" id="findProd" class="navButton" name="navButtons"><label for="findProd">Find Product</label>
-                    <input type="radio" id="findStand" class="navButton" name="navButtons"><label for="findStand">Find Standards</label>
-                    <input type="radio" id="findCert" class="navButton" name="findCert"><label for="findCert">Find Certification</label>
-                </div>
-            </div>
-        </nav>
+        <cfinclude template = "navBar.cfm">
 
         <div id="sliderFormWrapper">
             <form name="sliderForm" id="sliderForm" action="inventory.cfm" method="POST">
