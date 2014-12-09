@@ -91,14 +91,6 @@ ORDER BY main.composition DESC, main.symbol
 	</cfquery>
 </cfif>
 
-<!--- 
-	For each part number we are returning, get all of the symbols
-	associated with it and put them into a comma-delimeted list.
-	Put all of this into an array. 
---->
-
-<!--- <cfoutput query="getAllParts"> --->
-
 <div id="resultTableWrapper">
 	<table id="resultTable">
 		<caption><cfoutput>#getParts.RecordCount#</cfoutput> Products Found</caption>
