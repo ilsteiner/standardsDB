@@ -103,12 +103,12 @@ ORDER BY main.composition DESC, main.symbol
 		<caption><cfoutput>#getParts.RecordCount#</cfoutput> Products Found</caption>
 		<thead class="ui-widget-header">
 			<tr>
-				<td>Part Number</td>
-				<td>Type</td>
-				<td>Thickness</td>
-				<td>Price</td>
-				<td>In Stock</td>
-				<td>Composition</td>
+				<th>Part Number</th>
+				<th>Type</th>
+				<th>Thickness</th>
+				<th>Price</th>
+				<th>In Stock</th>
+				<th>Composition</th>
 			</tr>
 		</thead>
 
