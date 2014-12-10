@@ -42,3 +42,7 @@ body{
   font-size: 1.5vw;
   font-weight: bold;
 }
+
+#certTable,Table.partNums{
+	border: solid 1px;
+}
