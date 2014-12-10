@@ -57,14 +57,14 @@
             </thead>
             <tbody>
                 <cfoutput query="getCerts" group="certNumber" maxrows="5000">
-                    <tr>
-                        <td>#certNumber#</td>
+                    <tr class="certRow">
+                        <td><img class="expandIcon" src="img/icons/60px-40.png">#certNumber#</td>
                         <td>#certDate#</td>
                         <td>#name#</td>
                     </tr>
-                    <tr>
+                    <tr class="partRow">
                         <td colspan="3">
-                            <<table class="partNums">
+                            <table class="partNums">
                                 <thead>
                                     <tr>
                                         <th>Part Number</th>

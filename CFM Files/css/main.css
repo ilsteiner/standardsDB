@@ -16,6 +16,10 @@ body{
 	display: none;
 }
 
+.centerText{
+	text-align: center;
+}
+
 #activePage{
 	background: #68B389;
 	color: black;
@@ -45,4 +49,19 @@ body{
 
 #certTable,Table.partNums{
 	border: solid 1px;
+}
+
+#certTable > td,Table.partNums > td{
+	padding: .5em;
+}
+
+.expandIcon{
+	width: 1em;
+	height: 1em;
+}
+
+.expandedIcon{
+	-ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
 }
