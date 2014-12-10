@@ -74,13 +74,7 @@
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-		<!--- Editing an existing Standard --->
-    	<cfif #serialNum# neq "">
-
-		<!--- Creating a new Standard --->
-		<cfelifif #partNum# neq "">
+        <![enidf]-->
 
         <form id="newStandard">
             <label for="partNumber">Part Number</label>
@@ -92,9 +86,13 @@
                 <label for="plated">Plated On</label>
                 <input type="text" required disabled id="plated" name="plated" value="<cfoutput>#getData.typeDesc#</cfoutput>"/>
             </cfif>
-            <label for="actualValue">Measured thickness</label>
-            <input type="number" name="actualValue" id="actualValue" required min="2" max="1002" step="2" <cfif IsDefined("getData.actualValue") and #getData.actualValue# neq ""><cfoutput>value="#getData.actualValue#"</cfoutput></cfif>/>
-            <input type="text" required id="certNum">
+            <!--- Editing an existing Standard --->
+    		<cfif #serialNum# neq "">
+
+			<!--- Creating a new Standard --->
+			<cfelifif #partNum# neq "">
+	            <label for="actualValue">Measured thickness</label>
+	            <input type="number" name="actualValue" id="actualValue" required min="2" max="1002" step="2"/>
         </form>
 
 
