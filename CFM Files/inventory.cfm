@@ -115,7 +115,13 @@ ORDER BY main.composition DESC, main.symbol
 		<tbody class="ui-widget-content">
 			<cfoutput query="getParts" group="partNumber">
 				<tr>
-					<td class="partNumber">#partNumber#</td>
+					<td class="partNumber">
+						<!--- Hidden form to allow creation of a new standard for a given part --->
+						<form action="standard.cfm" method="POST" name="newStandard">
+							<input type="text" name="partNum" value="<cfoutput>#partNumber#</cfoutput>" class="hidden">
+							<a href="" onclick="parentNode.submit();return false;">#partNumber#</a>
+						</form>
+					</td>
 					<td>#typeDesc#<cfif #typeDesc# eq 'Plated'> (#platedElement#)</cfif></td>
 					<td>#targetValue#μin</td>
 					<td>$#price#</td>

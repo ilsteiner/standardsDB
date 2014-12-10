@@ -22,7 +22,7 @@
 	<!--- Editing an existing Standard --->
     <cfif #serialNum# neq "">
     	<cfquery
-	        name="getStandard"
+	        name="getData"
 	        datasource="#Request.DSN#"
 	        username="#Request.username#"
 	        password="#Request.password#"
@@ -51,7 +51,7 @@
 	<!--- Creating a new Standard --->
 	<cfif #partNum# neq "">
 	    <cfquery
-	        name="getPart"
+	        name="getData"
 	        datasource="#Request.DSN#"
 	        username="#Request.username#"
 	        password="#Request.password#"
@@ -76,20 +76,24 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!--- Get the information from the Element table for each element --->
+		<!--- Editing an existing Standard --->
+    	<cfif #serialNum# neq "">
+
+		<!--- Creating a new Standard --->
+		<cfelifif #partNum# neq "">
 
         <form id="newStandard">
             <label for="partNumber">Part Number</label>
-            <input type="text" required readonly id="partNumber" name="partNumber" value="<cfoutput>#partNumber#</cfoutput>"/>
+            <input type="text" required readonly id="partNumber" name="partNumber" value="<cfoutput>#partNum#</cfoutput>"/>
             <label for="stanType">Standard Type</label>
-            <input type="text" required disabled id="stanType" name="stanType" value="<cfoutput>#typeDesc#</cfoutput>"/>
-            <!--- IF this is a plated standard, show what it is plated on --->
-            <cfif #typeDesc# eq "Plated">
+            <input type="text" required disabled id="stanType" name="stanType" value="<cfoutput>#getData.typeDesc#</cfoutput>"/>
+            <!--- If this is a plated standard, show what it is plated on --->
+            <cfif #getData.typeDesc# eq "Plated">
                 <label for="plated">Plated On</label>
-                <input type="text" required disabled id="plated" name="plated" value="<cfoutput>#typeDesc#</cfoutput>"/>
+                <input type="text" required disabled id="plated" name="plated" value="<cfoutput>#getData.typeDesc#</cfoutput>"/>
             </cfif>
             <label for="actualValue">Measured thickness</label>
-            <input type="number" name="actualValue" id="actualValue" required min="2" max="1002" step="2" <cfif #actualValue# neq ""><cfoutput>value="#actualValue#"</cfoutput>/>
+            <input type="number" name="actualValue" id="actualValue" required min="2" max="1002" step="2" <cfif IsDefined("getData.actualValue") and #getData.actualValue# neq ""><cfoutput>value="#getData.actualValue#"</cfoutput></cfif>/>
             <input type="text" required id="certNum">
         </form>
 
