@@ -37,8 +37,12 @@ SELECT distinct
        p.price,
        st.typeDesc,
        p.platedElement,
-       p.custom
-FROM tbPartComponent main inner join tbPart p on p.partNumber = main.partNumber inner join tbStandardType st on p.typeID = st.typeID
+       p.custom,
+       e.density
+FROM tbPartComponent main 
+inner join tbPart p on p.partNumber = main.partNumber 
+inner join tbStandardType st on p.typeID = st.typeID
+inner join tbElement e on e.symbol = main.symbol
 WHERE main.partNumber <cfif len(#partialPart#) eq 11> = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#"><cfelse> LIKE <cfqueryparam cfsqltype="CF_SQL_VARCHAR" maxlength="11" value="#partialPart#%"></cfif>
 ORDER BY main.composition DESC, main.symbol
 </cfquery>
@@ -56,7 +60,8 @@ ORDER BY main.composition DESC, main.symbol
 		       price,
 		       typeDesc,
 		       platedElement,
-		       custom
+		       custom,
+		       density
 		FROM getAllParts
 	</cfquery>
 <cfelse>
@@ -75,10 +80,12 @@ ORDER BY main.composition DESC, main.symbol
 		                p.price,
 		                st.typeDesc,
 		                p.platedElement,
-		                p.custom
+		                p.custom,
+		                e.density
 		FROM tbPartComponent main
 		INNER JOIN tbPart p ON main.partNumber = p.partNumber
 		INNER JOIN tbStandardType st ON p.typeID = st.typeID
+		INNER JOIN tbElement e on e.symbol = main.symbol
 		WHERE
 		<!---Check the minimum and maximum thickness--->
 		  p.targetValue >= <cfqueryparam cfsqltype="CF_SQL_NUMERIC" maxlength="4" value="#minThick#">
@@ -109,6 +116,7 @@ ORDER BY main.composition DESC, main.symbol
 				<th>Price</th>
 				<th>In Stock</th>
 				<th>Composition</th>
+				<th>Density</th>
 			</tr>
 		</thead>
 
@@ -128,11 +136,23 @@ ORDER BY main.composition DESC, main.symbol
 					<td>#stock#</td>
 					<td class="composition">
 						<cfset elemList="">
+						<cfset compList="">
+						<cfset denList="">
 						<cfoutput>
+							<cfset currComp = composition>
+							<cfset currDen = density>
 							<cfset currElem = composition & "%" & " " & symbol>
+							
+							<cfset compList = listAppend(compList,currComp)>
+							<cfset denList = listAppend(elemList,currDen)>
 							<cfset elemList = listAppend(elemList,currElem)>
 						</cfoutput>
 						#elemList#
+					</td>
+					<td>
+						<script type="text/javascript">
+							calcDensity("<cfoutput>#denList#</cfoutput>","<cfoutput>#compList#</cfoutput>");
+						</script>
 					</td>
 				</tr>
 			</cfoutput>

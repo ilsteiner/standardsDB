@@ -166,3 +166,18 @@ $("#partialPart").on('input change',function(e){
 		}
 	});
 });
+
+//Calculate density
+function calcDensity(densities,compositions){
+	var denArray = densities.split(',');
+	var compArray = compositions.split(',');
+	var denSum = 0;
+
+	//For each composition/density pair, divide the composition by the density
+	for(var i = 1; denArray.length; i++) {
+		denSum += (compArray[i]/denArray[i]);
+	}
+
+	//Return 1 over the sum of composition/density calculations
+	return 1/denSum;
+}
