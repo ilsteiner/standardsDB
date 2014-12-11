@@ -14,6 +14,8 @@
     </head>
     
     <body>
+        <cfparam name="partNumber" default="" type="string" pattern="^[P]\d{10}$">
+
         <!--- Get the list of certifications and associated products --->
         <cfquery
             name="getCerts"
@@ -42,6 +44,9 @@
             inner join tbStandardType st on p.typeID = st.typeID
             inner join tbTechnician t on c.technicianID = t.technicianID
             WHERE c.statusID IN ('P','R')
+            <cfif isDefined("FORM.partNumber")>
+                and s.partNumber = <cfqueryparam cfsqltype="cf_sql_varchar" maxlength="11" value="#FORM.partNumber#">
+            </cfif>
             and ROWNUM <= 5000
             ORDER BY c.certDate DESC
         </cfquery>
@@ -61,6 +66,17 @@
                         <td>#certNumber#</td>
                         <td>#certDate#</td>
                         <td>#name#</td>
+                        <!--- If we came here with a part number defined --->
+                        <cfif isDefined("FORM.partNumber")>
+                            <td>
+                                <form name="certifyStandard" method="POST" action="addToCert.cfm">
+                                    <input type="number" name="quantity" value="1" min="1" max="<cfoutput>#p.stock#</cfoutput>" required>
+                                    <input type="hidden" readonly name="certNumber" value="<cfoutput>#certNumber#</cfoutput>">
+                                    <input type="hidden" readonly name="partNumber" value="<cfoutput>#FORM.partNumber#</cfoutput>">
+                                    <<input type="submit" name="addToCert" value="submit">
+                                </form>
+                            </td>
+                        </cfif>
                     </tr>
                     <tr>
                         <td colspan="3">
