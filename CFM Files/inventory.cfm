@@ -150,8 +150,10 @@ ORDER BY main.composition DESC, main.symbol
 						#elemList#
 					</td>
 					<td>
+						<cfdump var="#denList#">
+						<cfdump var="#compList#">
 						<script type="text/javascript">
-							calcDensity("<cfoutput>#denList#</cfoutput>","<cfoutput>#compList#</cfoutput>");
+							//calcDensity("<cfoutput>#denList#</cfoutput>","<cfoutput>#compList#</cfoutput>");
 						</script>
 					</td>
 				</tr>
