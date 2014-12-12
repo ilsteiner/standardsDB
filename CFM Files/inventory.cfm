@@ -106,17 +106,17 @@ ORDER BY main.composition DESC, main.symbol
 </cfif>
 
 <div id="resultTableWrapper">
-	<table id="resultTable">
+	<table id="resultTable" class="tablesorter">
 		<caption><cfoutput>#getParts.RecordCount#</cfoutput> Products Found</caption>
-		<thead class="ui-widget-header">
+		<thead>
 			<tr>
-				<th>Part Number</th>
-				<th>Type</th>
-				<th>Thickness</th>
-				<th>Price</th>
-				<th>In Stock</th>
-				<th>Composition</th>
-				<th>Density</th>
+				<th><div class="headerWrapper">Part Number</div></th>
+				<th><div class="headerWrapper">Type</div></th>
+				<th><div class="headerWrapper">Thickness</div></th>
+				<th><div class="headerWrapper">Price</div></th>
+				<th><div class="headerWrapper">In Stock</div></th>
+				<th><div class="headerWrapper">Composition</div></th>
+				<th><div class="headerWrapper">Density</div></th>
 			</tr>
 		</thead>
 

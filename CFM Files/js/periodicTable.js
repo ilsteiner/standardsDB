@@ -86,8 +86,8 @@ $(function() {
 	});
   });
 
-//Take over the submit function of the form
 $(document).ready(function() {
+	//Take over the submit function of the form
 	$("#sliderForm").submit(updateList);
 });
 
@@ -101,6 +101,9 @@ function updateList() {
 		//Otherwise, return the data
 		else{
 			$("#formResults").html(data);
+
+				//Make the table sortable
+				$("#resultTable").tablesorter();
 		}
 	});
 	return false;

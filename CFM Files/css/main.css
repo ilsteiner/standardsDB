@@ -46,3 +46,21 @@ body{
 #certTable,Table.partNums{
 	border: solid 1px;
 }
+
+.certRow{
+	background-color: LightGray;
+}
+
+.expand{
+	width: 1em;
+}
+
+/* Fix arrows on tablesorter tables */
+/* table.tablesorter thead tr .header {
+    background-position: left center;
+    padding-left: .5vw;
+}​ */
+
+.headerWrapper{
+	margin-right: 12px;
+}

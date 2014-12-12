@@ -12,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="css/periodicTable.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="js/tablesorter/themes/blue/style.css">
     </head>
 
     <cfset currPage = "findProd">
@@ -54,7 +55,7 @@
         <cfset lastEl="2,10,18,36,54,71,86,103,118">
         <cfset hasSpace="1,4,12">
 
-        <div id="#navButtonsWrapper">
+        <div id="navButtonsWrapper">
             <div id="navButtons">
                 <cfinclude template = "navBar.cfm">
             </div>
@@ -157,5 +158,6 @@
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jqueryui-1.11.2.min.js"><\/script>')</script>
         <script type="text/javascript" src="js/periodicTable.js"></script>
+        <script type="text/javascript" src="js/tablesorter/jquery.tablesorter.min.js"></script>
     </body>
 </html>

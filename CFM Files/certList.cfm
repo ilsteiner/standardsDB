@@ -55,14 +55,16 @@
             <caption>Certifications</caption>
             <thead>
                 <tr>
+                    <th></th>
                     <th>Certification Number</th>
                     <th>Certification Date</th>
                     <th>Technician</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="certTable">
                 <cfoutput query="getCerts" group="certNumber" maxrows="5000">
-                    <tr>
+                    <tr class="certRow">
+                        <td><img src="img/plus.png" alt="expand" class="expand"></td>
                         <td>#certNumber#</td>
                         <td>#certDate#</td>
                         <td>#name#</td>
@@ -78,7 +80,7 @@
                             </td>
                         </cfif>
                     </tr>
-                    <tr>
+                    <tr class="productRow hidden">
                         <td colspan="3">
                             <<table class="partNums">
                                 <thead>
