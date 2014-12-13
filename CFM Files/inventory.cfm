@@ -139,6 +139,8 @@ ORDER BY main.composition DESC, main.symbol
 						<cfset denSum="0">
 						<cfoutput>
 							<cfset currElem = composition & "%" & " " & symbol>
+
+							<!--- Add to the sum of densities of component elements of this alloy...or just this element if it isn't an alloy --->
 							<cfset currDen = (composition/100) / density>
 					
 							<cfset denSum = denSum + currDen>
@@ -147,6 +149,7 @@ ORDER BY main.composition DESC, main.symbol
 						#elemList#
 					</td>
 					<td>
+						<!--- Display the density for this product --->
 						<cfset theDen = (1 / denSum)>
 						#numberformat(theDen,"0.00")#g/cc
 					</td>
