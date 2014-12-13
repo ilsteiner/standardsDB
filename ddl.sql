@@ -223,7 +223,7 @@ END;
 
 --Trigger to ensure that product compositions always sum to 100%
 CREATE OR REPLACE TRIGGER trg_productComposition
-	BEFORE INSERT or UPDATE or DELETE
+	BEFORE INSERT or UPDATE
 	ON tbPartComponent
 	FOR EACH ROW
 DECLARE
@@ -245,7 +245,7 @@ END;
 
 --Trigger to ensure that standard compositions always sum to 100%
 CREATE OR REPLACE TRIGGER trg_standardComposition
-	BEFORE INSERT or UPDATE or DELETE
+	BEFORE INSERT or UPDATE
 	ON tbStandardComponent
 	FOR EACH ROW
 DECLARE
@@ -263,6 +263,7 @@ BEGIN
 		DBMS_OUTPUT.put_line('Total composition for standard '||:new.serialNumber||' ('||:new.symbol||') was '||compositionSum||'%. It should not be less than 100%.');
 	END IF;
 END;
+/
 
 -- Trigger to update stock number when a standard is added, deleted, or changed to a new product number
 CREATE OR REPLACE TRIGGER trg_updateStock
