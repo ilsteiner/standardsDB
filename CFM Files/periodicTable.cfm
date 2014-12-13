@@ -6,8 +6,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Product Table</title>
-        <meta name="description" content="">
+        <title>Products</title>
+        <meta name="View available products" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/periodicTable.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">

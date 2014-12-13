@@ -6,8 +6,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Product Table</title>
-        <meta name="description" content="">
+        <title>Certifications</title>
+        <meta name="View certifications" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
@@ -50,60 +50,76 @@
             and ROWNUM <= 5000
             ORDER BY c.certDate DESC
         </cfquery>
-    
-        <table id="certTable">
-            <caption>Certifications</caption>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Certification Number</th>
-                    <th>Certification Date</th>
-                    <th>Technician</th>
-                </tr>
-            </thead>
-            <tbody id="certTable">
-                <cfoutput query="getCerts" group="certNumber" maxrows="5000">
-                    <tr class="certRow">
-                        <td><img src="img/plus.png" alt="expand" class="expand"></td>
-                        <td>#certNumber#</td>
-                        <td>#certDate#</td>
-                        <td>#name#</td>
-                        <!--- If we came here with a part number defined --->
-                        <cfif isDefined("FORM.partNumber")>
-                            <td>
-                                <form name="certifyStandard" method="POST" action="addToCert.cfm">
-                                    <input type="number" name="quantity" value="1" min="1" max="<cfoutput>#p.stock#</cfoutput>" required>
-                                    <input type="hidden" readonly name="certNumber" value="<cfoutput>#certNumber#</cfoutput>">
-                                    <input type="hidden" readonly name="partNumber" value="<cfoutput>#FORM.partNumber#</cfoutput>">
-                                    <<input type="submit" name="addToCert" value="submit">
-                                </form>
-                            </td>
-                        </cfif>
+
+        <cfset currPage = "findCert">
+
+        <div id="mainWrapper">
+            <span id="navButtonsCenter">
+                <cfinclude template = "navBar.cfm">
+            </span>
+        
+            <table id="certTable" class="hidden">
+                <caption>Certifications</caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Certification Number</th>
+                        <th>Certification Date</th>
+                        <th>Technician</th>
                     </tr>
-                    <tr class="productRow hidden">
-                        <td colspan="3">
-                            <<table class="partNums">
-                                <thead>
-                                    <tr>
-                                        <th>Part Number</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <cfoutput>
+                </thead>
+
+                <!--- Loading image --->
+                <img src="img/loading.gif" id="loading">
+
+                <tbody id="certTable">
+                    <cfoutput query="getCerts" group="certNumber" maxrows="5000">
+                        <tr class="certRow">
+                            <td><img src="img/plus.png" alt="expand" class="expand"></td>
+                            <td>#certNumber#</td>
+                            <td>#certDate#</td>
+                            <td>#name#</td>
+                            <!--- If we came here with a part number defined --->
+                            <cfif isDefined("FORM.partNumber")>
+                                <td>
+                                    <form name="certifyStandard" method="POST" action="addToCert.cfm">
+                                        <input type="number" name="quantity" value="1" min="1" max="<cfoutput>#p.stock#</cfoutput>" required>
+                                        <input type="hidden" readonly name="certNumber" value="<cfoutput>#certNumber#</cfoutput>">
+                                        <input type="hidden" readonly name="partNumber" value="<cfoutput>#FORM.partNumber#</cfoutput>">
+                                        <input type="submit" name="addToCert" value="submit">
+                                    </form>
+                                </td>
+                            </cfif>
+                        </tr>
+                        <tr class="productRow hidden">
+                            <td colspan="3">
+                                <table class="partNums">
+                                    <thead>
                                         <tr>
-                                            <td>
-                                                #getCerts.partNumber#
-                                            </td>
+                                            <th>Part Number</th>
+                                            <th>Type</th>
+                                            <th>Target Value</th>
+                                            <th>Actual Value</th>
                                         </tr>
-                                    </cfoutput>
-                                </tbody>
-                            </table>
-                        </td>
-                        
-                    </tr>
-                </cfoutput>
-            </tbody>
-        </table>
+                                    </thead>
+                                    <tbody>
+                                        <cfoutput>
+                                            <tr>
+                                                <td>#getCerts.partNumber#</td>
+                                                <td>#getCerts.typeDesc#</td>
+                                                <td>#getCerts.targetValue#μin</td>
+                                                <td>#getCerts.actualValue#μin</td>
+                                            </tr>
+                                        </cfoutput>
+                                    </tbody>
+                                </table>
+                            </td>
+                            
+                        </tr>
+                    </cfoutput>
+                </tbody>
+            </table>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -111,6 +127,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jqueryui-1.11.2.min.js"><\/script>')</script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/jExpand.js"></script>
+        <script type="text/javascript" src="js/certList.js"></script>
 
         <script>
             $("#certTable").jExpand();

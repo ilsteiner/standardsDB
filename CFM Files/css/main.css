@@ -17,17 +17,13 @@ body{
 }
 
 #activePage{
-	background: #68B389;
+	background-color: MediumSeaGreen;
 	color: black;
 }
 
-.navSelected{
+/* .navSelected{
 	background-color: green;
-}
-
-#nav-main{
-  width: 70%;
-}
+} */
 
 .navButton{
   list-style: none;
@@ -36,10 +32,14 @@ body{
   padding: 2%;
 }
 
+.navButton:hover{
+	background-color: #68B389;
+}
+
 #nav-main > ul > a{
   color: black;
   text-decoration: none;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-weight: bold;
 }
 
@@ -55,12 +55,21 @@ body{
 	width: 1em;
 }
 
-/* Fix arrows on tablesorter tables */
-/* table.tablesorter thead tr .header {
-    background-position: left center;
-    padding-left: .5vw;
-}​ */
+#mainWrapper{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
 
+#navButtonsCenter{
+	flex: 4;
+}
+
+#certTable{
+	font-size: 1.8vw;
+}
+
+/* Fix arrows on tablesorter tables */
 .headerWrapper{
 	margin-right: 12px;
 }
