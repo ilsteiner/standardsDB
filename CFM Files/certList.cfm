@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="js/tablesorter/themes/blue/style.css">
     </head>
     
     <body>
@@ -56,10 +57,28 @@
         <div id="mainWrapper">
             <span id="navButtonsCenter">
                 <cfinclude template = "navBar.cfm">
+
+                <!--- Page controls --->
+                <div id="pager" class="pager hidden">
+                    <form>
+                      <img src="img/first.png" class="first"/>
+                      <img src="img//prev.png" class="prev"/>
+                      <input type="text" class="pagedisplay"/>
+                      <img src="img//next.png" class="next"/>
+                      <img src="img//last.png" class="last"/>
+                      <select class="pagesize">
+                        <option selected="selected"  value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option  value="40">40</option>
+                      </select>
+                    </form>
+                </div>
             </span>
         
-            <table id="certTable" class="hidden">
+            <table id="certTable" class="hidden tablesorter">
                 <caption>Certifications</caption>
+
                 <thead>
                     <tr>
                         <th></th>
@@ -91,9 +110,9 @@
                                 </td>
                             </cfif>
                         </tr>
-                        <tr class="productRow hidden">
+                        <tr class="productRow hidden expand-child">
                             <td colspan="3">
-                                <table class="partNums">
+                                <table class="partNums tablesorter">
                                     <thead>
                                         <tr>
                                             <th>Part Number</th>
@@ -127,6 +146,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jqueryui-1.11.2.min.js"><\/script>')</script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/jExpand.js"></script>
+        <script type="text/javascript" src="js/tablesorter/jquery.tablesorter.min.js"></script>
+        <script type="text/javascript" src="js/tablesorter/addons/pager/jquery.tablesorter.pager.js"></script>
         <script type="text/javascript" src="js/certList.js"></script>
 
         <script>

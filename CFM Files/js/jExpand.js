@@ -2,24 +2,19 @@
     $.fn.jExpand = function(){
         var element = this;
 
-        // $(element).find(".certRow:nth-child(4)").addClass("odd");
-        $(element).find("tr:first-child").show();
-
+        //On click of a parent row, toggle its child row
         $(element).find("tr.certRow").click(function() {
-            $(this).next("tr").toggle();
-            toggleExpand($(this).next("td > img"));
-            console.log($(this).next("img"));
+            $(this).next("tr").slideToggle();
+            toggleExpand($(this).find('img'));
         });
     }    
 })(jQuery);
 
 function toggleExpand(img){
-	console.log("Function triggered.");
-	console.log(img.src)
-	if(img.src === "img/plus.png"){
-		img.src = "img/minus.png";	
+	if(img.attr('src') === "img/plus.png"){
+		img.attr('src','img/minus.png');	
 	}
 	else{
-		img.src = "img/plus.png";
+		img.attr('src','img/plus.png');
 	}
 }

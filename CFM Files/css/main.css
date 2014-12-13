@@ -44,7 +44,7 @@ body{
 }
 
 #certTable,Table.partNums{
-	border: solid 1px;
+	/*border: solid 1px;*/
 }
 
 .certRow{
@@ -65,8 +65,13 @@ body{
 	flex: 4;
 }
 
+#pager{
+	font-size: 1vw;
+}
+
 #certTable{
 	font-size: 1.8vw;
+	text-align: center;
 }
 
 /* Fix arrows on tablesorter tables */
