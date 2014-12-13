@@ -1,11 +1,11 @@
 function disableFilters(){
 	$("input").not("#partialPart").attr('disabled', 'disabled');
-	$("#rangeSlider").slider({disabled: "true"});	
+	$("#rangeSlider").slider('disable');	
 }
 
 function enableFilters(){
 	$("input").not("#partialPart").removeAttr('disabled');
-	$("#rangeSlider").slider({disabled: "false"});	
+	$("#rangeSlider").slider('enable');	
 }
 
 //Highlight the correct button for the current "page"
@@ -46,6 +46,21 @@ $("input").on('input change',function(){
 
 $("#rangeSlider").on("slidestop", function(e){
     $("#sliderForm").submit();
+});
+
+//If you uncheck one checkbox and the other is already unchecked, check that one
+$("#foil").on('change', function(e){
+	if($("#plated").not(":checked")){
+		$("#plated").prop('checked', true);
+		$("#sliderForm").submit();
+	}
+});
+
+$("#plated").on('change', function(e){
+	if($("#foil").not(":checked")){
+		$("#foil").prop('checked', true);
+		$("#sliderForm").submit();
+	}
 });
 
 //Code for the jQueryUI slider
@@ -93,6 +108,8 @@ $(document).ready(function() {
 
 //Query the DB for the parts associated with the parameters selected
 function updateList() {
+	$("#loading").show();
+
 	$.post('inventory.cfm', $('input').serialize(),function(data,status){
 		//Remove the headers if no elements are selected
 		if(($("#elements").val().length === 0) && $("#partialPart").val().length === 0){
@@ -105,6 +122,8 @@ function updateList() {
 				//Make the table sortable
 				$("#resultTable").tablesorter();
 		}
+
+		$("#loading").hide();
 	});
 	return false;
 };

@@ -62,6 +62,8 @@
         </div>
 
         <div id="sliderFormWrapper">
+            <img src="img/loading.gif" class="hidden">
+
             <form name="sliderForm" id="sliderForm" action="inventory.cfm" method="POST">
                 <div id="formInputs">
                     <div class="inputDiv">
@@ -70,8 +72,8 @@
                     </div>
 
                     <div class="checks">
-                        <label class="checkLabel"><input type="checkbox" checked name="types" value="F">Foils</label>
-                        <label class="checkLabel"><input type="checkbox" checked name="types" value="P">Plated&nbsp;standards</label>
+                        <label class="checkLabel"><input type="checkbox" checked id="foil" name="types" value="F">Foils</label>
+                        <label class="checkLabel"><input type="checkbox" checked id="plated" name="types" value="P">Plated&nbsp;standards</label>
                     </div>
 
                     <div class="inputDiv">
