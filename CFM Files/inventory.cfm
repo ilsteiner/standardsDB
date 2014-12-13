@@ -1,7 +1,7 @@
 <cftry>
 	<cfparam name="elements" default="Au,Fe" type="string" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])$)|(^([A-Z][a-z])$)">
 	<cfparam name="types" default="F" type="string" pattern="^([FP],)[FP]$|^[FP]$">
-	<cfparam name="partialPart" default="" type="string" pattern="^[P]\d{0,10}$">
+	<cfparam name="partialPart" default="P1111" type="string" pattern="^[P]\d{0,10}$">
 
 	<cfcatch>
 	<cfoutput>Invalid Parameter!</cfoutput>
@@ -136,25 +136,19 @@ ORDER BY main.composition DESC, main.symbol
 					<td>#stock#</td>
 					<td class="composition">
 						<cfset elemList="">
-						<cfset compList="">
-						<cfset denList="">
+						<cfset denSum="0">
 						<cfoutput>
-							<cfset currComp = composition>
-							<cfset currDen = density>
 							<cfset currElem = composition & "%" & " " & symbol>
-							
-							<cfset compList = listAppend(compList,currComp)>
-							<cfset denList = listAppend(elemList,currDen)>
+							<cfset currDen = (composition/100) / density>
+					
+							<cfset denSum = denSum + currDen>
 							<cfset elemList = listAppend(elemList,currElem)>
 						</cfoutput>
 						#elemList#
 					</td>
 					<td>
-						<cfdump var="#denList#">
-						<cfdump var="#compList#">
-						<script type="text/javascript">
-							//calcDensity("<cfoutput>#denList#</cfoutput>","<cfoutput>#compList#</cfoutput>");
-						</script>
+						<cfset theDen = (1 / denSum)>
+						#numberformat(theDen,"0.00")#g/cc
 					</td>
 				</tr>
 			</cfoutput>
