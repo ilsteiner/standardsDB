@@ -100,6 +100,22 @@ function makeButtonsClickable(){
 		$(".certify").removeClass("selected");
 		$("#numberOfCertParts").text("None");
 	});
+
+	//Make the "Certify All" button show a confirmation popup
+	$("#certifyAll").click(function() {
+		if($("#numberOfCertParts").text() == "0"){
+			$("#certConfirmation").text("No products selected for certification.");	
+		}
+		else if($("#numberOfCertParts").text() == "1"){
+			$("#certConfirmation").html("<p>You are about to certify " + $("#numberOfCertParts").text() + " product</p>"
+				+ $("#certParts").val().replace(/,/g, '<br>'));
+		}
+		else{
+			$("#certConfirmation").html("<p>You are about to certify " + $("#numberOfCertParts").text() + " products</p>"
+				+ $("#certParts").val().replace(/,/g, '<br>'));
+		}
+		$('#certConfirmation').dialog('open');
+	});
 }
 
 $("input").on('input change',function(){
@@ -123,6 +139,39 @@ $("#plated").on('change', function(e){
 		$("#foil").prop('checked', true);
 		$("#sliderForm").submit();
 	}
+});
+
+//Make the cert confirmation dialog into a dialog
+$(function() {
+$("#certConfirmation").dialog({
+	modal: true,
+	title: "Confirm Certification",
+	autoOpen: false,
+	closeOnEscape: true,
+	height: "auto",
+	buttons: [
+		{
+			text: "Confirm",
+			click: function() {
+	        	$( this ).dialog("close");
+	        	//Submit form
+	        	$("#clearCertify").click();
+	      	},
+	      	icons: {
+	      		primary: "ui-icon-check"
+	      	}
+      	},
+      {
+      	text: "Cancel",
+      	click: function() {
+        	$( this ).dialog( "close" );
+      	},
+      	icons: {
+	      		primary: "ui-icon-close"
+	    }	
+      }
+    ]
+	});
 });
 
 //Code for the jQueryUI slider
