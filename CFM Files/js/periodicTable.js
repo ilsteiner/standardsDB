@@ -35,18 +35,39 @@ $(".active").click(function() {
 
 function makeButtonsClickable(){
 	//Update the list of products chosen for certification
-	$(".certify").each(function(e){
-		if($("#certParts").val().indexOf($(this).parent().parent().parent().closest('tr').children(".partNumber").text()) >= 0){
-			$(this).addClass('selected');
+
+	//Make the current list into an array of values
+	var currParts = $("#certParts").val().split(',');
+
+	//Put the count of selected parts in the div that displays that
+	if((currParts.length - 1) < 1){
+		$("#numberOfCertParts").text("None");	
+	}
+	else{
+		$("#numberOfCertParts").text(currParts.length - 1);
+	}
+
+	//If any of the displayed products are in the list, mark them as such
+	$(".certify").each(function(){
+		//Get the part number
+		var thePart = $(this).parent().parent().parent().closest('tr').children(".partNumVal").text();
+
+		console.log(currParts.join(","));
+
+		//If the part number is in our list of selected parts, mark it selected
+		if($.inArray(thePart,currParts) > -1){
+			$(this).addClass("selected");
 		}
 	});
 
-	//When clicking a certify button, toggle it's placement in the list
+	//When clicking a certify button, toggle it's part number's placement in the list
 	$(".certify").click(function() {
 		$(this).toggleClass('selected');
 
 		//Get the part number
-		var thePart = $(this).parent().parent().parent().closest('tr').children(".partNumber").text();
+		var thePart = $(this).parent().parent().parent().closest('tr').children(".partNumVal").text();
+
+		console.log($(this).parent().parent().parent().closest('tr').children(".partNumVal").text());
 
 		//Make the current list into an array of values
 		var currParts = $("#certParts").val().split(',');
@@ -63,6 +84,21 @@ function makeButtonsClickable(){
 
 		//Replace the list with the new list with the part number removed
 		$("#certParts").val(currParts.join(','));
+
+		//Put the count of selected parts in the div that displays that
+		if((currParts.length - 1) < 1){
+			$("#numberOfCertParts").text("None");	
+		}
+		else{
+			$("#numberOfCertParts").text(currParts.length - 1);
+		}
+	});
+
+	//Make the "Clear" button clear the selected standards
+	$("#clearCertify").click(function() {
+		$("#certParts").val("");
+		$(".certify").removeClass("selected");
+		$("#numberOfCertParts").text("None");
 	});
 }
 
@@ -149,7 +185,9 @@ function updateList() {
 			makeButtonsClickable()
 
 			//Make the table sortable
-			$("#resultTable").tablesorter();
+			$("#resultTable").tablesorter({
+				headers: {7: {sorter: false}}
+			});
 		}
 
 		$("#loading").hide();

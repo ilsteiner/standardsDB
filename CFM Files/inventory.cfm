@@ -107,7 +107,7 @@ ORDER BY main.composition DESC, main.symbol
 
 <div id="resultTableWrapper">
 	<table id="resultTable" class="tablesorter">
-		<caption><cfoutput>#getParts.RecordCount#</cfoutput> Products Found</caption>
+		<caption><cfoutput>#getParts.RecordCount#</cfoutput> Products Found - <span id="numberOfCertParts"></span> Selected for Certification</caption>
 		<thead>
 			<tr>
 				<th><div class="headerWrapper">Part Number</div></th>
@@ -117,20 +117,25 @@ ORDER BY main.composition DESC, main.symbol
 				<th><div class="headerWrapper">In Stock</div></th>
 				<th><div class="headerWrapper">Composition</div></th>
 				<th><div class="headerWrapper">Density</div></th>
+				<th>
+					<div class="headerWrapper">
+						<ul class="formButtons">
+							<li class="formButton" id="certifyAll" title="Create a new certification from the current list">
+								Certify All
+							</li>
+							<li class="formButton" id="clearCertify" title="Clear the certification list">
+								Clear Selections
+							</li>
+						</ul>
+					</div>
+				</th>
 			</tr>
 		</thead>
 
 		<tbody class="ui-widget-content">
 			<cfoutput query="getParts" group="partNumber">
 				<tr>
-					<td class="partNumVal">
-						<!--- Hidden form to allow creation of a new standard for a given part --->
-						<!--- <form action="certify.cfm" method="POST" name="newStandard">
-							<input type="text" name="partNum" value="<cfoutput>#partNumber#</cfoutput>" class="hidden">
-							<a href="" onclick="parentNode.submit();return false;">#partNumber#</a>
-						</form> --->
-						#partNumber#
-					</td>
+					<td class="partNumVal">#partNumber#</td>
 					<td>#typeDesc#<cfif #typeDesc# eq 'Plated'> (#platedElement#)</cfif></td>
 					<td>#targetValue#μin</td>
 					<td>$#price#</td>
@@ -156,10 +161,10 @@ ORDER BY main.composition DESC, main.symbol
 					</td>
 					<td>
 						<ul class="formButtons">
-							<li class="formButton certify">
+							<li class="formButton certify" title="Add to certification list">
 								Certify from Stock
 							</li>
-							<li class="formButton newStand">
+							<li class="formButton newStand" title="Create a new standard">
 								Create New
 							</li>
 						</ul>

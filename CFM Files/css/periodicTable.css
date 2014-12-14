@@ -26,6 +26,10 @@
 	padding: 0;
 }
 
+#certifyAll{
+	margin-left: 3%;
+}
+
 /* 
 	I can't get the elements to be square.
 	This is probably because I have a div

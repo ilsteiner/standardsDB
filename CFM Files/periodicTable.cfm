@@ -61,11 +61,6 @@
             </div>
         </div>
 
-        <!--- Hidden input to store the selected products for certification --->
-        <form action="newCertification.cfm" method="POST">
-            <input type="hidden" id="certParts" name="certParts" value="">
-        </form>
-
         <div id="sliderFormWrapper">
             <img src="img/loading.gif" class="hidden">
 
@@ -91,11 +86,16 @@
                 <div id="searchPartWrapper">
                     <div id="searchPart">
                         <label for="partialPart">Search by part number</label>
-                        <input type="text" maxlength="11" name="partialPart" id="partialPart">
+                        <input title="Enter part or all of a part number" type="text" maxlength="11" name="partialPart" id="partialPart">
                     </div>
                 </div>
             </form>
         </div>
+
+        <!--- Hidden input to store the selected products for certification --->
+        <form action="newCertification.cfm" method="POST">
+            <input type="hidden" id="certParts" name="certParts" value="">
+        </form>
 
         <div id="pDiv">
             <table id="pTable">
