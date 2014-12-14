@@ -93,7 +93,7 @@
         </div>
 
         <!--- Hidden input to store the selected products for certification --->
-        <form action="newCertification.cfm" method="POST">
+        <form action="newCertification.cfm" id="newCertification" name="newCertification" method="POST">
             <input type="hidden" id="certParts" name="certParts" value="">
         </form>
 
@@ -162,7 +162,7 @@
         </div>
 
         <div id="certConfirmation">
-            
+
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

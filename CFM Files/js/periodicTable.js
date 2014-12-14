@@ -154,8 +154,11 @@ $("#certConfirmation").dialog({
 			text: "Confirm",
 			click: function() {
 	        	$( this ).dialog("close");
-	        	//Submit form
+	        	//Submit the form
+	        	$("#newCertification").submit();
 	        	$("#clearCertify").click();
+	        	//Reload the inventory form
+	        	$("#sliderForm").submit();
 	      	},
 	      	icons: {
 	      		primary: "ui-icon-check"
@@ -213,8 +216,11 @@ $(function() {
   });
 
 $(document).ready(function() {
-	//Take over the submit function of the form
+	//Take over the submit function of the inventory form
 	$("#sliderForm").submit(updateList);
+
+	//Take over the submit function of the new certification form
+	$("#newCertification").submit(addCert);
 });
 
 //Query the DB for the parts associated with the parameters selected
@@ -241,6 +247,13 @@ function updateList() {
 
 		$("#loading").hide();
 	});
+	return false;
+};
+
+//Add the selected standards to a new certification
+function addCert() {
+	$.post('addToCert.cfm',$("#newCertification").serialize());
+
 	return false;
 };
 
