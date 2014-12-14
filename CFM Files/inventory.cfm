@@ -123,12 +123,12 @@ ORDER BY main.composition DESC, main.symbol
 		<tbody class="ui-widget-content">
 			<cfoutput query="getParts" group="partNumber">
 				<tr>
-					<td class="partNumber">
+					<td class="partNumVal">
 						<!--- Hidden form to allow creation of a new standard for a given part --->
-						<!-- <form action="certify.cfm" method="POST" name="newStandard">
+						<!--- <form action="certify.cfm" method="POST" name="newStandard">
 							<input type="text" name="partNum" value="<cfoutput>#partNumber#</cfoutput>" class="hidden">
 							<a href="" onclick="parentNode.submit();return false;">#partNumber#</a>
-						</form> -->
+						</form> --->
 						#partNumber#
 					</td>
 					<td>#typeDesc#<cfif #typeDesc# eq 'Plated'> (#platedElement#)</cfif></td>
@@ -156,10 +156,10 @@ ORDER BY main.composition DESC, main.symbol
 					</td>
 					<td>
 						<ul class="formButtons">
-							<li class="formButton">
+							<li class="formButton certify">
 								Certify from Stock
 							</li>
-							<li class="formButton">
+							<li class="formButton newStand">
 								Create New
 							</li>
 						</ul>

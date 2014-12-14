@@ -61,6 +61,11 @@
             </div>
         </div>
 
+        <!--- Hidden input to store the selected products for certification --->
+        <form action="newCertification.cfm" method="POST">
+            <input type="hidden" id="certParts" name="certParts" value="">
+        </form>
+
         <div id="sliderFormWrapper">
             <img src="img/loading.gif" class="hidden">
 
@@ -82,7 +87,7 @@
                     </div>
                 </div>
                 <div id="rangeSlider"></div>
-                <input class="col-12-12" type="hidden" name="elements" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
+                <input type="hidden" name="elements" id="elements" pattern="(^(([A-Z][a-z][,])*)([A-Z][a-z])(?!,)$)|(^([A-Z][a-z][^,])$)"/>
                 <div id="searchPartWrapper">
                     <div id="searchPart">
                         <label for="partialPart">Search by part number</label>
@@ -91,6 +96,7 @@
                 </div>
             </form>
         </div>
+
         <div id="pDiv">
             <table id="pTable">
                 <cfloop from="1" to=#getElements.recordcount# index="i" step="1">

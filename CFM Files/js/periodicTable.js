@@ -8,7 +8,7 @@ function enableFilters(){
 	$("#rangeSlider").slider('enable');	
 }
 
-//Update the list of selected elements
+//Update the list of selected elements (for searching)
 $(".active").click(function() {
 	$(this).toggleClass('selected');
 
@@ -32,6 +32,39 @@ $(".active").click(function() {
 	//Submit the form to update the results
 	$("#sliderForm").submit();
 });
+
+function makeButtonsClickable(){
+	//Update the list of products chosen for certification
+	$(".certify").each(function(e){
+		if($("#certParts").val().indexOf($(this).parent().parent().parent().closest('tr').children(".partNumber").text()) >= 0){
+			$(this).addClass('selected');
+		}
+	});
+
+	//When clicking a certify button, toggle it's placement in the list
+	$(".certify").click(function() {
+		$(this).toggleClass('selected');
+
+		//Get the part number
+		var thePart = $(this).parent().parent().parent().closest('tr').children(".partNumber").text();
+
+		//Make the current list into an array of values
+		var currParts = $("#certParts").val().split(',');
+
+		//If this is a newly chosen product
+		if($(this).hasClass("selected")){
+			//Add this part number to the array
+			currParts.push(thePart);
+		}
+		else{
+			//Remove this part number from the array
+			currParts.splice($.inArray(thePart,currParts),1);
+		}
+
+		//Replace the list with the new list with the part number removed
+		$("#certParts").val(currParts.join(','));
+	});
+}
 
 $("input").on('input change',function(){
 	$("#sliderForm").submit();
@@ -112,8 +145,11 @@ function updateList() {
 		else{
 			$("#formResults").html(data);
 
-				//Make the table sortable
-				$("#resultTable").tablesorter();
+			//Make the buttons clickable
+			makeButtonsClickable()
+
+			//Make the table sortable
+			$("#resultTable").tablesorter();
 		}
 
 		$("#loading").hide();

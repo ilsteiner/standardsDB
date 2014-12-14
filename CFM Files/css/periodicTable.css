@@ -70,7 +70,7 @@
 }
 
 .selected,.selected:hover{
-	background-color: #3C7EB3;
+	background-color: #3C7EB3 !important;
 }
 
 #sliderFormWrapper,nav{
