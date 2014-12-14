@@ -50,6 +50,22 @@
         from tbPartComponent
         </cfquery>
 
+        <!--- Get the technicians --->
+        <cfquery
+                name="getTechs"
+                 datasource="#Request.DSN#"
+                 username="#Request.username#"
+                 password="#Request.password#"
+                 cachedwithin="#CreateTimeSpan(2,0,0,0)#">
+
+        select
+        technicianID,
+        name,
+        title
+        from tbTechnician
+        order by name
+        </cfquery>
+
         <!--- Make lists of atomic numbers where we need to do something different when generating the table --->
         <cfset firstEl="1,3,11,19,37,55,57,87,89">
         <cfset lastEl="2,10,18,36,54,71,86,103,118">
@@ -91,11 +107,6 @@
                 </div>
             </form>
         </div>
-
-        <!--- Hidden input to store the selected products for certification --->
-        <form action="newCertification.cfm" id="newCertification" name="newCertification" method="POST">
-            <input type="hidden" id="certParts" name="certParts" value="">
-        </form>
 
         <div id="pDiv">
             <table id="pTable">
@@ -148,7 +159,18 @@
                                 <div id="formResults">&nbsp;</div>
                             </td>
                             <td class="spacer" colspan="5">
-                                &nbsp;
+                                <!--- The form for adding standards to certifications --->
+                                <form action="newCertification.cfm" id="newCertification" name="newCertification" method="POST">
+                                    <!--- Hidden input to store the selected products for certification --->
+                                    <input type="hidden" id="certParts" name="certParts" value="">
+                                    <label id="techLabel" for="technician">Technician</label>
+                                    <br>
+                                    <select name="technician" id="technician">
+                                        <cfoutput query="getTechs">
+                                            <option title="#title#" value="#technicianID#">#name#</option>
+                                        </cfoutput>
+                                    </select>
+                                </form>
                             </td>
                         </cfif>
 

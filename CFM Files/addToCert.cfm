@@ -1,6 +1,4 @@
 <cfparam name="partNumber" default="" type="string" pattern="^[P]\d{10}$">
-<cfparam name="certNumber" default="" type="string" pattern="^[C]\d{10}$">
-<cfparam name="quantity" default="1" type="integer">
 
         <!--- Get the list of certifications and associated products --->
         <cfquery
@@ -31,7 +29,6 @@
             inner join tbTechnician t on c.technicianID = t.technicianID
             WHERE c.statusID IN ('P','R')
             and s.partNumber = <cfqueryparam cfsqltype="cf_sql_varchar" maxlength="11" value="#FORM.partNumber#">
-            and ROWNUM <= 5000
             ORDER BY c.certDate DESC
         </cfquery>
 

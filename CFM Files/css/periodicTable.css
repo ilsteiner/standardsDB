@@ -12,6 +12,10 @@
 	width: 100vw;
 }
 
+select{
+	width: 80%;
+}
+
 .formButton{
 	font-weight: bold;
 	height: 20%;
@@ -92,6 +96,10 @@
 
 #navButtons{
 	margin-left: 8%;
+}
+
+#techLabel{
+	font-size: 1.2vw;
 }
 
 #searchPartWrapper{
