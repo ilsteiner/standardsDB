@@ -146,6 +146,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jqueryui-1.11.2.min.js"><\/script>')</script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/jExpand.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/tablesorter/jquery.tablesorter.min.js"></script>
         <script type="text/javascript" src="js/tablesorter/addons/pager/jquery.tablesorter.pager.js"></script>
         <script type="text/javascript" src="js/certList.js"></script>

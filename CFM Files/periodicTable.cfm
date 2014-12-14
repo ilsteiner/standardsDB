@@ -160,6 +160,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jqueryui-1.11.2.min.js"><\/script>')</script>
         <script type="text/javascript" src="js/periodicTable.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/tablesorter/jquery.tablesorter.min.js"></script>
     </body>
 </html>

@@ -125,10 +125,11 @@ ORDER BY main.composition DESC, main.symbol
 				<tr>
 					<td class="partNumber">
 						<!--- Hidden form to allow creation of a new standard for a given part --->
-						<form action="standard.cfm" method="POST" name="newStandard">
+						<!-- <form action="certify.cfm" method="POST" name="newStandard">
 							<input type="text" name="partNum" value="<cfoutput>#partNumber#</cfoutput>" class="hidden">
 							<a href="" onclick="parentNode.submit();return false;">#partNumber#</a>
-						</form>
+						</form> -->
+						#partNumber#
 					</td>
 					<td>#typeDesc#<cfif #typeDesc# eq 'Plated'> (#platedElement#)</cfif></td>
 					<td>#targetValue#μin</td>
@@ -152,6 +153,16 @@ ORDER BY main.composition DESC, main.symbol
 						<!--- Display the density for this product --->
 						<cfset theDen = (1 / denSum)>
 						#numberformat(theDen,"0.00")#g/cc
+					</td>
+					<td>
+						<ul class="formButtons">
+							<li class="formButton">
+								Certify from Stock
+							</li>
+							<li class="formButton">
+								Create New
+							</li>
+						</ul>
 					</td>
 				</tr>
 			</cfoutput>

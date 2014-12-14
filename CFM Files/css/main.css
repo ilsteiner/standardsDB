@@ -25,15 +25,16 @@ body{
 	background-color: green;
 } */
 
-.navButton{
+.navButton,.formButton{
   list-style: none;
   display: inline-block;
   background-color: LightGray;
   padding: 2%;
 }
 
-.navButton:hover{
+.navButton:hover,.formButton:hover{
 	background-color: #68B389;
+	cursor: pointer;
 }
 
 #nav-main > ul > a{
@@ -72,6 +73,14 @@ body{
 #certTable{
 	font-size: 1.8vw;
 	text-align: center;
+}
+
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
 }
 
 /* Fix arrows on tablesorter tables */

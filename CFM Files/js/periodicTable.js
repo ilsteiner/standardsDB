@@ -8,13 +8,6 @@ function enableFilters(){
 	$("#rangeSlider").slider('enable');	
 }
 
-//Highlight the correct button for the current "page"
-$(".navButton").click(function() {
-	$(".navButton").removeClass('navSelected');
-
-	$(this).addClass('navSelected');
-});
-
 //Update the list of selected elements
 $(".active").click(function() {
 	$(this).toggleClass('selected');
