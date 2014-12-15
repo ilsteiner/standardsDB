@@ -1,4 +1,4 @@
-<cfparam name="partNumber" default="P1111111111" type="string" pattern="^[P]\d{10}$">
+<cfparam name="partNumber" default="" type="string" pattern="^[P]\d{10}$">
 <cfparam name="actualValue" default="" type="numeric" min="0" max="1002">
 
 <!--- Make sure that the thickness is valid --->

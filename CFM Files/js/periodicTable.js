@@ -266,7 +266,7 @@ function addCert() {
 	$.post("addToCert.cfm",$("#newCertification").serialize(),
 		function(response){
 			alert(response);
-		},"text");
+		},"html");
 	return false;
 };
 
