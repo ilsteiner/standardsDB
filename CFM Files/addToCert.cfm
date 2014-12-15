@@ -1,5 +1,7 @@
 <cfparam name="partNumber" default="" type="string" pattern="(^(([P]\d{10}[,])*)([P]\d{10})$)|(^([P]\d{10})$)">
 <cfparam name="technician" default="" type="string" pattern="^[T]\d{2}$">
+
+<cfset technician = "T01">
         
     <!--- Create a new certification --->
     <cfquery
@@ -11,7 +13,7 @@
 
         INSERT INTO tbCertification
         (technicianID,statusID,certDate)
-        VALUES (<cfqueryparam cfsqltype="cf_sql_char" maxlength="3" null="false" value="#FORM.technician#">,"C",<cfqueryparam cfsqltype="cf_sql_date" null="false" value="#Now()#">)
+        VALUES (<cfqueryparam cfsqltype="cf_sql_char" maxlength="3" null="false" value="#technician#">,'C',<cfqueryparam cfsqltype="cf_sql_date" null="false" value="#Now()#">)
     </cfquery>
 
     <!--- Get the ROWID for the certification we just created --->
@@ -51,7 +53,7 @@
 
             -- Set all the standards we found (by serial number) to the certNumber we just added
             UPDATE tbStandard
-            SET certNumber = (SELECT certNumber from tbCertification where #ROWID# = #newCertRow#)
+            SET certNumber = (SELECT certNumber from tbCertification where ROWID = '#newCertRow#')
             WHERE serialNumber in (<cfqueryparam list="true" cfsqltype="cf_sql_varchar" value="#stanList#">)
     </cfquery>
 
