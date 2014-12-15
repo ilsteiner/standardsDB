@@ -1,7 +1,7 @@
 <cfparam name="partNumber" default="P1111111111,P1111111113" type="string" pattern="(^(([P]\d{10}[,])*)([P]\d{10})$)|(^([P]\d{10})$)">
 <cfparam name="technician" default="T01" type="string" pattern="^[T]\d{2}$">
 
-<!--- <cfset technician = "T01"> --->
+<cfset FORM.partNumber = "P1111111111,P1111111112">
         
     <!--- Create a new certification --->
     <cfquery
@@ -19,77 +19,63 @@
     <!--- Get the ROWID for the certification we just created --->
     <cfset newCertRow = theCert.ROWID>
 
-    <!--- Create a list in which to store the standards we find for each part--->
-    <cfset stanList = ''>
-
-    <!--- Put the list of part numbers into an array --->
-    <!--- <cfset partArray = listToArray("#partNumber#")> --->
-
-    <!--- <cfloop from="1" to="#ArrayLen(partArray)#" index="i"> --->
+    <!--- Put the list of part numbers and serial numbers into a struct --->
         <cfquery
-            name="getStandard"
+            name="getStandards"
+            datasource="#Request.DSN#"
+            username="#Request.username#"
+            password="#Request.password#">
+            -- Get a standard that has the correct part number and doesn't already have a cert
+            SELECT
+                serialNumber,
+                partNumber
+                FROM tbStandard
+                WHERE partNumber in (<cfqueryparam cfsqltype="cf_sql_char" list="yes" maxlength="11" null="no" value="#FORM.partNumber#">)
+                -- and ROWNUM = 1
+                and certNumber is null
+        </cfquery>
+        
+        <cfset serialNums = StructNew()>
+
+        <cfoutput query="getStandards" group="partNumber">
+            <!--- Add the serial number to the list of serial numbers --->
+            <cfoutput>
+                <cfscript>
+                    try {
+                        structInsert(serialNums,"#partNumber#","#serialNumber#",false);
+                    }
+                    catch (any e) {
+                        // Do nothing because we expect errors as we will be trying to insert duplicates
+                    }
+                </cfscript>
+            </cfoutput>
+        </cfoutput>
+
+        <cfdump var="#serialNums#">
+
+
+<!--- </cfloop> --->
+
+<!--- Update all of the standards we found --->
+<cfset sumRecords = "0">
+
+<cfloop collection="#serialNums#" item="partNum">
+    <cfquery
+            name="updateStandard"
             datasource="#Request.DSN#"
             username="#Request.username#"
             password="#Request.password#"
-            result="aStandard">
-            -- Get a standard that has the correct part number and doesn't already have a cert
-            SELECT
-                serialNumber
-                FROM tbStandard
-                WHERE partNumber in (<cfqueryparam cfsqltype="cf_sql_varchar" list="yes" maxlength="11" null="false" value="#partNumber#">)
-                -- and ROWNUM = 1
-                and certNumber is null
-                -- and serialNumber not in (<cfqueryparam cfsqltype="cf_sql_varchar" list="true" value="#stanList#">)
-        </cfquery>
+            result="updatedStandard">
 
-        <cfoutput query="getStandard" group="partNumber">
-            <!--- Add the serial number to the list of serial numbers --->
-            #partNumber#
-            #serialNumber#
-
-            <!--- <cfset stanList = ListAppend(stanList,#getStandard.serialNumber[0]#)> --->
-        </cfoutput>
-    <!--- </cfloop> --->
-
-<!--     - Get the first standard with each partnumber that does not already have a certification -
-<cfloop index = "partNum" list = "#partNumber#" delimiters=",">
-    <cfquery
-        name="getStandard"
-        datasource="#Request.DSN#"
-        username="#Request.username#"
-        password="#Request.password#"
-        result="aStandard">
-        -- Get a standard that has the correct part number and doesn't already have a cert
-        SELECT
-            serialNumber
-            FROM tbStandard
-            WHERE partNumber = <cfqueryparam cfsqltype="cf_sql_varchar" maxlength="11" null="false" value="#partNum#">
-            and ROWNUM = 1
-            and certNumber is null
+            UPDATE tbStandard
+            SET certNumber = (SELECT certNumber from tbCertification where ROWID = '#newCertRow#')
+            WHERE serialNumber = <cfqueryparam cfsqltype="cf_sql_char" value="#serialNums[partNum]#">
     </cfquery>
-    <cfoutput query="getStandard">
-        - Add the serial number to the list of serial numbers -
-        <cfset stanList = ListAppend(stanList,#serialNumber#)>
-    </cfoutput>
-</cfloop>       
- -->
-<!-- <cfdump var = "#partNumber#">
-<cfdump var = "#partArray#">
-<cfdump var = "#stanList#"> -->
 
- <!--    <cfquery
-         name="addCertToStandard"
-         datasource="#Request.DSN#"
-         username="#Request.username#"
-         password="#Request.password#"
-         result="addedCerts">
- 
-         -- Set all the standards we found (by serial number) to the certNumber we just added
-         UPDATE tbStandard
-         SET certNumber = (SELECT certNumber from tbCertification where ROWID = '#newCertRow#')
-         WHERE serialNumber in (<cfqueryparam list="true" cfsqltype="cf_sql_varchar" value="#stanList#">)
- </cfquery>
- 
- <cfoutput>
-     Updated #addedCerts.RecordCount# records.
- </cfoutput> -->
+    <cfset sumRecords = sumRecords + 1>
+</cfloop>
+
+<cfoutput>
+    #sumRecords#
+    <cfdump var="#updatedStandard#">
+</cfoutput>

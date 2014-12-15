@@ -27,6 +27,7 @@
             SELECT DISTINCT
                 s.partNumber,
                 s.certNumber,
+                s.serialNumber,
                 c.certDate,
                 cs.statusDesc,
                 t.name,
@@ -46,12 +47,11 @@
             inner join tbStandardType st on p.typeID = st.typeID
             inner join tbTechnician t on c.technicianID = t.technicianID
             inner join tbCertStatus cs on c.statusID = cs.statusID
-            WHERE c.statusID IN ('P','R')
+            WHERE ROWNUM <= 5000
             <cfif isDefined("FORM.partNumber")>
                 and s.partNumber = <cfqueryparam cfsqltype="cf_sql_varchar" maxlength="11" value="#FORM.partNumber#">
             </cfif>
-            and ROWNUM <= 5000
-            ORDER BY c.certDate DESC
+            ORDER BY s.certNumber DESC
         </cfquery>
 
         <cfset currPage = "findCert">
@@ -87,6 +87,7 @@
                         <th>Certification Number</th>
                         <th>Certification Date</th>
                         <th>Technician</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
 
@@ -100,6 +101,7 @@
                             <td>#certNumber#</td>
                             <td>#certDate#</td>
                             <td>#name#</td>
+                            <td>#statusDesc#</td>
                             <!--- If we came here with a part number defined --->
                             <cfif isDefined("FORM.partNumber")>
                                 <td>
@@ -117,6 +119,7 @@
                                 <table class="partNums tablesorter">
                                     <thead>
                                         <tr>
+                                            <th>Serial Number</th>
                                             <th>Part Number</th>
                                             <th>Type</th>
                                             <th>Target Value</th>
@@ -126,6 +129,7 @@
                                     <tbody>
                                         <cfoutput>
                                             <tr>
+                                                <td>#getCerts.serialNumber#</td>
                                                 <td>#getCerts.partNumber#</td>
                                                 <td>#getCerts.typeDesc#</td>
                                                 <td>#getCerts.targetValue#μin</td>

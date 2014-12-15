@@ -61,8 +61,12 @@ body{
   font-weight: bold;
 }
 
-#certTable,Table.partNums{
-	/*border: solid 1px;*/
+#certTable{
+	z-index: 2;
+}
+
+#pager{
+	z-index: 1;
 }
 
 .certRow{
