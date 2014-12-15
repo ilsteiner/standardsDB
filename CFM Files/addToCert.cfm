@@ -1,47 +1,60 @@
-<cfparam name="partNumber" default="" type="string" pattern="^[P]\d{10}$">
+<cfparam name="partNumber" default="" type="string" pattern="(^(([P]\d{10}[,])*)([P]\d{10})$)|(^([P]\d{10})$)">
+<cfparam name="technician" default="" type="string" pattern="^[T]\d{2}$">
+        
+    <!--- Create a new certification --->
+    <cfquery
+        name="createNewCert"
+        datasource="#Request.DSN#"
+        username="#Request.username#"
+        password="#Request.password#"
+        result="theCert">
 
-        <!--- Get the list of certifications and associated products --->
+        INSERT INTO tbCertification
+        (technicianID,statusID,certDate)
+        VALUES (<cfqueryparam cfsqltype="cf_sql_char" maxlength="3" null="false" value="#FORM.technician#">,"C",<cfqueryparam cfsqltype="cf_sql_date" null="false" value="#Now()#">)
+    </cfquery>
+
+    <!--- Get the ROWID for the certification we just created --->
+    <cfset newCertRow = theCert.ROWID>
+
+    <!--- Create a list in which to store the standards we find for each part--->
+    <cfset stanList = ''>
+
+    <!--- Get the first standard with each partnumber that does not already have a certification --->
+    <cfloop index = "partNum" list = "#partNumber#">
         <cfquery
-            name="getCerts"
+            name="getStandard"
             datasource="#Request.DSN#"
             username="#Request.username#"
             password="#Request.password#"
-            result="theStandard">
-            SELECT DISTINCT
-                s.partNumber,
-                s.certNumber,
-                c.certDate,
-                t.name,
-                s.actualValue,
-                pc.symbol,
-                pc.composition,
-                p.stock,
-                p.targetValue,
-                p.price,
-                st.typeDesc,
-                p.platedElement,
-                p.custom
-            FROM tbStandard s 
-            left join tbCertification c on s.certNumber = c.certNumber
-            inner join tbPartComponent pc on s.partNumber = pc.partNumber
-            inner join tbPart p on pc.partNumber = p.partNumber
-            inner join tbStandardType st on p.typeID = st.typeID
-            inner join tbTechnician t on c.technicianID = t.technicianID
-            WHERE c.statusID IN ('P','R')
-            and s.partNumber = <cfqueryparam cfsqltype="cf_sql_varchar" maxlength="11" value="#FORM.partNumber#">
-            ORDER BY c.certDate DESC
+            result="aStandard">
+            -- Get a standard that has the correct part number and doesn't already have a cert
+            SELECT
+                serialNumber
+                FROM tbStandard
+                WHERE partNumber = <cfqueryparam cfsqltype="cf_sql_varchar" maxlength="11" null="false" value="#partNum#">
+                and ROWNUM = 1
+                and certNumber is null
         </cfquery>
+        <cfoutput query="getStandard">
+            <!--- Add the serial number to the list of serial numbers --->
+            <cfset stanList = ListAppend(stanList,#serialNumber#)>
+        </cfoutput>
+    </cfloop>       
 
-    <cfloop from="1" to=#FORM.quantity# index="i" step="1">
-        <cfquery
-            name="getCerts"
+    <cfquery
+            name="addCertToStandard"
             datasource="#Request.DSN#"
             username="#Request.username#"
             password="#Request.password#"
-            result="theStandard">
+            result="addedCerts">
 
+            -- Set all the standards we found (by serial number) to the certNumber we just added
             UPDATE tbStandard
-            SET certNumber = #FORM.certNumber#
-            WHERE partNumber = #FORM.partNumber#
-        </cfquery>
-    </cfloop>
+            SET certNumber = (SELECT certNumber from tbCertification where #ROWID# = #newCertRow#)
+            WHERE serialNumber in (<cfqueryparam list="true" cfsqltype="cf_sql_varchar" value="#stanList#">)
+    </cfquery>
+
+    <cfoutput>
+        Updated #addedCerts.RecordCount# records.
+    </cfoutput>

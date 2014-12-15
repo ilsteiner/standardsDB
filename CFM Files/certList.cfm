@@ -16,7 +16,7 @@
     
     <body>
         <cfparam name="partNumber" default="" type="string" pattern="^[P]\d{10}$">
-
+    
         <!--- Get the list of certifications and associated products --->
         <cfquery
             name="getCerts"
@@ -28,6 +28,7 @@
                 s.partNumber,
                 s.certNumber,
                 c.certDate,
+                cs.statusDesc,
                 t.name,
                 s.actualValue,
                 pc.symbol,
@@ -44,6 +45,7 @@
             inner join tbPart p on pc.partNumber = p.partNumber
             inner join tbStandardType st on p.typeID = st.typeID
             inner join tbTechnician t on c.technicianID = t.technicianID
+            inner join tbCertStatus cs on c.statusID = cs.statusID
             WHERE c.statusID IN ('P','R')
             <cfif isDefined("FORM.partNumber")>
                 and s.partNumber = <cfqueryparam cfsqltype="cf_sql_varchar" maxlength="11" value="#FORM.partNumber#">

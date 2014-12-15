@@ -118,6 +118,9 @@ function makeButtonsClickable(){
 	});
 }
 
+//Make select inputs look better
+$("select").selectmenu();
+
 $("input").on('input change',function(){
 	$("#sliderForm").submit();
 });
@@ -252,8 +255,10 @@ function updateList() {
 
 //Add the selected standards to a new certification
 function addCert() {
-	$.post('addToCert.cfm',$("#newCertification").serialize());
-
+	$.post("addToCert.cfm",$("#newCertification").serialize(),
+		function(response){
+			alert(response);
+		},"text");
 	return false;
 };
 
