@@ -16,8 +16,6 @@
     </head>
     <cfparam name="partNumber" default="P1111111111" type="string" pattern="^[P]\d{10}$">
 
-    <cfset FORM.partNumber = "P1111111111">
-
     <cfset currPage = "newStan">
 	
 	<!--- Get information about the part for which we are creating a new standard --->
@@ -113,9 +111,9 @@
 					<td class="serialNumber"></td>
 					<td>
 						<form action="createStandard.cfm" id="newStandardForm" method="POST">
-							<input type="submit" name="submit" id="submit" value="Create standard" form="newStandardForm">
-				        	<input required readonly type="hidden" form="newStandardForm" name="partNumber" value="<cfoutput>#FORM.partNumber#</cfoutput>">
-				        	<input required type="number" form="newStandardForm" name="actualValue" id="actualValue" min="<cfoutput>#getThePart.minThick#</cfoutput>" max="<cfoutput>#getThePart.maxThick#</cfoutput>" step=".01" placeholder="<cfoutput>#getThePart.minThick#μin - #getThePart.maxThick#μin</cfoutput>">
+							<input type="submit" name="submit" class="ui-button" id="submit" value="Create standard" form="newStandardForm">
+				        	<input required readonly type="hidden" form="newStandardForm" name="partNumber" value="<cfoutput>#getThePart.partNumber#</cfoutput>">
+				        	<input required type="number" form="newStandardForm" name="actualValue" class="ui-widget ui-widget-content ui-corner-all" id="actualValue" min="<cfoutput>#getThePart.minThick#</cfoutput>" max="<cfoutput>#getThePart.maxThick#</cfoutput>" step=".01" placeholder="<cfoutput>#getThePart.minThick#μin - #getThePart.maxThick#μin</cfoutput>">
 						</form>
 					</td>
 				</tr>

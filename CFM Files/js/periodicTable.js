@@ -116,6 +116,14 @@ function makeButtonsClickable(){
 		}
 		$('#certConfirmation').dialog('open');
 	});
+
+	//Make the "Create New" button take the user to the page to create new stnadards
+	$(".newStand").click(function(){
+		//Get the part number
+		var thePart = $(this).parent().parent().parent().closest('tr').children(".partNumVal").text();
+
+		window.open('newStandard.cfm?partNumber=' + thePart, '_blank');
+	});
 }
 
 //Make select inputs look better

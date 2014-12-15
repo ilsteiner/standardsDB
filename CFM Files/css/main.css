@@ -21,9 +21,26 @@ body{
 	color: black;
 }
 
-/* .navSelected{
-	background-color: green;
-} */
+#sliderFormWrapper,nav{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+#sliderForm,#navButtonsWrapper{
+	margin-left: auto;
+	margin-right: 35%;
+	margin-top: 2%;
+	width: 50%;
+}
+
+#navButtons{
+	margin-left: 8%;
+}
+
+#nav-main{
+  width: 70%;
+}
 
 .navButton,.formButton{
   list-style: none;

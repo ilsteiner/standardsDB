@@ -81,21 +81,17 @@ select{
 	background-color: #3C7EB3 !important;
 }
 
-#sliderFormWrapper,nav{
+#sliderFormWrapper{
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
 }
 
-#sliderForm,#navButtonsWrapper{
+#sliderForm{
 	margin-left: auto;
 	margin-right: 35%;
 	margin-top: 2%;
 	width: 50%;
-}
-
-#navButtons{
-	margin-left: 8%;
 }
 
 #techLabel{
@@ -137,10 +133,6 @@ select{
 #resultTable td{
 	padding: 2px;
 	text-align: center;
-}
-
-#nav-main{
-  width: 70%;
 }
 
 .infinity{
