@@ -70,7 +70,12 @@ function makeButtonsClickable(){
 		console.log($(this).parent().parent().parent().closest('tr').children(".partNumVal").text());
 
 		//Make the current list into an array of values
-		var currParts = $("#certParts").val().split(',');
+		if($("#certParts").val() == ""){
+			var currParts = [];
+		}
+		else{
+			var currParts = $("#certParts").val().split(',');
+		}
 
 		//If this is a newly chosen product
 		if($(this).hasClass("selected")){
@@ -265,7 +270,7 @@ function updateList() {
 function addCert() {
 	$.post("addToCert.cfm",$("#newCertification").serialize(),
 		function(response){
-			alert(response);
+			console.log(response);
 		},"html");
 	return false;
 };

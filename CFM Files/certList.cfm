@@ -15,8 +15,8 @@
     </head>
     
     <body>
-        <cfparam name="partNumber" default="" type="string" pattern="^[P]\d{10}$">
-    
+        <cfparam name="partNumFilter" default="" type="string" pattern="^[P]\d{10}$">
+
         <!--- Get the list of certifications and associated products --->
         <cfquery
             name="getCerts"
@@ -48,10 +48,10 @@
             inner join tbTechnician t on c.technicianID = t.technicianID
             inner join tbCertStatus cs on c.statusID = cs.statusID
             WHERE ROWNUM <= 5000
-            <cfif isDefined("FORM.partNumber")>
-                and s.partNumber = <cfqueryparam cfsqltype="cf_sql_varchar" maxlength="11" value="#FORM.partNumber#">
+            <cfif isDefined("partNumFilter") and #partNumFilter# neq "">
+                and s.partNumber = <cfqueryparam cfsqltype="cf_sql_varchar" maxlength="11" value="#partNumFilter#">
             </cfif>
-            ORDER BY s.certNumber DESC
+            ORDER BY c.certDate DESC
         </cfquery>
 
         <cfset currPage = "findCert">

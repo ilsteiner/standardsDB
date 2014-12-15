@@ -135,7 +135,7 @@ ORDER BY main.composition DESC, main.symbol
 		<tbody class="ui-widget-content">
 			<cfoutput query="getParts" group="partNumber">
 				<tr>
-					<td class="partNumVal">#partNumber#</td>
+					<td class="partNumVal"><a title="View certifications" href="certList.cfm?partNumFilter=#partNumber#">#partNumber#</a></td>
 					<td>#typeDesc#<cfif #typeDesc# eq 'Plated'> (#platedElement#)</cfif></td>
 					<td>#targetValue#μin</td>
 					<td>$#price#</td>

@@ -284,6 +284,20 @@ IF INSERTING OR UPDATING('partNumber') THEN
 END IF;
 END;
 
+--Trigger to update stock number when a standard is certified
+CREATE OR REPLACE TRIGGER trg_updateStockCert
+	BEFORE INSERT or UPDATE
+	ON tbStandard
+	FOR EACH ROW
+BEGIN
+IF INSERTING or UPDATING('certNumber') THEN
+	IF new.certNumber is not null THEN
+		UPDATE tbPart
+		SET stock = stock - 1
+		WHERE partNumber = :new.partNumber;
+END;
+/
+
 -- Trigger to update stock number when a standard is added or removed from a certification
 CREATE OR REPLACE TRIGGER trg_updateStock
 	BEFORE INSERT or DELETE or UPDATE

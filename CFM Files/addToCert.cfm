@@ -1,8 +1,6 @@
-<cfparam name="partNumber" default="P1111111111,P1111111113" type="string" pattern="(^(([P]\d{10}[,])*)([P]\d{10})$)|(^([P]\d{10})$)">
+<cfparam name="certParts" default="P1111111111,P1111111113" type="string" pattern="(^(([P]\d{10}[,])*)([P]\d{10})$)|(^([P]\d{10})$)">
 <cfparam name="technician" default="T01" type="string" pattern="^[T]\d{2}$">
 
-<cfset FORM.partNumber = "P1111111111,P1111111112">
-        
     <!--- Create a new certification --->
     <cfquery
         name="createNewCert"
@@ -19,42 +17,38 @@
     <!--- Get the ROWID for the certification we just created --->
     <cfset newCertRow = theCert.ROWID>
 
-    <!--- Put the list of part numbers and serial numbers into a struct --->
-        <cfquery
-            name="getStandards"
-            datasource="#Request.DSN#"
-            username="#Request.username#"
-            password="#Request.password#">
-            -- Get a standard that has the correct part number and doesn't already have a cert
-            SELECT
-                serialNumber,
-                partNumber
-                FROM tbStandard
-                WHERE partNumber in (<cfqueryparam cfsqltype="cf_sql_char" list="yes" maxlength="11" null="no" value="#FORM.partNumber#">)
-                -- and ROWNUM = 1
-                and certNumber is null
-        </cfquery>
+    <!--- Get the list of part numbers and serial numbers --->
+    <cfquery
+        name="getStandards"
+        datasource="#Request.DSN#"
+        username="#Request.username#"
+        password="#Request.password#"
+        result="foundStandards">
+        -- Get a standard that has the correct part number and doesn't already have a cert
+        SELECT
+            serialNumber,
+            partNumber
+            FROM tbStandard
+            WHERE partNumber in (<cfqueryparam cfsqltype="cf_sql_char" list="yes" maxlength="11" null="no" value="#certParts#">)
+            -- and ROWNUM = 1
+            and certNumber is null
+    </cfquery>
         
-        <cfset serialNums = StructNew()>
-
-        <cfoutput query="getStandards" group="partNumber">
-            <!--- Add the serial number to the list of serial numbers --->
-            <cfoutput>
-                <cfscript>
-                    try {
-                        structInsert(serialNums,"#partNumber#","#serialNumber#",false);
-                    }
-                    catch (any e) {
-                        // Do nothing because we expect errors as we will be trying to insert duplicates
-                    }
-                </cfscript>
-            </cfoutput>
+    <cfset serialNums = StructNew()>
+    
+    <!--- Put the list of part numbers and serial numbers into a struct --->
+    <cfoutput query="getStandards" group="partNumber">
+        <cfoutput>
+            <cfscript>
+                try {
+                    structInsert(serialNums,"#partNumber#","#serialNumber#",false);
+                }
+                catch (any e) {
+                    // Do nothing because we expect errors as we will be trying to insert duplicates
+                }
+            </cfscript>
         </cfoutput>
-
-        <cfdump var="#serialNums#">
-
-
-<!--- </cfloop> --->
+    </cfoutput>
 
 <!--- Update all of the standards we found --->
 <cfset sumRecords = "0">
@@ -77,5 +71,4 @@
 
 <cfoutput>
     #sumRecords#
-    <cfdump var="#updatedStandard#">
 </cfoutput>
