@@ -69,6 +69,15 @@
     <cfset sumRecords = sumRecords + 1>
 </cfloop>
 
+<cfquery
+            name="updateStandard"
+            datasource="#Request.DSN#"
+            username="#Request.username#"
+            password="#Request.password#"
+            result="updatedStandard">
+UPDATE tbPart
+SET stock = (SELECT count(*) from tbStandard sub where tbPart.partNumber = sub.partNumber and sub.certNumber is null)
+
 <cfoutput>
     #sumRecords#
 </cfoutput>

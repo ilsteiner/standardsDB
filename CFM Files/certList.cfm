@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="js/tablesorter/themes/blue/style.css">
     </head>
+
+    <cfinclude template="forceLogin.cfm">
     
     <body>
         <cfparam name="partNumFilter" default="" type="string" pattern="^[P]\d{10}$">
@@ -102,17 +104,6 @@
                             <td>#certDate#</td>
                             <td>#name#</td>
                             <td>#statusDesc#</td>
-                            <!--- If we came here with a part number defined --->
-                            <cfif isDefined("FORM.partNumber")>
-                                <td>
-                                    <form name="certifyStandard" method="POST" action="addToCert.cfm">
-                                        <input type="number" name="quantity" value="1" min="1" max="<cfoutput>#p.stock#</cfoutput>" required>
-                                        <input type="hidden" readonly name="certNumber" value="<cfoutput>#certNumber#</cfoutput>">
-                                        <input type="hidden" readonly name="partNumber" value="<cfoutput>#FORM.partNumber#</cfoutput>">
-                                        <input type="submit" name="addToCert" value="submit">
-                                    </form>
-                                </td>
-                            </cfif>
                         </tr>
                         <tr class="productRow hidden expand-child">
                             <td colspan="3">

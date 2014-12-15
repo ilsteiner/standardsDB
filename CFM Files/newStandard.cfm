@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="js/tablesorter/themes/blue/style.css">
     </head>
+	
+	<cfinclude template="forceLogin.cfm">
+
     <cfparam name="partNumber" default="P1111111111" type="string" pattern="^[P]\d{10}$">
 
     <cfset currPage = "newStan">
@@ -58,7 +61,7 @@
 				<tr>
 					<th><div class="headerWrapper">Part Number</div></th>
 					<th><div class="headerWrapper">Type</div></th>
-					<th><div class="headerWrapper">Thickness</div></th>
+					<th><div class="headerWrapper">Target Thickness</div></th>
 					<th><div class="headerWrapper">Price</div></th>
 					<th><div class="headerWrapper">In Stock</div></th>
 					<th><div class="headerWrapper">Composition</div></th>
@@ -69,7 +72,12 @@
 			<tbody class="ui-widget-content">
 				<cfoutput query="getThePart" group="partNumber">
 					<tr>
-						<td class="partNumVal">#partNumber#</td>
+						<td class="partNumVal">
+							<form name="selectNewPart" method="POST" action="newStandard.cfm">
+								<input type="search" name="partNumber" value="#partNumber#" placeholder="P1111111111" maxlength="11" pattern="^[P]\d{10}$" title="Create standards for another product">
+								<input type="submit" name="submit" value="Change selected product" class="ui-widget ui-widget-content ui-corner-all">
+							</form>
+						</td>
 						<td>#typeDesc#<cfif #typeDesc# eq 'Plated'> (#platedElement#)</cfif></td>
 						<td>#targetValue#μin</td>
 						<td>$#price#</td>

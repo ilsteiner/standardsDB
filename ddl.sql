@@ -291,10 +291,12 @@ CREATE OR REPLACE TRIGGER trg_updateStockCert
 	FOR EACH ROW
 BEGIN
 IF INSERTING or UPDATING('certNumber') THEN
-	IF new.certNumber is not null THEN
+	IF :new.certNumber is not null THEN
 		UPDATE tbPart
 		SET stock = stock - 1
 		WHERE partNumber = :new.partNumber;
+	END IF;
+END IF;
 END;
 /
 
