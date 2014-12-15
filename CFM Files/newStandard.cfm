@@ -12,8 +12,8 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/newStandard.css">
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="js/tablesorter/themes/blue/style.css">
     </head>
-
     <cfparam name="partNumber" default="P1111111111" type="string" pattern="^[P]\d{10}$">
 
     <cfset FORM.partNumber = "P1111111111">
@@ -100,7 +100,7 @@
 			</tbody>
 		</table>
 		
-		<table id="standardTable">
+		<table id="standardTable" class="tablesorter">
 			<!--- <caption>table title and/or explanatory text</caption> --->
 			<thead>
 				<tr>
@@ -109,10 +109,11 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
+				<tr id="formRow">
 					<td class="serialNumber"></td>
-					<td class="thick formRow">
+					<td>
 						<form action="createStandard.cfm" id="newStandardForm" method="POST">
+							<input type="submit" name="submit" id="submit" value="Create standard" form="newStandardForm">
 				        	<input required readonly type="hidden" form="newStandardForm" name="partNumber" value="<cfoutput>#FORM.partNumber#</cfoutput>">
 				        	<input required type="number" form="newStandardForm" name="actualValue" id="actualValue" min="<cfoutput>#getThePart.minThick#</cfoutput>" max="<cfoutput>#getThePart.maxThick#</cfoutput>" step=".01" placeholder="<cfoutput>#getThePart.minThick#μin - #getThePart.maxThick#μin</cfoutput>">
 						</form>
@@ -120,10 +121,6 @@
 				</tr>
 			</tbody>
 		</table>
-		
-		<input type="submit" name="addMore" value="Create and new" form="newStandardForm">
-		<input type="submit" name="done" value="Create and done" form="newStandardForm">
-		<input type="submit" name="cancel" value="Cancel entry" form="newStandardForm">
 
     	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
