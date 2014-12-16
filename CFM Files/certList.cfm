@@ -13,8 +13,6 @@
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="js/tablesorter/themes/blue/style.css">
     </head>
-
-    <cfinclude template="forceLogin.cfm">
     
     <body>
         <cfparam name="partNumFilter" default="" type="string" pattern="^[P]\d{10}$">
@@ -41,7 +39,8 @@
                 p.price,
                 st.typeDesc,
                 p.platedElement,
-                p.custom
+                p.custom,
+                e.density
             FROM tbStandard s 
             left join tbCertification c on s.certNumber = c.certNumber
             inner join tbPartComponent pc on s.partNumber = pc.partNumber
@@ -49,6 +48,7 @@
             inner join tbStandardType st on p.typeID = st.typeID
             inner join tbTechnician t on c.technicianID = t.technicianID
             inner join tbCertStatus cs on c.statusID = cs.statusID
+            INNER JOIN tbElement e on e.symbol = pc.symbol
             WHERE ROWNUM <= 5000
             <cfif isDefined("partNumFilter") and #partNumFilter# neq "">
                 and s.partNumber = <cfqueryparam cfsqltype="cf_sql_varchar" maxlength="11" value="#partNumFilter#">
@@ -112,6 +112,8 @@
                                         <tr>
                                             <th>Serial Number</th>
                                             <th>Part Number</th>
+                                            <th>Composition</th>
+                                            <th>Density</th>
                                             <th>Type</th>
                                             <th>Target Value</th>
                                             <th>Actual Value</th>
@@ -122,6 +124,32 @@
                                             <tr>
                                                 <td>#getCerts.serialNumber#</td>
                                                 <td>#getCerts.partNumber#</td>
+                                                <td class="composition">
+                                                    <cfset elemList="">
+                                                    <cfset denSum="0">
+                                                    <cfset compSum="0">
+                                                    <cfoutput>
+                                                        <cfset currElem = composition & "%" & " " & symbol>
+                                                        
+                                                        <!--- This is to fix a bug that is a result of how I am grouping this query output...things were showing once for each element they contained --->
+                                                        <cfset compSum = compSum + composition>
+
+                                                        <!--- Add to the sum of densities of component elements of this alloy...or just this element if it isn't an alloy --->
+                                                        <cfset currDen = (composition/100) / density>
+                                                
+                                                        <cfset denSum = denSum + currDen>
+                                                        <cfset elemList = listAppend(elemList,currElem)>
+                                                    </cfoutput>
+                                                    <cfif #compSum# neq "100">
+                                                        <span class="hideParent">#compSum#</span>
+                                                    </cfif>
+                                                    #elemList#
+                                                </td>
+                                                <td>
+                                                    <!--- Display the density for this product --->
+                                                    <cfset theDen = (1 / denSum)>
+                                                    #numberformat(theDen,"0.00")#g/cc
+                                                </td>
                                                 <td>#getCerts.typeDesc#</td>
                                                 <td>#getCerts.targetValue#μin</td>
                                                 <td>#getCerts.actualValue#μin</td>

@@ -14,8 +14,6 @@
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
     </head>
 
-    <cfinclude template="forceLogin.cfm">
-
     <cfset currPage = "findStan">
 
     <cfparam name="partNum" default="" type="string" pattern="^[P]\d{10}$">

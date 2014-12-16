@@ -14,8 +14,6 @@
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="js/tablesorter/themes/blue/style.css">
     </head>
-	
-	<cfinclude template="forceLogin.cfm">
 
     <cfparam name="partNumber" default="P1111111111" type="string" pattern="^[P]\d{10}$">
 
@@ -74,7 +72,7 @@
 					<tr>
 						<td class="partNumVal">
 							<form name="selectNewPart" method="POST" action="newStandard.cfm">
-								<input type="search" name="partNumber" value="#partNumber#" placeholder="P1111111111" maxlength="11" pattern="^[P]\d{10}$" title="Create standards for another product">
+								<input type="search" name="partNumber" value="#partNumber#" placeholder="P1111111111" maxlength="11" pattern="^[P]\d{10}$" title="Type in a different part number to create standards for another product">
 								<input type="submit" name="submit" value="Change selected product" class="ui-widget ui-widget-content ui-corner-all">
 							</form>
 						</td>

@@ -37,14 +37,19 @@ function makeButtonsClickable(){
 	//Update the list of products chosen for certification
 
 	//Make the current list into an array of values
-	var currParts = $("#certParts").val().split(',');
+	if($("#certParts").val() == ""){
+		var currParts = [];
+	}
+	else{
+		var currParts = $("#certParts").val().split(',');
+	}
 
 	//Put the count of selected parts in the div that displays that
-	if((currParts.length - 1) < 1){
+	if((currParts.length) < 1){
 		$("#numberOfCertParts").text("None");	
 	}
 	else{
-		$("#numberOfCertParts").text(currParts.length - 1);
+		$("#numberOfCertParts").text(currParts.length);
 	}
 
 	//If any of the displayed products are in the list, mark them as such
@@ -91,11 +96,11 @@ function makeButtonsClickable(){
 		$("#certParts").val(currParts.join(','));
 
 		//Put the count of selected parts in the div that displays that
-		if((currParts.length - 1) < 1){
+		if((currParts.length) < 1){
 			$("#numberOfCertParts").text("None");	
 		}
 		else{
-			$("#numberOfCertParts").text(currParts.length - 1);
+			$("#numberOfCertParts").text(currParts.length);
 		}
 	});
 

@@ -8,4 +8,6 @@ $(".navButton").click(function() {
 $(function() {
 	//Make tooltips look better
     $( document ).tooltip();
+
+    $("option").tooltip();
  });

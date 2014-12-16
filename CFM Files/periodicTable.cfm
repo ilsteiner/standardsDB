@@ -63,7 +63,7 @@
         name,
         title
         from tbTechnician
-        order by name
+        order by title,name
         </cfquery>
 
         <!--- Make lists of atomic numbers where we need to do something different when generating the table --->
@@ -163,11 +163,15 @@
                                 <form action="newCertification.cfm" id="newCertification" name="newCertification" method="POST">
                                     <!--- Hidden input to store the selected products for certification --->
                                     <input type="hidden" id="certParts" name="certParts" value="">
-                                    <label id="techLabel" for="technician">Technician</label>
+                                    <label id="techLabel" for="technician" title="The technician listed on the certification">Technician</label>
                                     <br>
                                     <select name="technician" id="technician">
-                                        <cfoutput query="getTechs">
-                                            <option title="#title#" value="#technicianID#">#name#</option>
+                                        <cfoutput query="getTechs" group="title">
+                                            <optgroup label="#title#">
+                                                <cfoutput>
+                                                    <option value="#technicianID#">#name#</option>
+                                                </cfoutput>
+                                            </optgroup>
                                         </cfoutput>
                                     </select>
                                 </form>
