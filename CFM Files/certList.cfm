@@ -103,7 +103,7 @@
                         <tr class="certRow">
                             <td><img src="img/plus.png" alt="expand" class="expand"></td>
                             <td>#certNumber#</td>
-                            <td>#certDate#</td>
+                            <td>#DateFormat(certDate,"mm/dd/yyyy")#</td>
                             <td>#name#</td>
                             <td>#statusDesc#</td>
                         </tr>
