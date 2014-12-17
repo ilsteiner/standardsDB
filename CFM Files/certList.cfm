@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="js/tablesorter/themes/blue/style.css">
     </head>
+
+    <cferror type="EXCEPTION" exception="expression" template="error.cfm">
     
     <body>
         <cfparam name="partNumFilter" default="" type="string" pattern="^[P]\d{10}$">

@@ -104,6 +104,12 @@ body{
 	float: left;
 }
 
+.bigError{
+	color: darkred;
+	width: 80%;
+	margin: auto;
+}
+
 /* Fix arrows on tablesorter tables */
 .headerWrapper{
 	margin-right: 12px;
