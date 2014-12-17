@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="js/tablesorter/themes/blue/style.css">
     </head>
 
+    <cferror type="EXCEPTION" exception="expression" template="error.cfm">
+
     <cfset currPage = "findProd">
 
     <body>

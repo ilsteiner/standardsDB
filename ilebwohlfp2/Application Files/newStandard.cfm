@@ -15,7 +15,9 @@
         <link rel="stylesheet" href="js/tablesorter/themes/blue/style.css">
     </head>
 
-    <cfparam name="partNumber" default="P1111111111" type="string" pattern="^[P]\d{10}$">
+    <cferror type="EXCEPTION" exception="expression" template="error.cfm">
+
+    <cfparam name="partNumber" default="" type="string" pattern="^[P]\d{10}$">
 
     <cfset currPage = "newStan">
 	
