@@ -1,0 +1,110 @@
+body{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.horMargin{
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.vertMargin{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.hidden{
+	display: none;
+}
+
+#activePage{
+	background-color: MediumSeaGreen;
+	color: black;
+}
+
+#sliderFormWrapper,nav{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+#sliderForm,#navButtonsWrapper{
+	margin-left: auto;
+	margin-right: 35%;
+	margin-top: 2%;
+	width: 50%;
+}
+
+#navButtons{
+	margin-left: 8%;
+}
+
+#nav-main{
+  width: 70%;
+}
+
+.navButton,.formButton{
+  list-style: none;
+  display: inline-block;
+  background-color: LightGray;
+  padding: 2%;
+}
+
+.navButton:hover,.formButton:hover{
+	background-color: #68B389;
+	cursor: pointer;
+}
+
+#nav-main > ul > a{
+  color: black;
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+
+#certTable{
+	z-index: 2;
+}
+
+#pager{
+	z-index: 1;
+}
+
+.certRow{
+	background-color: LightGray;
+}
+
+.expand{
+	width: 1em;
+}
+
+#mainWrapper{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#navButtonsCenter{
+	flex: 4;
+}
+
+#pager{
+	font-size: 1vw;
+}
+
+#certTable{
+	font-size: 1.8vw;
+	text-align: center;
+}
+
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+}
+
+/* Fix arrows on tablesorter tables */
+.headerWrapper{
+	margin-right: 12px;
+}
