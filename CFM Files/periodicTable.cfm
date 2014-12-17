@@ -102,7 +102,7 @@
                 <div id="searchPartWrapper">
                     <div id="searchPart">
                         <label for="partialPart">Search by part number</label>
-                        <input title="Enter part or all of a part number" type="text" maxlength="11" name="partialPart" id="partialPart">
+                        <input title="Enter part or all of a part number" type="search" maxlength="11" name="partialPart" id="partialPart">
                     </div>
                 </div>
             </form>

@@ -97,7 +97,7 @@ function makeButtonsClickable(){
 
 		//Put the count of selected parts in the div that displays that
 		if((currParts.length) < 1){
-			$("#numberOfCertParts").text("None");	
+			$("#numberOfCertParts").text("None");
 		}
 		else{
 			$("#numberOfCertParts").text(currParts.length);
