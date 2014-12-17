@@ -118,12 +118,12 @@ function makeButtonsClickable(){
 			$(".ui-dialog-buttonpane button:contains('Confirm')").button("disable");
 		}
 		else if($("#numberOfCertParts").text() == "1"){
-			$("#certConfirmation").html("<p>You are about to certify " + $("#numberOfCertParts").text() + " product</p>"
+			$("#certConfirmation").html("<p>" + $("#technician option:selected").text() + " is about to certify " + $("#numberOfCertParts").text() + " product:</p>"
 				+ $("#certParts").val().replace(/,/g, '<br>'));
 			$(".ui-dialog-buttonpane button:contains('Confirm')").button("enable");
 		}
 		else{
-			$("#certConfirmation").html("<p>You are about to certify " + $("#numberOfCertParts").text() + " products</p>"
+			$("#certConfirmation").html("<p>" + $("#technician option:selected").text() + " is about to certify " + $("#numberOfCertParts").text() + " products:</p>"
 				+ $("#certParts").val().replace(/,/g, '<br>'));
 			$(".ui-dialog-buttonpane button:contains('Confirm')").button("enable");
 		}
