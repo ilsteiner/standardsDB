@@ -7,6 +7,16 @@ $(document).ready(function() {
 		    addStandard();
 		  }
 	});
+
+	if($("#partNumber").val() == ""){
+		$("#partNumber").focus();
+		$("#actualValue").attr("title","");
+		$("#actualValue").attr('disabled','disabled');
+		$("#submit").attr('disabled','disabled');
+	}
+	else{
+		$("#actualValue").focus();
+	}
 });
 
 function addStandard(){

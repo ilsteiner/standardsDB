@@ -68,39 +68,57 @@
 			</thead>
 
 			<tbody class="ui-widget-content">
-				<cfoutput query="getThePart" group="partNumber">
-					<tr>
-						<td class="partNumVal">
-							<form name="selectNewPart" method="POST" action="newStandard.cfm">
-								<input type="search" name="partNumber" value="#partNumber#" placeholder="P1111111111" maxlength="11" pattern="^[P]\d{10}$" title="Type in a different part number to create standards for another product">
-								<input type="submit" name="submit" value="Change selected product" class="ui-widget ui-widget-content ui-corner-all">
-							</form>
-						</td>
-						<td>#typeDesc#<cfif #typeDesc# eq 'Plated'> (#platedElement#)</cfif></td>
-						<td>#targetValue#μin</td>
-						<td>$#price#</td>
-						<td>#stock#</td>
-						<td class="composition">
-							<cfset elemList="">
-							<cfset denSum="0">
-							<cfoutput>
-								<cfset currElem = composition & "%" & " " & symbol>
+				<!--- If the query returned an unexpected number of results --->
+				<cfif #getThePart.RECORDCOUNT# neq 1>
+					<td class="partNumVal">
+						<form name="selectNewPart" method="POST" action="newStandard.cfm">
+							<input type="search" id="partNumber" name="partNumber" value="" placeholder="P1111111111" maxlength="11" pattern="^[P]\d{10}$" title="Type in a different a part number to create standards">
+							<input type="submit" name="submit" value="Change selected product" class="ui-widget ui-widget-content ui-corner-all">
+							<span class="error">There are no parts with that part number. Please enter a different value.</span>
+						</form>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</td>
+				<!--- If the query executed normally --->
+				<cfelse>
+					<cfoutput query="getThePart" group="partNumber">
+						<tr>
+							<td class="partNumVal">
+								<form name="selectNewPart" method="POST" action="newStandard.cfm">
+									<input type="search" id="partNumber" name="partNumber" value="#partNumber#" placeholder="P1111111111" maxlength="11" pattern="^[P]\d{10}$" title="Type in a different part number to create standards for another product">
+									<input type="submit" name="submit" value="Change selected product" class="ui-widget ui-widget-content ui-corner-all">
+								</form>
+							</td>
+							<td>#typeDesc#<cfif #typeDesc# eq 'Plated'> (#platedElement#)</cfif></td>
+							<td>#targetValue#μin</td>
+							<td>$#price#</td>
+							<td>#stock#</td>
+							<td class="composition">
+								<cfset elemList="">
+								<cfset denSum="0">
+								<cfoutput>
+									<cfset currElem = composition & "%" & " " & symbol>
 
-								<!--- Add to the sum of densities of component elements of this alloy...or just this element if it isn't an alloy --->
-								<cfset currDen = (composition/100) / density>
-						
-								<cfset denSum = denSum + currDen>
-								<cfset elemList = listAppend(elemList,currElem)>
-							</cfoutput>
-							#elemList#
-						</td>
-						<td>
-							<!--- Display the density for this product --->
-							<cfset theDen = (1 / denSum)>
-							#numberformat(theDen,"0.00")#g/cc
-						</td>
-					</tr>
-				</cfoutput>
+									<!--- Add to the sum of densities of component elements of this alloy...or just this element if it isn't an alloy --->
+									<cfset currDen = (composition/100) / density>
+							
+									<cfset denSum = denSum + currDen>
+									<cfset elemList = listAppend(elemList,currElem)>
+								</cfoutput>
+								#elemList#
+							</td>
+							<td>
+								<!--- Display the density for this product --->
+								<cfset theDen = (1 / denSum)>
+								#numberformat(theDen,"0.00")#g/cc
+							</td>
+						</tr>
+					</cfoutput>
+				</cfif>
 			</tbody>
 		</table>
 		
@@ -119,7 +137,7 @@
 						<form action="createStandard.cfm" id="newStandardForm" method="POST">
 							<input type="submit" name="submit" class="ui-button" id="submit" value="Create standard" form="newStandardForm">
 				        	<input required readonly type="hidden" form="newStandardForm" name="partNumber" value="<cfoutput>#getThePart.partNumber#</cfoutput>">
-				        	<input required type="number" form="newStandardForm" name="actualValue" class="ui-widget ui-widget-content ui-corner-all" id="actualValue" min="<cfoutput>#getThePart.minThick#</cfoutput>" max="<cfoutput>#getThePart.maxThick#</cfoutput>" step=".01" placeholder="<cfoutput>#getThePart.minThick#μin - #getThePart.maxThick#μin</cfoutput>">
+				        	<input required type="number" form="newStandardForm" id="actualValue" name="actualValue" class="ui-widget ui-widget-content ui-corner-all" id="actualValue" min="<cfoutput>#getThePart.minThick#</cfoutput>" max="<cfoutput>#getThePart.maxThick#</cfoutput>" step=".01" placeholder="<cfoutput>#getThePart.minThick#μin - #getThePart.maxThick#μin</cfoutput>">
 						</form>
 					</td>
 				</tr>

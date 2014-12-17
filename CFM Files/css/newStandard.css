@@ -2,7 +2,7 @@
 	text-align: center;
 }
 
-label.error{
+label.error,td > form > span.error{
 	color: red;
 	font-weight: bold;
 	font-size: 1.2em;

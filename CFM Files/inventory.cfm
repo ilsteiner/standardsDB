@@ -121,10 +121,10 @@ ORDER BY main.composition DESC, main.symbol
 					<div class="headerWrapper">
 						<ul class="formButtons">
 							<li class="formButton" id="certifyAll" title="Create a new certification from the current list">
-								Certify Selected
+								Certify<br>Selected
 							</li>
 							<li class="formButton" id="clearCertify" title="Clear the certification list">
-								Clear Selections
+								Clear<br>Selections
 							</li>
 						</ul>
 					</div>
