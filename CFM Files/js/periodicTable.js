@@ -113,16 +113,19 @@ function makeButtonsClickable(){
 
 	//Make the "Certify All" button show a confirmation popup
 	$("#certifyAll").click(function() {
-		if($("#numberOfCertParts").text() == "0"){
-			$("#certConfirmation").text("No products selected for certification.");	
+		if($("#numberOfCertParts").text() == "None"){
+			$("#certConfirmation").text("No products selected for certification.");
+			$(".ui-dialog-buttonpane button:contains('Confirm')").button("disable");
 		}
 		else if($("#numberOfCertParts").text() == "1"){
 			$("#certConfirmation").html("<p>You are about to certify " + $("#numberOfCertParts").text() + " product</p>"
 				+ $("#certParts").val().replace(/,/g, '<br>'));
+			$(".ui-dialog-buttonpane button:contains('Confirm')").button("enable");
 		}
 		else{
 			$("#certConfirmation").html("<p>You are about to certify " + $("#numberOfCertParts").text() + " products</p>"
 				+ $("#certParts").val().replace(/,/g, '<br>'));
+			$(".ui-dialog-buttonpane button:contains('Confirm')").button("enable");
 		}
 		$('#certConfirmation').dialog('open');
 	});

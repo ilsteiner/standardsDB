@@ -14,12 +14,12 @@
 <!--- If we are including infinites, add them to the type list --->
 <cfif #minThick# gt 1000>
 	<cfset types &= ",I">
-	<cfset minThick = 1000>
+	<cfset minThick = 1002>
 </cfif>
 
 <cfif #maxThick# gt 1000>
 	<cfset types &= ",I">
-	<cfset maxThick = 1000>
+	<cfset maxThick = 9999>
 </cfif>
 
 <cfquery
